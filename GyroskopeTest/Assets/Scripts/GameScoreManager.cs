@@ -30,10 +30,10 @@ public class GameScoreManager : MonoBehaviour {
         if (isCounting)
         {
             rtime -= Time.deltaTime;
-            float minutes = Mathf.Floor(rtime / 60);
-            float seconds = Mathf.RoundToInt(rtime%60);
+            string minutes = Mathf.Floor(rtime / 60).ToString("00");
+            string seconds = Mathf.RoundToInt(rtime%60).ToString("00");
 
-            TimeDisplay.text = minutes.ToString() + ":" + seconds.ToString();
+            TimeDisplay.text = minutes + ":" + seconds;
 
             if (rtime<=0)//abbruch
             {
