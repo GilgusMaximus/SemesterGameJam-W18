@@ -38,7 +38,7 @@ public class GameScoreManager : MonoBehaviour {
                 TimeDisplay.text = "0";
                 isCounting = false;
                 //TODO verloren, naechste scene?
-                Highscores.AddNewHighscore("Anonyme Eule", currentScore);//hochladen des highscores
+                Highscores.AddNewHighscore(Menu.playerName, currentScore);//hochladen des highscores TODO
 
                 //TODO TOUCH DISABLE
 
@@ -73,7 +73,7 @@ public class GameScoreManager : MonoBehaviour {
         if (scoredisplay.activeInHierarchy)
         {
             scoredisplay.SetActive(false);
-            SceneManager.LoadScene("PlayMenu");
+            SceneManager.LoadScene("Menu");
         }
     }
 
