@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour {
     public static string playerName;
 
     public InputField input;
+    public GameObject text;
 
 	// Use this for initialization
 	void Start () {
@@ -51,6 +52,12 @@ public class Menu : MonoBehaviour {
             playerName = "Anomyous_Owl";
         }
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void openText()
+    {
+        text.SetActive(true);
+
     }
 
 }
