@@ -12,19 +12,16 @@ public class Touchable : MonoBehaviour, IPointerClickHandler {
         Rocks r = eventData.pointerPress.GetComponent<Rocks>();
         if (r != null)
         {
-            GameObject.FindObjectOfType<Pickaxe>().SpawnPickaxe(eventData);
-            
-            r.ReduceHealth();
+            if (GameScoreManager.isCounting)
+            {
+                GameObject.FindObjectOfType<Pickaxe>().SpawnPickaxe(eventData);
+
+                r.ReduceHealth();
+            }
         }
 
         //Destroy(gameObject);
     }
 
-    public void Update()
-    {
-      
-
-
-    }
 
 }

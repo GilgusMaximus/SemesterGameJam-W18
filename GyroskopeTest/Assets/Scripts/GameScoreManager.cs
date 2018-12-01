@@ -10,11 +10,13 @@ public class GameScoreManager : MonoBehaviour {
     public float timer = 600;//time in seconds
 
     public float rtime;//remaining time
-    public bool isCounting;
+    public static bool isCounting;
 
     public Text TimeDisplay;
 
     public GameObject scoredisplay;
+
+    public static bool l;
 
     private void Start()
     {
@@ -73,6 +75,7 @@ public class GameScoreManager : MonoBehaviour {
         if (scoredisplay.activeInHierarchy)
         {
             scoredisplay.SetActive(false);
+            isCounting = true;
             SceneManager.LoadScene("Menu");
         }
     }
