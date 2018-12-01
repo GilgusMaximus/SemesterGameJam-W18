@@ -40,6 +40,8 @@ public class GameScoreManager : MonoBehaviour {
                 //TODO verloren, naechste scene?
                 Highscores.AddNewHighscore("Anonyme Eule", currentScore);//hochladen des highscores
 
+                //TODO TOUCH DISABLE
+
                 //Anzeigen Highscore und enable laden naechster scene durch button
                 if (!scoredisplay.activeInHierarchy)
                 {
