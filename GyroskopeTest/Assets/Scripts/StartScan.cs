@@ -1,19 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartScan : MonoBehaviour {
 
     public GameObject scanner;
+    public Image image;
+    public Button button;
     public float scanTime = 3.0f;
     public float scanOfftime = 2.0f;
-    public bool buttonActive = true;
     private float scanTimeLeft;
     private float scanOfftimeLeft;
 
 	// Use this for initialization
 	void Start () {
-        buttonActive = true;
+        button.enabled = true;
         scanTimeLeft = scanTime;
         scanOfftimeLeft = scanOfftime;
         scanner.SetActive(false);
@@ -23,24 +25,26 @@ public class StartScan : MonoBehaviour {
 	void Update () {
 		if(scanner.activeSelf) {
             scanTimeLeft -= Time.deltaTime;
+            image.fillAmount -= Time.deltaTime / scanTime;
             if(scanTimeLeft < 0) {
                 scanner.SetActive(false);
                 scanTimeLeft = scanTime;
-                buttonActive = false;
             }
         }
         else {
-            if (!buttonActive) {
+            if (!button.enabled) {
                 scanOfftimeLeft -= Time.deltaTime;
-                if(scanOfftimeLeft < 0) {
+                image.fillAmount += Time.deltaTime / scanOfftime;
+                if (scanOfftimeLeft < 0) {
                     scanOfftimeLeft = scanOfftime;
-                    buttonActive = true;
+                    button.enabled = true;
                 }
             } 
         }
 	}
 
-    void Startscan() {
+    public void Startscan() {
+        button.enabled = false;
         scanner.SetActive(true);
     }
 }
