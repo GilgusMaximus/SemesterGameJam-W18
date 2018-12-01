@@ -42,7 +42,7 @@ public class DisplayLadder : MonoBehaviour {
 
     IEnumerator RefreshHighscores()
     {
-        while (SceneManager.GetActiveScene().name=="Startmenu")
+        while (SceneManager.GetActiveScene().name=="HighscoreMenu")
         {
             highscoreManager.Downloadighscores();
             yield return new WaitForSeconds(30);

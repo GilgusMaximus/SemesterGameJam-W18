@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameScoreManager : MonoBehaviour {
 
@@ -37,6 +38,7 @@ public class GameScoreManager : MonoBehaviour {
                 //TODO verloren, naechste scene?
                 Highscores.AddNewHighscore("Test", currentScore);//hochladen des highscores
 
+                SceneManager.LoadScene("HighscoreMenu");
                 //laden naechster scene
 
                 Debug.Log("Times's up guys!");

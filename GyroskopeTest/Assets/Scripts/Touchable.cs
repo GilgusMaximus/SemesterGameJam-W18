@@ -5,15 +5,26 @@ using UnityEngine;
 
 public class Touchable : MonoBehaviour, IPointerClickHandler {
 
+  
+
     public void OnPointerClick(PointerEventData eventData)
     {
         Rocks r = eventData.pointerPress.GetComponent<Rocks>();
         if (r != null)
         {
+            GameObject.FindObjectOfType<Pickaxe>().SpawnPickaxe(eventData);
+            
             r.ReduceHealth();
         }
 
         //Destroy(gameObject);
+    }
+
+    public void Update()
+    {
+      
+
+
     }
 
 }

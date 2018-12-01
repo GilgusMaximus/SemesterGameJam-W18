@@ -12,6 +12,8 @@ public class Treasure : MonoBehaviour {
     private MeshRenderer renderer;
     public float dissolveSpeed;
 
+    public int Wert;
+
 	// Use this for initialization
 	void Start () {
 

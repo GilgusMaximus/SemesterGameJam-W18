@@ -71,7 +71,7 @@ public class Rocks : MonoBehaviour {
             Instantiate(Treasure, TreasurePoint, Quaternion.identity);  //noch Randomisieren?
 
 
-            GameScoreManager.addScore(10);//TODO add specific score
+            GameScoreManager.addScore(Treasure.GetComponent<Treasure>().Wert);//TODO add specific score
             //Highscores.AddNewHighscore("Test",GameScoreManager.currentScore);
         }
 
