@@ -38,8 +38,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1330947778035132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6.24}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.03, y: -0.6920738, z: -6.019175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -224,6 +224,8 @@ MonoBehaviour:
   miningSound: {fileID: 0}
   DestroySoundNothing: {fileID: 0}
   DestroySoundTreasure: {fileID: 0}
-  MiningParticle: {fileID: 0}
-  DestroyParticle: {fileID: 0}
+  MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
+    type: 2}
+  DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
+    type: 2}
   index: 0

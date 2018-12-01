@@ -53,7 +53,7 @@ public class Rocks : MonoBehaviour {
             DestroySelf();
             return;
         }
-       // Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
+        Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
       //  audioSource.clip = miningSound;
        // audioSource.Play();
 
@@ -67,13 +67,15 @@ public class Rocks : MonoBehaviour {
             //   audioSource.clip = DestroySoundTreasure;
             //   audioSource.Play();
             //  Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
-            //  Instantiate(DestroyParticle,this.transform.position, Quaternion.identity);
+            // Instantiate(DestroyParticle,this.transform.position, Quaternion.identity);
             Instantiate(Treasure, TreasurePoint, Quaternion.identity);  //noch Randomisieren?
 
 
             GameScoreManager.addScore(Treasure.GetComponent<Treasure>().Wert);//TODO add specific score
             //Highscores.AddNewHighscore("Test",GameScoreManager.currentScore);
         }
+
+        Instantiate(DestroyParticle, this.transform.position, Quaternion.identity);
 
         Destroy(this.gameObject);
     }
