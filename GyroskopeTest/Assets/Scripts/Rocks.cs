@@ -32,7 +32,7 @@ public class Rocks : MonoBehaviour {
         float z = Random.Range(-1f, 1f);
 
         TreasurePoint = this.transform.position + new Vector3(x, y, z).normalized*Random.Range(0,TreasurePointDiffrence);
-        audioSource = this.GetComponent<AudioSource>();
+        audioSource = GameObject.Find("Audio").GetComponent<AudioSource>();
         if (Treasure != null)
         {
             tr = Instantiate(Treasure, TreasurePoint, Quaternion.identity);
@@ -58,7 +58,7 @@ public class Rocks : MonoBehaviour {
         }
         Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
       //  audioSource.clip = miningSound;
-       // audioSource.Play();
+      //  audioSource.Play();
 
 
     }
@@ -67,8 +67,8 @@ public class Rocks : MonoBehaviour {
     {
         if (hasTreasure)
         {
-            //   audioSource.clip = DestroySoundTreasure;
-            //   audioSource.Play();
+            //  audioSource.clip = DestroySoundTreasure;
+            //  audioSource.Play();
             //  Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
             // Instantiate(DestroyParticle,this.transform.position, Quaternion.identity);
             //noch Randomisieren?
@@ -86,7 +86,11 @@ public class Rocks : MonoBehaviour {
 
         Instantiate(DestroyParticle, this.transform.position, Quaternion.identity);
 
+        audioSource.clip = DestroySoundNothing;
+        audioSource.Play();
+
         Destroy(this.gameObject);
+
     }
 
 }
