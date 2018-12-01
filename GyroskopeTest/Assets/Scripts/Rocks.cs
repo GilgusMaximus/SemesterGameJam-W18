@@ -59,8 +59,8 @@ public class Rocks : MonoBehaviour {
             return;
         }
         Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
-      //  audioSource.clip = miningSound;
-      //  audioSource.Play();
+        audioSource.clip = miningSound;
+        audioSource.Play();
 
 
     }
@@ -69,8 +69,7 @@ public class Rocks : MonoBehaviour {
     {
         if (hasTreasure)
         {
-            //  audioSource.clip = DestroySoundTreasure;
-            //  audioSource.Play();
+             
             //  Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
             // Instantiate(DestroyParticle,this.transform.position, Quaternion.identity);
             //noch Randomisieren?
@@ -79,7 +78,14 @@ public class Rocks : MonoBehaviour {
             GameScoreManager.addScore(Treasure.GetComponent<Treasure>().Wert);//TODO add specific score
 
             TimeDynamite t = Treasure.GetComponent<TimeDynamite>();//invoke special behaviour for time or dynamite
-           
+
+
+            if (t == null)
+            {
+                audioSource.clip = DestroySoundTreasure;
+                audioSource.Play();
+            }
+
             if (t!=null)
             {
                 if (!t.istime)
