@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23616560183623906}
   - component: {fileID: 114672278782248982}
   - component: {fileID: 54229450570285008}
+  - component: {fileID: 65155862656898824}
   m_Layer: 0
   m_Name: treasure_sapphire
   m_TagString: Treasure
@@ -100,6 +101,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65155862656898824
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1332043829007110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018084068, y: 0.01807259, z: 0.0077266144}
+  m_Center: {x: -0.00003373623, y: 0.0005206991, z: 0.010297885}
 --- !u!114 &114672278782248982
 MonoBehaviour:
   m_ObjectHideFlags: 1
