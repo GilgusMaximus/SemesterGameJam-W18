@@ -156,7 +156,7 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
   DestroySoundNothing: {fileID: 0}
   DestroySoundTreasure: {fileID: 0}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
