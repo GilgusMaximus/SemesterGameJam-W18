@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour {
+
+    public static string playerName;
+
+    public InputField input;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +32,21 @@ public class Menu : MonoBehaviour {
         Application.Quit();
     
         
+    }
+
+
+    public void InputAppear()
+    {
+        input.gameObject.SetActive(true);
+
+        input.ActivateInputField();
+
+    }
+
+    public void SetName(string sceneName)
+    {
+        playerName =input.text;
+        SceneManager.LoadScene(sceneName);
     }
 
 }
