@@ -72,7 +72,13 @@ public class Rocks : MonoBehaviour {
 
 
             GameScoreManager.addScore(Treasure.GetComponent<Treasure>().Wert);//TODO add specific score
-            //Highscores.AddNewHighscore("Test",GameScoreManager.currentScore);
+
+            TimeDynamite t = Treasure.GetComponent<TimeDynamite>();//invoke special behaviour for time or dynamite
+            if (t!=null)
+            {
+                t.apply();
+            }
+
         }
 
         Instantiate(DestroyParticle, this.transform.position, Quaternion.identity);

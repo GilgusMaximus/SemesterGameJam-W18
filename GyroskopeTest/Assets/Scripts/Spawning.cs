@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Spawning : MonoBehaviour {
 
-    public int treasureNumber;
     private Rocks[] rocks;
 
     public GameObject[] Tresures;
@@ -25,7 +24,7 @@ public class Spawning : MonoBehaviour {
        
 
 
-        while(treasureNumbers.Count!= treasureNumber)
+        while(treasureNumbers.Count!= Tresures.Length)
         {
             int x =Random.Range(0, rocks.Length);
 
