@@ -38,7 +38,7 @@ public class GameScoreManager : MonoBehaviour {
                 //TODO verloren, naechste scene?
                 Highscores.AddNewHighscore("Test", currentScore);//hochladen des highscores
 
-                SceneManager.LoadScene("HighscoreMenu");
+                //SceneManager.LoadScene("HighscoreMenu");
                 //laden naechster scene
 
                 Debug.Log("Times's up guys!");
