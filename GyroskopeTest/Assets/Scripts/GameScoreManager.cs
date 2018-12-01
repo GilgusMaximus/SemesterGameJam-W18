@@ -12,7 +12,9 @@ public class GameScoreManager : MonoBehaviour {
     public float rtime;//remaining time
     public bool isCounting;
 
-    public Text display;
+    public Text TimeDisplay;
+
+    public GameObject scoredisplay;
 
     private void Start()
     {
@@ -29,17 +31,29 @@ public class GameScoreManager : MonoBehaviour {
             float minutes = Mathf.Floor(rtime / 60);
             float seconds = Mathf.RoundToInt(rtime%60);
 
-            display.text = minutes.ToString() + ":" + seconds.ToString();
+            TimeDisplay.text = minutes.ToString() + ":" + seconds.ToString();
 
             if (rtime<=0)//abbruch
             {
-                display.text = "0";
+                TimeDisplay.text = "0";
                 isCounting = false;
                 //TODO verloren, naechste scene?
+<<<<<<< HEAD
                 Highscores.AddNewHighscore(Menu.playerName, currentScore);//hochladen des highscores
+=======
+                Highscores.AddNewHighscore("Anonyme Eule", currentScore);//hochladen des highscores
 
-                //SceneManager.LoadScene("HighscoreMenu");
-                //laden naechster scene
+                //TODO TOUCH DISABLE
+>>>>>>> b4dccd0d528d4accaffa90d9fe418a7772a818c6
+
+                //Anzeigen Highscore und enable laden naechster scene durch button
+                if (!scoredisplay.activeInHierarchy)
+                {
+                    Text scored = scoredisplay.transform.GetChild(0).GetComponent<Text>();
+                    scored.text = "Your score is: "+GameScoreManager.currentScore.ToString();
+
+                    scoredisplay.SetActive(true);
+                }
 
                 Debug.Log("Times's up guys!");
             }
@@ -56,6 +70,15 @@ public class GameScoreManager : MonoBehaviour {
     public static void addScore(int i)
     {
         currentScore += i;
+    }
+
+    public void ButtonHandleLoad()//invoked by button at end of round to load back into menu
+    {
+        if (scoredisplay.activeInHierarchy)
+        {
+            scoredisplay.SetActive(false);
+            SceneManager.LoadScene("PlayMenu");
+        }
     }
 
 }

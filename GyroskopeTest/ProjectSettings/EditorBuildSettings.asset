@@ -9,12 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuUI/Menu.unity
     guid: 6eb321de701c9404d9ee111eb42e4ed2
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/MenuUI/HighscoreMenu.unity
     guid: 864d4a1df281ffc43ab6d010377ecd89
   - enabled: 1
     path: Assets/Scenes/MenuUI/PlayMenu.unity
     guid: b2f53373f2ae69a4aa5f1bed682b407a
   - enabled: 1
+=======
+    path: Assets/Scenes/MenuUI/PlayMenu.unity
+    guid: b2f53373f2ae69a4aa5f1bed682b407a
+  - enabled: 1
+    path: Assets/Scenes/MenuUI/HighscoreMenu.unity
+    guid: 864d4a1df281ffc43ab6d010377ecd89
+  - enabled: 1
+>>>>>>> b4dccd0d528d4accaffa90d9fe418a7772a818c6
     path: Assets/Scenes/MenuUI/PlayScene.unity
     guid: c1b0a5d6186de03419e9db574d4eb192
   m_configObjects: {}
