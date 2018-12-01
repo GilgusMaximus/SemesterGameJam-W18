@@ -6,21 +6,24 @@ public class TimeDynamite : MonoBehaviour {
 
     public bool istime;
     public int time;//in seconds
-    private AudioSource audioSource;
+   // public AudioSource audioSource;
 
-    public AudioClip Explosion;
+    
 
-    public void Start()
+    void Start()
     {
-        audioSource = GameObject.Find("Audio").GetComponent<AudioSource>();
+        //audioSource = GameObject.Find("Audio").GetComponent<AudioSource>();
+
+        
+
     }
 
     public void apply()
     {
         GameScoreManager g= GameObject.Find("Highscoremanager").GetComponent<GameScoreManager>();
 
-        audioSource.clip = Explosion;
-        audioSource.Play();
+      //  audioSource.clip = Explosion;
+      //  audioSource.Play();
 
         if (istime)
         {

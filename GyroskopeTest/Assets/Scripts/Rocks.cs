@@ -24,9 +24,11 @@ public class Rocks : MonoBehaviour {
     private GameObject tr;
     private bool instantiated;
 
+    public AudioClip Explosion;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         float x = Random.Range(-1f, 1f);
         float y = Random.Range(-1f, 1f);
         float z = Random.Range(-1f, 1f);
@@ -77,10 +79,20 @@ public class Rocks : MonoBehaviour {
             GameScoreManager.addScore(Treasure.GetComponent<Treasure>().Wert);//TODO add specific score
 
             TimeDynamite t = Treasure.GetComponent<TimeDynamite>();//invoke special behaviour for time or dynamite
+           
             if (t!=null)
             {
+                if (!t.istime)
+                {
+                    audioSource.clip = Explosion;
+                    audioSource.Play();
+                }
                 t.apply();
             }
+
+            Instantiate(DestroyParticle, this.transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+            return;
 
         }
 

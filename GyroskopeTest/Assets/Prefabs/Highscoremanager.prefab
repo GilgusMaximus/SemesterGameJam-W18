@@ -54,4 +54,5 @@ MonoBehaviour:
   timer: 30
   rtime: 0
   isCounting: 0
-  display: {fileID: 0}
+  TimeDisplay: {fileID: 0}
+  scoredisplay: {fileID: 0}
