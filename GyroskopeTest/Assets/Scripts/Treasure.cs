@@ -11,8 +11,11 @@ public class Treasure : MonoBehaviour {
     public bool dissolve;
     private MeshRenderer renderer;
     public float dissolveSpeed;
+    public bool discovered;
 
     public int Wert;
+    private bool instantiated;
+    public ParticleSystem treasureparticle;
 
 	// Use this for initialization
 	void Start () {
@@ -27,30 +30,36 @@ public class Treasure : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-        if((this.transform.position-playerpos).magnitude >= aufsammelRadius)
+        if (discovered)
         {
-           // Debug.Log("Go");
-            this.transform.Translate(direction * Time.deltaTime * speed);
-        }
-        else
-        {
-            Dissapear();
-        }
-
-        if (dissolve)
-        {
-
-            renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a - dissolveSpeed * Time.deltaTime);
-
-            if (renderer.material.color.a <= 0)
+            if (!instantiated)
             {
-                Destroy(this.gameObject);
+                Instantiate(treasureparticle, this.transform.position, Quaternion.identity);
+                instantiated = true;
             }
+            if ((this.transform.position - playerpos).magnitude >= aufsammelRadius)
+            {
+                // Debug.Log("Go");
+                this.transform.Translate(direction * Time.deltaTime * speed);
+            }
+            else
+            {
+                Dissapear();
+            }
+
+            if (dissolve)
+            {
+
+                renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a - dissolveSpeed * Time.deltaTime);
+
+                if (renderer.material.color.a <= 0)
+                {
+                    Destroy(this.gameObject);
+                }
+            }
+
+
         }
-
-        
-
 
 	}
 

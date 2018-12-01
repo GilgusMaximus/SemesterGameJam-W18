@@ -21,7 +21,8 @@ public class Rocks : MonoBehaviour {
     public ParticleSystem DestroyParticle;
 
     public int index;
-
+    private GameObject tr;
+    private bool instantiated;
 
 
 	// Use this for initialization
@@ -32,16 +33,16 @@ public class Rocks : MonoBehaviour {
 
         TreasurePoint = this.transform.position + new Vector3(x, y, z).normalized*Random.Range(0,TreasurePointDiffrence);
         audioSource = this.GetComponent<AudioSource>();
+        tr = Instantiate(Treasure, TreasurePoint, Quaternion.identity);
 
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ReduceHealth();
-        }
+
+
+     
 	}
 
     public void ReduceHealth()
@@ -68,8 +69,8 @@ public class Rocks : MonoBehaviour {
             //   audioSource.Play();
             //  Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
             // Instantiate(DestroyParticle,this.transform.position, Quaternion.identity);
-            Instantiate(Treasure, TreasurePoint, Quaternion.identity);  //noch Randomisieren?
-
+            //noch Randomisieren?
+            tr.GetComponent<Treasure>().discovered = true;
 
             GameScoreManager.addScore(Treasure.GetComponent<Treasure>().Wert);//TODO add specific score
 
