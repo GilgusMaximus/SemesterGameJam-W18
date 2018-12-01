@@ -26,6 +26,7 @@ public class GyroControl : MonoBehaviour {
 
         if (gEnabled)
         {
+            //TODO stabelizer
             cameraContainer.transform.Rotate(0,-myGyro.rotationRateUnbiased.y,0);
             transform.Rotate(-myGyro.rotationRateUnbiased.x, 0, 0);
         }

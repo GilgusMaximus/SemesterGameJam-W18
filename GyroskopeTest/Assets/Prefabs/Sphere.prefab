@@ -97,11 +97,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b740a27b041e8fa4e9443ef0a7454731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 2
   aufsammelRadius: 0.1
   dissolve: 0
   dissolveSpeed: 0.1
+  discovered: 0
   Wert: 0
+  treasureparticle: {fileID: 0}
 --- !u!114 &114509717689005632
 MonoBehaviour:
   m_ObjectHideFlags: 1
