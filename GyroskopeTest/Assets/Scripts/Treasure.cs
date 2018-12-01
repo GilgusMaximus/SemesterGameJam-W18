@@ -34,8 +34,11 @@ public class Treasure : MonoBehaviour {
         {
             if (!instantiated)
             {
-                Instantiate(treasureparticle, this.transform.position, Quaternion.identity);
-                instantiated = true;
+                if (treasureparticle != null)
+                {
+                    Instantiate(treasureparticle, this.transform.position, Quaternion.identity);
+                    instantiated = true;
+                }
             }
             if ((this.transform.position - playerpos).magnitude >= aufsammelRadius)
             {
