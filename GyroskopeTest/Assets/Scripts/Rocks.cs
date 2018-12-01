@@ -33,8 +33,10 @@ public class Rocks : MonoBehaviour {
 
         TreasurePoint = this.transform.position + new Vector3(x, y, z).normalized*Random.Range(0,TreasurePointDiffrence);
         audioSource = this.GetComponent<AudioSource>();
-        tr = Instantiate(Treasure, TreasurePoint, Quaternion.identity);
-
+        if (Treasure != null)
+        {
+            tr = Instantiate(Treasure, TreasurePoint, Quaternion.identity);
+        }
 
     }
 	
