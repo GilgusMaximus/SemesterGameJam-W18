@@ -70,10 +70,9 @@ public class Rocks : MonoBehaviour {
             //  Instantiate(DestroyParticle,this.transform.position, Quaternion.identity);
             Instantiate(Treasure, TreasurePoint, Quaternion.identity);  //noch Randomisieren?
 
-            Debug.Log("Haha");
 
-            GameScoreManager.addScore(10);
-            Highscores.AddNewHighscore("Test",GameScoreManager.currentScore);
+            GameScoreManager.addScore(10);//TODO add specific score
+            //Highscores.AddNewHighscore("Test",GameScoreManager.currentScore);
         }
 
         Destroy(this.gameObject);
