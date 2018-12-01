@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4315197011240128}
   - component: {fileID: 114037548177818682}
-  - component: {fileID: 114614347840500902}
   m_Layer: 0
   m_Name: Highscores
   m_TagString: Untagged
@@ -50,16 +49,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98007ebec7665c947a5d2018b59a9c89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114614347840500902
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1725962159548680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc6755c85e80a344b5f1f4e896619fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

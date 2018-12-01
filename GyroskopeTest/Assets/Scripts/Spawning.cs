@@ -15,7 +15,7 @@ public class Spawning : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
          rocks =  GameObject.FindObjectsOfType<Rocks>();
 

@@ -13,6 +13,7 @@ public class particle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        this.transform.LookAt(Camera.main.transform);
         time = time + Time.deltaTime;
         if(time >= system.startLifetime)
         {
