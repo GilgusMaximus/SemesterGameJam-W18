@@ -46,6 +46,10 @@ public class Menu : MonoBehaviour {
     public void SetName(string sceneName)
     {
         playerName =input.text;
+        if (playerName.Equals(""))
+        {
+            playerName = "Anomyous_Owl";
+        }
         SceneManager.LoadScene(sceneName);
     }
 
