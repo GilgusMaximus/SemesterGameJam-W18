@@ -9,49 +9,49 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1402614796021202}
+  m_RootGameObject: {fileID: 1748777978354672}
   m_IsPrefabAsset: 1
---- !u!1 &1402614796021202
+--- !u!1 &1748777978354672
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4314339884225262}
-  - component: {fileID: 114521421121010852}
+  - component: {fileID: 4940252846322358}
+  - component: {fileID: 114231690619940106}
   m_Layer: 0
-  m_Name: PickaxeSpawner
+  m_Name: PickaxeSpawner 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4314339884225262
+--- !u!4 &4940252846322358
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1402614796021202}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7112302, y: 3.4475417, z: 1.5858374}
+  m_GameObject: {fileID: 1748777978354672}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.7112427, y: 3.4475708, z: 1.5858374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114521421121010852
+--- !u!114 &114231690619940106
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1402614796021202}
+  m_GameObject: {fileID: 1748777978354672}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3146e3f0388c03b4a9b1ee7d6819eccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickaxe: {fileID: 1950091545862500, guid: fc3595a27a4a0574ba104aaba4daded6, type: 2}
+  pickaxe: {fileID: 1224706861424766, guid: 2bd0f9d6f98a0ce4f9a2830755041197, type: 2}
   distanceFromRock: 2
   stayTime: 0.2
   pick: {fileID: 0}
