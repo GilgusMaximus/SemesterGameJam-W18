@@ -11,6 +11,10 @@ public class Menu : MonoBehaviour {
     public InputField input;
     public GameObject text;
 
+    public GameObject PauseMenu;
+
+    
+
 	// Use this for initialization
 	void Start () {
 		
@@ -51,6 +55,8 @@ public class Menu : MonoBehaviour {
         {
             playerName = "Anomyous_Owl";
         }
+        GameScoreManager.resetScore();
+        
         SceneManager.LoadScene(sceneName);
     }
 
@@ -59,5 +65,20 @@ public class Menu : MonoBehaviour {
         text.SetActive(true);
 
     }
+
+    public void openPauseMenu()
+    {
+        Time.timeScale = 0;
+        PauseMenu.SetActive( true);
+
+    }
+
+    public void Continue()
+    {
+
+        Time.timeScale = 1;
+        PauseMenu.SetActive(false);
+    }
+
 
 }

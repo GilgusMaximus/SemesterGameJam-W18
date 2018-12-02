@@ -20,7 +20,7 @@ public class GameScoreManager : MonoBehaviour {
 
     private void Start()
     {
-        if (rtime == 0)
+        if (rtime <= 0)
         {
             rtime = timer;
         }
