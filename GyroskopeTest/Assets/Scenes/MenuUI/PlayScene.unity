@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16030,11 +16030,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114205617237718872, guid: 0703ec64157d04d4f8a4d6731e78c351,
-        type: 2}
-      propertyPath: particles.Array.size
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4305214189336214, guid: 0703ec64157d04d4f8a4d6731e78c351, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16067,46 +16062,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114205617237718872, guid: 0703ec64157d04d4f8a4d6731e78c351,
-        type: 2}
-      propertyPath: particles
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 23667411329387992, guid: 0703ec64157d04d4f8a4d6731e78c351,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114205617237718872, guid: 0703ec64157d04d4f8a4d6731e78c351,
-        type: 2}
-      propertyPath: particles.Array.data[0]
-      value: 
-      objectReference: {fileID: 4974364714321236, guid: 4a1255e507102c542aca847db5814ed3,
-        type: 2}
-    - target: {fileID: 114205617237718872, guid: 0703ec64157d04d4f8a4d6731e78c351,
-        type: 2}
-      propertyPath: particles.Array.data[1]
-      value: 
-      objectReference: {fileID: 4335994263669436, guid: 3a58f4d1e8da3074cb77a9e769a8462a,
-        type: 2}
-    - target: {fileID: 114205617237718872, guid: 0703ec64157d04d4f8a4d6731e78c351,
-        type: 2}
-      propertyPath: particles.Array.data[2]
-      value: 
-      objectReference: {fileID: 4850475339361460, guid: 267e6b253c5cb2040a46f6a472ab9f48,
-        type: 2}
-    - target: {fileID: 114205617237718872, guid: 0703ec64157d04d4f8a4d6731e78c351,
-        type: 2}
-      propertyPath: particles.Array.data[4]
-      value: 
-      objectReference: {fileID: 4010810201747712, guid: 0a01d743e1978944c8a07989ff22d75e,
-        type: 2}
-    - target: {fileID: 114205617237718872, guid: 0703ec64157d04d4f8a4d6731e78c351,
-        type: 2}
-      propertyPath: particles.Array.data[5]
-      value: 
-      objectReference: {fileID: 4763431702099860, guid: 2f226b5aececcdd4f97272c9d012ddc9,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0703ec64157d04d4f8a4d6731e78c351, type: 2}
   m_IsPrefabAsset: 0

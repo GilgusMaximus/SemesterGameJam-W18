@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3146e3f0388c03b4a9b1ee7d6819eccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickaxe: {fileID: 1950091545862500, guid: fc3595a27a4a0574ba104aaba4daded6, type: 2}
+  pickaxe: {fileID: 1748683598772516, guid: a302f7e17405a444e975a1cca5ffae1f, type: 2}
   distanceFromRock: 2
   stayTime: 0.2
   pick: {fileID: 0}
