@@ -27,11 +27,11 @@ public class TimeDynamite : MonoBehaviour {
 
         if (istime)
         {
-            g.rtime += time;   
+            GameScoreManager.rtime += time;   
         }
         else
         {
-            g.rtime -= time;
+            GameScoreManager.rtime -= time;
         }
 
     }

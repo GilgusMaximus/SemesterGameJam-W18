@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -287,9 +287,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -450,9 +451,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -667,9 +669,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -831,6 +834,105 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 26528475}
   m_Mesh: {fileID: 4300000, guid: c37a9a27fbaf57144bdd5bc5ce3cb67c, type: 3}
+--- !u!1001 &40128553
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.545
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_Name
+      value: Ladder (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+  m_IsPrefabAsset: 0
+--- !u!1 &40128554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: fedfc83f735c1e04b930d223d6b1458d,
+    type: 3}
+  m_PrefabInternal: {fileID: 40128553}
+--- !u!114 &40128555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40128554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae19d0c8167df245b13f3a6096194a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &40128556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40128554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7180240b8d417c34a842d69119930f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &40128557
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40128554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
 --- !u!1 &47663796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,9 +1107,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -1264,9 +1367,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -1315,7 +1419,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4923077068630120, guid: 57625be32061fd7488df6e91bb0a0d70, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114849312922486580, guid: 57625be32061fd7488df6e91bb0a0d70,
         type: 2}
@@ -1442,14 +1546,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 77600027}
-  m_LocalRotation: {x: -0.68022263, y: 0.1931249, z: -0.1931249, w: 0.68022263}
-  m_LocalPosition: {x: 0.44833335, y: 0.25666675, z: 0.9580001}
+  m_LocalRotation: {x: -0.6254932, y: -0.41462788, z: -0.32978514, w: 0.5727859}
+  m_LocalPosition: {x: 0.416, y: 0.263, z: 0.996}
   m_LocalScale: {x: 0.12500001, y: 0.30000007, z: 0.12500003}
   m_Children:
   - {fileID: 1836856564}
   m_Father: {fileID: 1131129064}
   m_RootOrder: 72
-  m_LocalEulerAnglesHint: {x: 0, y: 31.7, z: 0}
+  m_LocalEulerAnglesHint: {x: -98.1, y: 26.3, z: -90.00001}
 --- !u!64 &77600030
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1494,9 +1598,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -1581,9 +1686,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -1668,9 +1774,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -1755,9 +1862,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -1842,9 +1950,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -1927,6 +2036,60 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 113521153}
   m_Mesh: {fileID: 4300000, guid: d3148cdfe6d2d4d4a896a91d1e8a4eb7, type: 3}
+--- !u!1001 &114727529
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1 &131679500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,9 +2340,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -2441,14 +2605,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 154445309}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.6751703, y: 0.08794959, z: -0.08158495, w: -0.7278419}
   m_LocalPosition: {x: -0.495, y: 0.061666727, z: 1.8753294}
   m_LocalScale: {x: 0.125, y: 0.30000007, z: 0.12500003}
   m_Children:
   - {fileID: 722098148}
   m_Father: {fileID: 1131129064}
   m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -274.3, y: -13.78, z: 0}
 --- !u!82 &154445311
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2588,9 +2752,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -2751,9 +2916,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -3066,9 +3232,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -3139,7 +3306,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &217673600
 GameObject:
@@ -3315,9 +3482,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -3630,9 +3798,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -3813,9 +3982,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -4011,7 +4181,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b4663d771cc4494c9fcc9d3e6557c23, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4b4663d771cc4494c9fcc9d3e6557c23, type: 3}
       propertyPath: m_LocalScale.x
@@ -4032,6 +4202,47 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b4663d771cc4494c9fcc9d3e6557c23, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &290280854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: fedfc83f735c1e04b930d223d6b1458d,
+    type: 3}
+  m_PrefabInternal: {fileID: 114727529}
+--- !u!114 &290280855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 290280854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7180240b8d417c34a842d69119930f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &290280856
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 290280854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: fedfc83f735c1e04b930d223d6b1458d, type: 3}
+--- !u!114 &290280857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 290280854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae19d0c8167df245b13f3a6096194a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &314104384
 GameObject:
   m_ObjectHideFlags: 0
@@ -4414,9 +4625,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -4501,9 +4713,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -4588,9 +4801,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 0}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -4675,9 +4889,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -5594,9 +5809,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -5777,9 +5993,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -5864,9 +6081,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -5951,9 +6169,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -6134,9 +6353,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -6317,9 +6537,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -6667,7 +6888,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4822264834851542, guid: fc3595a27a4a0574ba104aaba4daded6, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4864606692842338, guid: fc3595a27a4a0574ba104aaba4daded6, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7030,9 +7251,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -7193,9 +7415,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -7280,9 +7503,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -7443,9 +7667,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 0}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -7530,9 +7755,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -7641,14 +7867,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 738337309}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.60863656, y: 0.35994664, z: 0.35994664, w: 0.60863656}
   m_LocalPosition: {x: 0.35708338, y: -0.2358334, z: 1.570001}
   m_LocalScale: {x: 0.125, y: 0.3000002, z: 0.1250001}
   m_Children:
   - {fileID: 227039720}
   m_Father: {fileID: 1131129064}
   m_RootOrder: 65
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 61.2}
 --- !u!64 &738337312
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7693,9 +7919,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -7780,9 +8007,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -8019,9 +8247,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -8182,9 +8411,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -8958,9 +9188,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -8993,7 +9224,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &914094542
 GameObject:
@@ -9073,9 +9304,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -9312,9 +9544,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -9399,9 +9632,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -9582,9 +9816,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -9669,9 +9904,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 0}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -9895,9 +10131,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -10078,9 +10315,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -10165,9 +10403,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -10252,9 +10491,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -10617,7 +10857,7 @@ Transform:
   - {fileID: 1298284768}
   - {fileID: 1060510952}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1142402190
 GameObject:
@@ -10697,9 +10937,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -10784,9 +11025,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -11048,9 +11290,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -11307,9 +11550,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -11342,14 +11586,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1191537004}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.16181922, y: 0.68158084, z: 0.66090167, w: -0.26920468}
   m_LocalPosition: {x: 0.44833335, y: 0.25666678, z: 1.2660002}
   m_LocalScale: {x: 0.125, y: 0.30000007, z: 0.12500003}
   m_Children:
   - {fileID: 888657362}
   m_Father: {fileID: 1131129064}
   m_RootOrder: 73
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -98.87, y: 96.9, z: 118.7}
 --- !u!64 &1191537007
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11394,9 +11638,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -11481,9 +11726,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -11715,7 +11961,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4326306938995466, guid: 0b1e6fc0bb643404ebf0f7b6e8a36dfa, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114749935284714790, guid: 0b1e6fc0bb643404ebf0f7b6e8a36dfa,
         type: 2}
@@ -11808,9 +12054,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -12048,9 +12295,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -12083,14 +12331,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1271350896}
-  m_LocalRotation: {x: -0.6869159, y: 0.16776963, z: -0.16776963, w: 0.6869159}
+  m_LocalRotation: {x: 0.09333743, y: -0.5479103, z: -0.82592094, w: 0.094536334}
   m_LocalPosition: {x: -0.20750001, y: 0.5408335, z: 0.958}
   m_LocalScale: {x: 0.125, y: 0.30000007, z: 0.12500001}
   m_Children:
   - {fileID: 905646611}
   m_Father: {fileID: 1131129064}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 27.45, z: 0}
+  m_LocalEulerAnglesHint: {x: -62.550003, y: -34, z: -145.9}
 --- !u!64 &1271350899
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12135,9 +12383,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -12343,9 +12592,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -12454,14 +12704,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1298284767}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.5633335, z: 1.57}
-  m_LocalScale: {x: 0.125, y: 0.30000007, z: 0.12500003}
+  m_LocalRotation: {x: -0.9998321, y: 0, z: 0, w: 0.018325008}
+  m_LocalPosition: {x: 0, y: 0.621, z: 1.575}
+  m_LocalScale: {x: 0.125, y: 0.30000007, z: 0.16}
   m_Children:
   - {fileID: 1397810883}
   m_Father: {fileID: 1131129064}
   m_RootOrder: 98
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -177.9, y: 0, z: 0}
 --- !u!64 &1298284770
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12506,9 +12756,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -12741,6 +12992,130 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1351884504}
   m_Mesh: {fileID: 4300000, guid: 077d1ed5cfa781742b72e37b72e79062, type: 3}
+--- !u!1 &1367284732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1367284734}
+  - component: {fileID: 1367284733}
+  m_Layer: 0
+  m_Name: music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1367284733
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367284732}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 75cf575fec4fc1041ad09c764e17271e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.424
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1367284734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367284732}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.12923, y: -5.348323, z: 2.5387082}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372263832
 GameObject:
   m_ObjectHideFlags: 0
@@ -13047,9 +13422,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -13134,9 +13510,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -13317,9 +13694,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -13500,9 +13878,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -13587,9 +13966,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -13674,9 +14054,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -14008,9 +14389,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -14044,14 +14426,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1540848791}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.9929098, y: -0.006408986, z: -0.06342559, w: 0.10033087}
   m_LocalPosition: {x: -0.031666677, y: -0.4025, z: 1.2660003}
   m_LocalScale: {x: 0.125, y: 0.30000007, z: 0.12500003}
   m_Children:
   - {fileID: 479565291}
   m_Father: {fileID: 1131129064}
   m_RootOrder: 38
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -168.46, y: -7.31, z: 0}
 --- !u!82 &1540848793
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14191,9 +14573,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -14278,9 +14661,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 0}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -14613,9 +14997,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -14796,9 +15181,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -15170,9 +15556,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -15257,9 +15644,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 0}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -15420,9 +15808,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -15735,9 +16124,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -15822,9 +16212,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -15985,9 +16376,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -16072,9 +16464,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -16311,9 +16704,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -16494,9 +16888,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -16605,14 +17000,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1779102907}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.13333336, y: -0.30708343, z: 1.570001}
+  m_LocalRotation: {x: -0.48986435, y: -0.50993425, z: -0.50993425, w: 0.48986435}
+  m_LocalPosition: {x: 0.133, y: -0.307, z: 1.599}
   m_LocalScale: {x: 0.125, y: 0.3000002, z: 0.1250001}
   m_Children:
   - {fileID: 1854291134}
   m_Father: {fileID: 1131129064}
   m_RootOrder: 70
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -92.3}
 --- !u!64 &1779102910
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16657,9 +17052,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -16992,9 +17388,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -17327,9 +17724,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -17414,9 +17812,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -17448,13 +17847,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1836856563}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.00078534114, z: 0, w: 0.9999997}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 77600028}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.09, z: 0}
 --- !u!23 &1836856565
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17577,9 +17976,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -17664,9 +18064,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -17847,9 +18248,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -17958,7 +18360,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1854291133}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.14, y: 0.147, z: -0.198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1779102908}
@@ -18086,9 +18488,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -18173,9 +18576,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -18336,9 +18740,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -18372,14 +18777,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1930453015}
-  m_LocalRotation: {x: -0.43436527, y: 0.55796665, z: -0.55796665, w: 0.43436527}
+  m_LocalRotation: {x: -0.5367654, y: 0.4603075, z: -0.63328147, w: 0.31457043}
   m_LocalPosition: {x: 0.17166667, y: 0.52750015, z: 1.2660002}
   m_LocalScale: {x: 0.125, y: 0.3, z: 0.125}
   m_Children:
   - {fileID: 993497373}
   m_Father: {fileID: 1131129064}
   m_RootOrder: 43
-  m_LocalEulerAnglesHint: {x: 0, y: 104.2, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.200001, y: 90.00001, z: -112.97}
 --- !u!82 &1930453017
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18519,9 +18924,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -18606,9 +19012,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 0}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -18640,13 +19047,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1934528870}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.72356975, z: 0, w: 0.6902513}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 365746759}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 92.7, z: 0}
 --- !u!23 &1934528872
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18865,9 +19272,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -18934,7 +19342,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1945706131
 GameObject:
@@ -19058,7 +19466,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955439138
 GameObject:
@@ -19138,9 +19546,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -19453,9 +19862,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -19540,9 +19950,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -19779,9 +20190,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -19962,9 +20374,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -20221,9 +20634,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -20460,9 +20874,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -20643,9 +21058,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
@@ -20844,7 +21260,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4314339884225262, guid: eae5235c2dcf7544fa3bbd931233e625, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eae5235c2dcf7544fa3bbd931233e625, type: 2}
@@ -21023,9 +21439,10 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: ffbd1fbc28ae75d4494541cc8c35dcb7, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: cf757c314f8b77e4c9939218574eb87c, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 8f0eeb86cbf972e41ba6c5202edbd7ef,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,

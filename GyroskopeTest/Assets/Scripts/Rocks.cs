@@ -59,8 +59,8 @@ public class Rocks : MonoBehaviour {
             return;
         }
         Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
-      //  audioSource.clip = miningSound;
-      //  audioSource.Play();
+        audioSource.clip = miningSound;
+        audioSource.Play();
 
 
     }
@@ -69,8 +69,8 @@ public class Rocks : MonoBehaviour {
     {
         if (hasTreasure)
         {
-            //  audioSource.clip = DestroySoundTreasure;
-            //  audioSource.Play();
+              audioSource.clip = DestroySoundTreasure;
+             audioSource.Play();
             //  Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
             // Instantiate(DestroyParticle,this.transform.position, Quaternion.identity);
             //noch Randomisieren?

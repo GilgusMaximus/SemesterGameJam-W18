@@ -9,7 +9,7 @@ public class GameScoreManager : MonoBehaviour {
     public static int currentScore=0;
     public float timer = 600;//time in seconds
 
-    public float rtime;//remaining time
+    public static float rtime;//remaining time
     public static bool isCounting;
 
     public Text TimeDisplay;
@@ -20,7 +20,10 @@ public class GameScoreManager : MonoBehaviour {
 
     private void Start()
     {
-        rtime = timer;
+        if (rtime == 0)
+        {
+            rtime = timer;
+        }
         isCounting = true;
     }
 

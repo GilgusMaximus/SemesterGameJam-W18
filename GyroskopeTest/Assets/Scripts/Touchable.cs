@@ -19,6 +19,18 @@ public class Touchable : MonoBehaviour, IPointerClickHandler {
                 r.ReduceHealth();
             }
         }
+        else
+        {
+            Ladder l = eventData.pointerPress.GetComponent<Ladder>();
+            if(l != null)
+            {
+                l.Respawn();
+            }
+
+
+
+
+        }
 
         //Destroy(gameObject);
     }
