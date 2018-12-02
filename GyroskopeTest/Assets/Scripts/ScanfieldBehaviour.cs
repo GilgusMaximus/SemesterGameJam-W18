@@ -20,9 +20,8 @@ public class ScanfieldBehaviour : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.gameObject.GetComponent<Treasure>()) {
+        if (other.gameObject.GetComponent<Treasure>()!=null) {
             //Cast ray from scanner to treasure and spawn particle at intersection
-
             
             RaycastHit hit;
             Physics.Raycast(transform.parent.position, (other.gameObject.transform.position - transform.parent.position), out hit,
