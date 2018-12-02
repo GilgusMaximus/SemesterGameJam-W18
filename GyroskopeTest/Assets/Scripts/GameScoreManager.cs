@@ -43,9 +43,11 @@ public class GameScoreManager : MonoBehaviour {
                 TimeDisplay.text = "0";
                 isCounting = false;
                 //TODO verloren, naechste scene?
-                Highscores.AddNewHighscore(Menu.playerName, currentScore);//hochladen des highscores TODO
+                if (SceneManager.GetActiveScene().name=="PlayScene")//only upload in highscore scene
+                {
+                    Highscores.AddNewHighscore(Menu.playerName, currentScore);//hochladen des highscores TODO
+                }
 
-                //TODO TOUCH DISABLE
 
                 //Anzeigen Highscore und enable laden naechster scene durch button
                 if (!scoredisplay.activeInHierarchy)
