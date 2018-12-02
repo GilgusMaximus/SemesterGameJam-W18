@@ -1745,7 +1745,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8bcb27d59d8078b44a2a1bd5c6819e92, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d80db3d0102ec8245bb7cdfb8ac8ba37, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1976,6 +1976,48 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0000076293945, y: 0}
   m_SizeDelta: {x: 640, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1903343633
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4591983865726210, guid: 954f05e3271080a4b9cebb4cba6a4572, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 844.6227
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591983865726210, guid: 954f05e3271080a4b9cebb4cba6a4572, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1124.0723
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591983865726210, guid: 954f05e3271080a4b9cebb4cba6a4572, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 27540776
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591983865726210, guid: 954f05e3271080a4b9cebb4cba6a4572, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591983865726210, guid: 954f05e3271080a4b9cebb4cba6a4572, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591983865726210, guid: 954f05e3271080a4b9cebb4cba6a4572, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591983865726210, guid: 954f05e3271080a4b9cebb4cba6a4572, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4591983865726210, guid: 954f05e3271080a4b9cebb4cba6a4572, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 954f05e3271080a4b9cebb4cba6a4572, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &2077497700
 GameObject:
   m_ObjectHideFlags: 0

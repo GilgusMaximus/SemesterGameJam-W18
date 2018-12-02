@@ -51,6 +51,8 @@ public class Menu : MonoBehaviour {
         {
             playerName = "Anomyous_Owl";
         }
+        GameScoreManager.resetScore();
+        
         SceneManager.LoadScene(sceneName);
     }
 

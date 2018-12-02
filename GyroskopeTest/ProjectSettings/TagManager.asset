@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Treasure
+  - Gold
+  - Silver
+  - Diamond
+  - Emerald
+  - Sapphire
+  - Ruby
+  - Dynamite
+  - Clock
   layers:
   - Default
   - TransparentFX

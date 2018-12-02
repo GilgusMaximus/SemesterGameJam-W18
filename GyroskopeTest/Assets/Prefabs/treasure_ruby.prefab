@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 65063058580981616}
   m_Layer: 0
   m_Name: treasure_ruby
-  m_TagString: Treasure
+  m_TagString: Ruby
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
