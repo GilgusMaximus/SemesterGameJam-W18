@@ -26,7 +26,12 @@ public class ScanfieldBehaviour : MonoBehaviour {
             RaycastHit hit;
             Physics.Raycast(transform.parent.position, (other.gameObject.transform.position - transform.parent.position), out hit,
                                 Mathf.Infinity, layerMask);
+
             Vector3 spawnPoint = hit.point;
+            Vector3 treasureToPlayer = transform.parent.position - hit.point;
+            treasureToPlayer = treasureToPlayer.normalized;
+            treasureToPlayer *= 0.2f;
+            spawnPoint += treasureToPlayer;
 
             switch (other.gameObject.tag)
             {

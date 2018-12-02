@@ -12,6 +12,7 @@ public class StartScan : MonoBehaviour {
     public float scanOfftime = 2.0f;
     private float scanTimeLeft;
     private float scanOfftimeLeft;
+    public static bool scannerActive = false;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,7 @@ public class StartScan : MonoBehaviour {
         scanTimeLeft = scanTime;
         scanOfftimeLeft = scanOfftime;
         scanner.SetActive(false);
+        scannerActive = false;
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,7 @@ public class StartScan : MonoBehaviour {
             image.fillAmount -= Time.deltaTime / scanTime;
             if(scanTimeLeft < 0) {
                 scanner.SetActive(false);
+                scannerActive = false;
                 scanTimeLeft = scanTime;
             }
         }
@@ -46,5 +49,6 @@ public class StartScan : MonoBehaviour {
     public void Startscan() {
         button.enabled = false;
         scanner.SetActive(true);
+        scannerActive = true;
     }
 }

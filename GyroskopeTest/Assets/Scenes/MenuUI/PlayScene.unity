@@ -21849,6 +21849,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114521421121010852, guid: eae5235c2dcf7544fa3bbd931233e625,
+        type: 2}
+      propertyPath: pickaxe
+      value: 
+      objectReference: {fileID: 1950091545862500, guid: fc3595a27a4a0574ba104aaba4daded6,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eae5235c2dcf7544fa3bbd931233e625, type: 2}
   m_IsPrefabAsset: 0
