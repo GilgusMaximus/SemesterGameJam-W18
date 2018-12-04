@@ -71,9 +71,7 @@ public class Rocks : MonoBehaviour {
         {
               audioSource.clip = DestroySoundTreasure;
              audioSource.Play();
-            //  Instantiate(MiningParticle, this.transform.position, Quaternion.identity);
-            // Instantiate(DestroyParticle,this.transform.position, Quaternion.identity);
-            //noch Randomisieren?
+            
             tr.GetComponent<Treasure>().discovered = true;
 
             GameScoreManager.addScore(Treasure.GetComponent<Treasure>().Wert);//TODO add specific score

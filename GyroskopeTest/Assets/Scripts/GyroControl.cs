@@ -40,6 +40,8 @@ public class GyroControl : MonoBehaviour {
             myGyro = Input.gyro;//sets our gyroscpe to the default gyro of device
             myGyro.enabled = true;//activate it
 
+            cameraContainer.transform.rotation = myGyro.attitude; //test
+
             return true;
         }
         return false;

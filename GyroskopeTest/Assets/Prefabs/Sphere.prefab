@@ -1052,7 +1052,8 @@ MonoBehaviour:
   dissolveSpeed: 0.1
   discovered: 0
   Wert: 0
-  treasureparticle: {fileID: 0}
+  treasureparticle: {fileID: 198996813813768928, guid: d2e0a33af272e804e8f569951003f005,
+    type: 2}
 --- !u!114 &114509717689005632
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -207,7 +207,8 @@ MonoBehaviour:
   dissolveSpeed: 0.1
   discovered: 0
   Wert: 0
-  treasureparticle: {fileID: 0}
+  treasureparticle: {fileID: 198141637586873756, guid: 4c1d8caa911a470498bbaaacb0d58402,
+    type: 2}
 --- !u!135 &135289910425061214
 SphereCollider:
   m_ObjectHideFlags: 1
