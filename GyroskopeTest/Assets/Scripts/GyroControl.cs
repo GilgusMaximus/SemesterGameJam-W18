@@ -12,6 +12,8 @@ public class GyroControl : MonoBehaviour {
     //stuff to test out gyro
     private GameObject cameraContainer;
 
+   // private Quaternion offset;
+
 	void Start () {
 
         cameraContainer = new GameObject("CameraContainer");
@@ -20,16 +22,24 @@ public class GyroControl : MonoBehaviour {
         transform.SetParent(cameraContainer.transform);
 
         gEnabled = enableGyro();
-	}
+
+    }
+
+    /*Quaternion GyroToUnity(Quaternion q)
+    {
+        return new Quaternion(q.x,q.y,-q.z,-q.w);
+    }*/
 	
 	void Update () {
 
-        if (gEnabled)
-        {
-            //TODO stabelizer
-            cameraContainer.transform.Rotate(0,-myGyro.rotationRateUnbiased.y,0);
-            transform.Rotate(-myGyro.rotationRateUnbiased.x, 0, 0);
-        }
+            if (gEnabled)
+            {
+                cameraContainer.transform.Rotate(0,-myGyro.rotationRateUnbiased.y,0);
+                transform.Rotate(-myGyro.rotationRateUnbiased.x, 0, 0);
+
+               // cameraContainer.transform.rotation = offset * GyroToUnity(myGyro.attitude); Testing this right now
+
+            }
 
 	}
 
@@ -40,7 +50,8 @@ public class GyroControl : MonoBehaviour {
             myGyro = Input.gyro;//sets our gyroscpe to the default gyro of device
             myGyro.enabled = true;//activate it
 
-            cameraContainer.transform.rotation = myGyro.attitude; //TODO test
+            //offset = transform.rotation * Quaternion.Inverse(GyroToUnity(myGyro.attitude));
+            //cameraContainer.transform.rotation = offset* GyroToUnity(myGyro.attitude);
 
             return true;
         }
