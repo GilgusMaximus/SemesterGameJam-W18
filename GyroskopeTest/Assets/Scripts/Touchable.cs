@@ -28,9 +28,6 @@ public class Touchable : MonoBehaviour, IPointerClickHandler {
                 l.Respawn();
             }
 
-
-
-
         }
 
         //Destroy(gameObject);
