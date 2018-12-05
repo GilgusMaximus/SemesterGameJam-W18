@@ -9,10 +9,7 @@ public class GyroControl : MonoBehaviour {
     private bool gEnabled;//since not every device has a gyroscope
     private Gyroscope myGyro;//actual gyroscope which lets us get the attitude
 
-    //stuff to test out gyro
     private GameObject cameraContainer;
-
-   // private Quaternion offset;
 
 	void Start () {
 
@@ -25,19 +22,20 @@ public class GyroControl : MonoBehaviour {
 
     }
 
-    /*Quaternion GyroToUnity(Quaternion q)
+    Quaternion GyroToUnity(Quaternion q) //covert gyro left hand coords to unity right hand coords
     {
-        return new Quaternion(q.x,q.y,-q.z,-q.w);
-    }*/
+        return new Quaternion(q.x,q.z,q.y,-q.w);
+    }
 	
 	void Update () {
 
             if (gEnabled)
             {
-                cameraContainer.transform.Rotate(0,-myGyro.rotationRateUnbiased.y,0);
-                transform.Rotate(-myGyro.rotationRateUnbiased.x, 0, 0);
+            //cameraContainer.transform.Rotate(0,-myGyro.rotationRateUnbiased.y,0); //ALt: Rotate(), dies verursacht ungenauigkeiten
+            //transform.Rotate(-myGyro.rotationRateUnbiased.x, 0, 0);
 
-               // cameraContainer.transform.rotation = offset * GyroToUnity(myGyro.attitude); Testing this right now
+            transform.rotation = GyroToUnity(myGyro.attitude);//Neu: rotation=Quaternion
+            transform.Rotate(90f,0,0);
 
             }
 
@@ -50,8 +48,8 @@ public class GyroControl : MonoBehaviour {
             myGyro = Input.gyro;//sets our gyroscpe to the default gyro of device
             myGyro.enabled = true;//activate it
 
-            //offset = transform.rotation * Quaternion.Inverse(GyroToUnity(myGyro.attitude));
-            //cameraContainer.transform.rotation = offset* GyroToUnity(myGyro.attitude);
+            //transform.rotation = GyroToUnity(myGyro.attitude);//ALt: set offset zu anfang
+            //transform.Rotate(90f, 0, 0);//solves issue that gyro's z axis is same as unity z axis
 
             return true;
         }
