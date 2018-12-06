@@ -49,7 +49,7 @@ public class GyroControl : MonoBehaviour {
 
     private bool enableGyro()//checks and sets the gyroscope
     {
-        if (true)//SystemInfo.supportsGyroscope)
+        if (SystemInfo.supportsGyroscope)
         {
             myGyro = Input.gyro;//sets our gyroscpe to the default gyro of device
             myGyro.enabled = true;//activate it
