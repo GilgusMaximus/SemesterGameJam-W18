@@ -68,6 +68,7 @@ public class GameScoreManager : MonoBehaviour {
     public static void resetScore()//Caution: Always call this before embarking a new run!
     {
         currentScore = 0;
+        rtime = 0;
     }
 
     public static void addScore(int i)

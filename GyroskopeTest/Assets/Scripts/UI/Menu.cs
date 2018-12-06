@@ -27,6 +27,11 @@ public class Menu : MonoBehaviour {
 
     public void LoadScene(string sceneName)
     {
+        if (sceneName.Equals("Menu"))//Maarten: reset some stats
+        {
+            GameScoreManager.resetScore();
+        }
+
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1;
 

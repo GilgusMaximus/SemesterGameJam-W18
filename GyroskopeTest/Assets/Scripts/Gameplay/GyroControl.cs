@@ -11,6 +11,8 @@ public class GyroControl : MonoBehaviour {
 
     private GameObject cameraContainer;
 
+    private Quaternion prevRot=new Quaternion(0,0,0,0);
+
 	void Start () {
 
         cameraContainer = new GameObject("CameraContainer");
@@ -29,13 +31,17 @@ public class GyroControl : MonoBehaviour {
 	
 	void Update () {
 
-            if (gEnabled)
+            if (gEnabled&&Time.timeScale!=0)
             {
             //cameraContainer.transform.Rotate(0,-myGyro.rotationRateUnbiased.y,0); //ALt: Rotate(), dies verursacht ungenauigkeiten
             //transform.Rotate(-myGyro.rotationRateUnbiased.x, 0, 0);
 
-            transform.rotation = GyroToUnity(myGyro.attitude);//Neu: rotation=Quaternion
+            transform.rotation = Quaternion.Slerp(transform.rotation, GyroToUnity(myGyro.attitude), 60 * Time.deltaTime);
+
+            //transform.rotation = v1;//GyroToUnity(myGyro.attitude);//Neu: rotation=Quaternion
             transform.Rotate(90f,0,0);
+
+            prevRot = transform.rotation;
 
             }
 
@@ -43,7 +49,7 @@ public class GyroControl : MonoBehaviour {
 
     private bool enableGyro()//checks and sets the gyroscope
     {
-        if (SystemInfo.supportsGyroscope)
+        if (true)//SystemInfo.supportsGyroscope)
         {
             myGyro = Input.gyro;//sets our gyroscpe to the default gyro of device
             myGyro.enabled = true;//activate it
