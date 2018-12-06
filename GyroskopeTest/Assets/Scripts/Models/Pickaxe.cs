@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Pickaxe : MonoBehaviour {
+    [Tooltip("Das Pickaxe prefab")]
     public GameObject pickaxe;
+    [Tooltip("Die Entfernung vom stein ,wo das object erzeugt wird")]
     public float distanceFromRock;
+    [Tooltip("Wie lange das object bleibt bevor es wieder verschwindet(min die animations zeit)")]
     public float stayTime;
-    public GameObject pick;
-    public bool spawned;
+    private GameObject pick;
+    private bool spawned;
     private float time;
     // Use this for initialization
     void Start () {
@@ -17,9 +20,9 @@ public class Pickaxe : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (spawned)
+        if (spawned) //wenn es eine picke gibt
         {
-            time -= Time.deltaTime;
+            time -= Time.deltaTime; //zeit herunterzählen und dann die picke nach gewisser zeit zerstören
             if (time <= 0)
             {
                 Destroy(pick);
@@ -31,16 +34,11 @@ public class Pickaxe : MonoBehaviour {
 
     public void SpawnPickaxe(PointerEventData eventData)
     {
-        Destroy(pick);
-
-        //float hypothenuse = (Camera.main.transform.position - eventData.pointerPress.transform.position).magnitude;
-        //float kathete = (new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.z) - new Vector2(eventData.pointerPress.transform.position.x, eventData.pointerPress.transform.position.z)).magnitude;
-
-
-            pick = Instantiate(pickaxe, eventData.pointerPress.transform.position + (Camera.main.transform.position - eventData.pointerPress.transform.position).normalized * distanceFromRock,Quaternion.identity);
-        // pick.GetComponent<Animation>().Play();
-        pick.transform.LookAt(Camera.main.transform);
-            spawned = true;
+        Destroy(pick);// falls noch eine picke da ist wird sie zerstört
+            pick = Instantiate(pickaxe, eventData.pointerPress.transform.position + (Camera.main.transform.position - eventData.pointerPress.transform.position).normalized * distanceFromRock,Quaternion.identity); // die picke wird erzeugt
+      
+        pick.transform.LookAt(Camera.main.transform); // die rotation der picke wird richtig gesetzte;
+            spawned = true;  //die flag dass eine spitzhacke erzeugt wurde wird gesetzte
         
 
     }

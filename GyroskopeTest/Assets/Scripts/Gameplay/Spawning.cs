@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Spawning : MonoBehaviour {
 
-    private Rocks[] rocks;
-
-    public GameObject[] Tresures;
-     private int count;
+    private Rocks[] rocks;  //Alle steine
+    [Tooltip("Die vordefinierten SChätze")]
+    public GameObject[] Tresures; 
+   
    
     private List<int> treasureNumbers;
 
@@ -17,14 +17,14 @@ public class Spawning : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 
-         rocks =  GameObject.FindObjectsOfType<Rocks>();
+         rocks =  GameObject.FindObjectsOfType<Rocks>();  // alle steine in der szene finden
 
 
-        treasureNumbers = new List<int>();
+        treasureNumbers = new List<int>();      
        
 
 
-        while(treasureNumbers.Count!= Tresures.Length)
+        while(treasureNumbers.Count!= Tresures.Length)      // eine int Liste wird erstellt und mit verschiedenen zufälligen werten befüllt
         {
             int x =Random.Range(0, rocks.Length);
 
@@ -36,17 +36,19 @@ public class Spawning : MonoBehaviour {
 
 
         }
-        int[] temp = treasureNumbers.ToArray();
 
 
-        for (int i = 0; i < temp.Length; i++)
+        int[] temp = treasureNumbers.ToArray();  //die Liste wird zum array gemacht
+
+
+        for (int i = 0; i < temp.Length; i++)       // für jede Zahl in der treasureNumbersListe wird der dem ensprechende stein aus dem rock array befüllt
         {
 
 
             rocks[temp[i]].hasTreasure = true;
-            rocks[temp[i]].Treasure = Tresures[count];
-                count ++;
-            Debug.Log(temp[i]);
+            rocks[temp[i]].Treasure = Tresures[i];  //count entfernt vllt bug?
+             
+            //Debug.Log(temp[i]);
         }
 
         
@@ -54,10 +56,7 @@ public class Spawning : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
 
  

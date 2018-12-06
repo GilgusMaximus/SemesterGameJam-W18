@@ -5,12 +5,16 @@ using UnityEngine;
 public class Treasure : MonoBehaviour {
 
     private Vector3 playerpos;
+    [Tooltip("die geschw. mit der der schatz zum spieler fliegt")]
     public float speed;
     private Vector3 direction;
+    [Tooltip("der radius in dem aufgesammelt wird")]
     public float aufsammelRadius;
-    public bool dissolve;
-    private MeshRenderer renderer;
+    private bool dissolve;
+    private MeshRenderer render;
+    [Tooltip("die geschw. mit der es verschwindet")]
     public float dissolveSpeed;
+    [Tooltip("Ob der stein in dem sich der Schatz befindet zerstört wurde")]
     public bool discovered;
 
     public int Wert;
@@ -24,38 +28,38 @@ public class Treasure : MonoBehaviour {
         Debug.Log(playerpos);
         direction = (playerpos - this.transform.position).normalized;
 
-        renderer = this.gameObject.GetComponent<MeshRenderer>();
+        render = this.gameObject.GetComponent<MeshRenderer>();
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (discovered)
+        if (discovered) //Wenn discovered/der stein der den schatz beinhaltet zerstört wurde
         {
-            if (!instantiated)
+            if (!instantiated) //das wird nur beim ersten update nach dem entdecken ausgeführt
             {
                 if (treasureparticle != null)
                 {
-                    Instantiate(treasureparticle, this.transform.position, Quaternion.identity);
+                    Instantiate(treasureparticle, this.transform.position, Quaternion.identity);  //erschaffung des particle systems
                     instantiated = true;
                 }
             }
-            if ((this.transform.position - playerpos).magnitude >= aufsammelRadius)
+            if ((this.transform.position - playerpos).magnitude >= aufsammelRadius)  //wenn die entfernung zum spieler/ziel größer als der aufsammelradius ist
             {
-                // Debug.Log("Go");
-                this.transform.Translate(direction * Time.deltaTime * speed);
+            
+                this.transform.Translate(direction * Time.deltaTime * speed); //gehe zum spieler/ziel
             }
             else
             {
-                Dissapear();
+                Dissapear();//flag um das verwinden einzuleiten wird gesetzt
             }
 
-            if (dissolve)
+            if (dissolve) //wenn dissolve flag gesetzt
             {
 
-                renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, renderer.material.color.a - dissolveSpeed * Time.deltaTime);
+                render.material.color = new Color(render.material.color.r, render.material.color.g, render.material.color.b, render.material.color.a - dissolveSpeed * Time.deltaTime); //alpha des maerials runersetzen
 
-                if (renderer.material.color.a <= 0)
+                if (render.material.color.a <= 0) //wenn alpha klein genug ist zerstöre das Object
                 {
                     Destroy(this.gameObject);
                 }
@@ -66,9 +70,9 @@ public class Treasure : MonoBehaviour {
 
 	}
 
-    public void Dissapear()
+    public void Dissapear()  //flag um das verwinden einzuleiten wird gesetzt
     {
-        //addScore
+        
 
         dissolve = true;
 

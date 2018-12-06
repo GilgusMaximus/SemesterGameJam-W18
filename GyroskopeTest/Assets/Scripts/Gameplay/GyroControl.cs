@@ -11,7 +11,7 @@ public class GyroControl : MonoBehaviour {
 
     private GameObject cameraContainer;
 
-    private Quaternion prevRot=new Quaternion(0,0,0,0);
+   // private Quaternion prevRot=new Quaternion(0,0,0,0);
 
 	void Start () {
 
@@ -41,7 +41,7 @@ public class GyroControl : MonoBehaviour {
             //transform.rotation = v1;//GyroToUnity(myGyro.attitude);//Neu: rotation=Quaternion
             transform.Rotate(90f,0,0);
 
-            prevRot = transform.rotation;
+           // prevRot = transform.rotation;
 
             }
 

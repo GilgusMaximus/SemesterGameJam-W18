@@ -5,21 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Ladder : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	
 	
 	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Respawn();
-        }
-	}
+	
 
 
-    public void Respawn()
+    public void Respawn()  //die scene wird neu geladen
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 

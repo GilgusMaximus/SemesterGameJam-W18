@@ -9,7 +9,7 @@ public class LightFlickering : MonoBehaviour{
 	private float intensity;
 	private float startIntensity;
 	public float minIntensity = 5f, maxIntensity = 15f;
-	private bool flickering = false;
+	//private bool flickering = false;
 	public float minTimeBetweenFLicks = 2f;
 	private float remainingTimeTillFLickering;
 	

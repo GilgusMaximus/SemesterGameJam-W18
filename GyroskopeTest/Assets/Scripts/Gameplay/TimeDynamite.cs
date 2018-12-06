@@ -12,7 +12,7 @@ public class TimeDynamite : MonoBehaviour {
 
   
 
-    public void apply()
+    public void apply()  //zeit wird abgezofen oder hinzugefügt
     {
       
 
