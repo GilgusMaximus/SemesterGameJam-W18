@@ -54,8 +54,8 @@ public class GyroControl : MonoBehaviour {
             myGyro = Input.gyro;//sets our gyroscpe to the default gyro of device
             myGyro.enabled = true;//activate it
 
-            //transform.rotation = GyroToUnity(myGyro.attitude);//ALt: set offset zu anfang
-            //transform.Rotate(90f, 0, 0);//solves issue that gyro's z axis is same as unity z axis
+            transform.rotation = GyroToUnity(myGyro.attitude);//ALt: set offset zu anfang
+            transform.Rotate(90f, 0, 0);//solves issue that gyro's z axis is same as unity z axis
 
             return true;
         }
