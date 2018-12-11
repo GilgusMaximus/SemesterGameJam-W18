@@ -141,18 +141,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  TreasurePoint: {x: 0, y: 0, z: 0}
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
-  miningSound: {fileID: 0}
-  DestroySoundNothing: {fileID: 8300000, guid: 1c489a5ff5e8b5a4eaf633d54e7684c3, type: 3}
-  DestroySoundTreasure: {fileID: 0}
+  miningSound: {fileID: 8300000, guid: a5cdc5af0e663f345bbf307bb7529ecb, type: 3}
+  DestroySoundNothing: {fileID: 8300000, guid: b86b60c28459bd046ad9d6cf675f569a, type: 3}
+  DestroySoundTreasure: {fileID: 8300000, guid: 6a410ad4ba89b744cb3505315a5da33e,
+    type: 3}
   MiningParticle: {fileID: 198417458396227976, guid: 8d5c79518018ffa4191ee6efb235d5a4,
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
     type: 2}
-  index: 0
   Explosion: {fileID: 0}
 --- !u!114 &114737189529690664
 MonoBehaviour:

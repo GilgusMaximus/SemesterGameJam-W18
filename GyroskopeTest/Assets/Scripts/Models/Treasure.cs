@@ -28,7 +28,7 @@ public class Treasure : MonoBehaviour {
         Debug.Log(playerpos);
         direction = (playerpos - this.transform.position).normalized;
 
-        render = this.gameObject.GetComponent<MeshRenderer>();
+        render = this.gameObject.GetComponentInChildren<MeshRenderer>();
 
 	}
 	
