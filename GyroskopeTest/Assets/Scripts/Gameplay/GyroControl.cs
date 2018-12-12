@@ -11,7 +11,7 @@ public class GyroControl : MonoBehaviour {
 
     private GameObject cameraContainer;
 
-   // private Quaternion prevRot=new Quaternion(0,0,0,0);
+    public float sens = 60f;//var for accelerating or slowing the look around-motion
 
 	void Start () {
 
@@ -31,17 +31,16 @@ public class GyroControl : MonoBehaviour {
 	
 	void Update () {
 
-            if (gEnabled&&Time.timeScale!=0)
+            if (gEnabled)//&&Time.timeScale!=0)
             {
-            //cameraContainer.transform.Rotate(0,-myGyro.rotationRateUnbiased.y,0); //ALt: Rotate(), dies verursacht ungenauigkeiten
-            //transform.Rotate(-myGyro.rotationRateUnbiased.x, 0, 0);
+            cameraContainer.transform.Rotate(0,-myGyro.rotationRateUnbiased.y*sens*Time.deltaTime,0); //use Rotate() with gyroRotation, smooting with sens and deltatime
+            transform.Rotate(-myGyro.rotationRateUnbiased.x*sens*Time.deltaTime, 0, 0);
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, GyroToUnity(myGyro.attitude), 60 * Time.deltaTime);
+            // transform.rotation = Quaternion.Slerp(transform.rotation, GyroToUnity(myGyro.attitude), 60 * Time.deltaTime); //this is also a very good approach to gyro, 
+                                                                                                                             //but setting the rotation directly results 
+                                                                                                                             //in errors for specific values
 
-            //transform.rotation = v1;//GyroToUnity(myGyro.attitude);//Neu: rotation=Quaternion
-            transform.Rotate(90f,0,0);
-
-           // prevRot = transform.rotation;
+            //transform.Rotate(90f,0,0);
 
             }
 
@@ -54,7 +53,7 @@ public class GyroControl : MonoBehaviour {
             myGyro = Input.gyro;//sets our gyroscpe to the default gyro of device
             myGyro.enabled = true;//activate it
 
-            transform.rotation = GyroToUnity(myGyro.attitude);//ALt: set offset zu anfang
+            transform.rotation = GyroToUnity(myGyro.attitude);//setting the initial rot to gyro attitude
             transform.Rotate(90f, 0, 0);//solves issue that gyro's z axis is same as unity z axis
 
             return true;
