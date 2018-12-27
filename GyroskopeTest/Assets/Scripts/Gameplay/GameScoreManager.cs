@@ -18,7 +18,7 @@ public class GameScoreManager : MonoBehaviour {
 
     public static bool l;
 
-    private void Start()
+    private void Start()//Aufpassen: wenn man in einem level mehrere scenen läd, darf man den score nicht resetten!
     {
         if (rtime <= 0)
         {
@@ -74,6 +74,8 @@ public class GameScoreManager : MonoBehaviour {
     public static void addScore(int i)
     {
         currentScore += i;
+
+        CurrencyManager.incrementMoney(i / 2);//TODO MAARTEN einfach irgendeinen value addieren, können wir uns ja noch entscheiden
     }
 
     public void ButtonHandleLoad()//invoked by button at end of round to load back into menu
