@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 5a92b0327632a6a4e935a8a7fc6b420a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.00057739834, g: 0.0005917124, b: 0.0024969568, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -176,7 +176,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &33085036 stripped
@@ -247,7 +248,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &43961914 stripped
@@ -352,7 +354,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.118332006
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114897423163238794, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &219132461 stripped
@@ -485,7 +488,8 @@ Prefab:
       propertyPath: m_Name
       value: treasure_ruby (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114502728651863398, guid: 6ff66279f19419d47bbd465a2298170c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6ff66279f19419d47bbd465a2298170c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &254713247 stripped
@@ -659,7 +663,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &371348364 stripped
@@ -722,7 +727,8 @@ Prefab:
       propertyPath: m_Name
       value: treasures_silver (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114897423163238794, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &405938665 stripped
@@ -868,7 +874,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &583566826 stripped
@@ -931,7 +938,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -20.884
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114381415443415606, guid: d4cb369a45375284cb7c00e7fb0ab231, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d4cb369a45375284cb7c00e7fb0ab231, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &589708292 stripped
@@ -994,7 +1002,8 @@ Prefab:
       propertyPath: m_Name
       value: treasures_silver (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114897423163238794, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &640956186 stripped
@@ -1069,7 +1078,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 19.573002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114381415443415606, guid: d4cb369a45375284cb7c00e7fb0ab231, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d4cb369a45375284cb7c00e7fb0ab231, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &699021730 stripped
@@ -1132,7 +1142,8 @@ Prefab:
       propertyPath: m_Name
       value: treasures_silver (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114897423163238794, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &712986389 stripped
@@ -1203,7 +1214,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &727429242 stripped
@@ -1278,7 +1290,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -29.274002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114381415443415606, guid: d4cb369a45375284cb7c00e7fb0ab231, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d4cb369a45375284cb7c00e7fb0ab231, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &777298798 stripped
@@ -1349,7 +1362,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &807170510 stripped
@@ -1412,7 +1426,8 @@ Prefab:
       propertyPath: m_Name
       value: treasures_silver (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114897423163238794, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &852073917 stripped
@@ -1573,7 +1588,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &957858548 stripped
@@ -1636,7 +1652,8 @@ Prefab:
       propertyPath: m_Name
       value: treasures_silver (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114897423163238794, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1053521880 stripped
@@ -1707,7 +1724,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1083255248 stripped
@@ -1770,7 +1788,8 @@ Prefab:
       propertyPath: m_Name
       value: treasures_silver (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114897423163238794, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1126471014 stripped
@@ -1957,7 +1976,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1170912451 stripped
@@ -2098,7 +2118,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1227193685 stripped
@@ -2169,7 +2190,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1304813024 stripped
@@ -2360,7 +2382,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.307007
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114502728651863398, guid: 6ff66279f19419d47bbd465a2298170c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6ff66279f19419d47bbd465a2298170c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1356780885 stripped
@@ -2477,7 +2500,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.124758005
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1508982340 stripped
@@ -2664,7 +2688,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1667874067 stripped
@@ -2777,7 +2802,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1734019819 stripped
@@ -2936,7 +2962,8 @@ Prefab:
       propertyPath: m_Name
       value: treasures_silver (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114897423163238794, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1847362288 stripped
@@ -2999,7 +3026,8 @@ Prefab:
       propertyPath: m_Name
       value: treasures_silver (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114897423163238794, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: fba48768db6d87e428aa61e8350c1242, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1864543554 stripped
@@ -3201,7 +3229,8 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -25.413002
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114256551044211822, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e5049bcf2aa9b404e927681363f4b0bc, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &2013944679 stripped
