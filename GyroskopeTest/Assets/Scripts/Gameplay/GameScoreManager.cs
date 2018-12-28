@@ -83,7 +83,7 @@ public class GameScoreManager : MonoBehaviour {
         if (scoredisplay.activeInHierarchy)
         {
             scoredisplay.SetActive(false);
-            isCounting = true;
+            //isCounting = true;
             SceneManager.LoadScene("Menu");
         }
     }
