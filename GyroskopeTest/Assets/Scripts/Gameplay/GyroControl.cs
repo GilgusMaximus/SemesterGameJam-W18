@@ -17,10 +17,8 @@ public class GyroControl : MonoBehaviour {
     //Accelerometer Zeugs
     public Text AccelerometerDebug;
 
-    private Vector3 lowPassValue = Vector3.zero;
-    private static float AccelerometerUpdateInterval = 1.0f / 60.0f;
-    private static float LowPassKernelWithInSeconds = 0.5f;
-    private float LowPassFilterFactor = AccelerometerUpdateInterval / LowPassKernelWithInSeconds;
+    private int tiltcount = 0;
+    private bool isTilted=false;//flag to check if we tilt the phone back
 
     void Start () {
 
@@ -30,8 +28,6 @@ public class GyroControl : MonoBehaviour {
         transform.SetParent(cameraContainer.transform);
 
         gEnabled = enableGyro();
-
-        lowPassValue = Input.acceleration;
     }
 
     Quaternion GyroToUnity(Quaternion q) //covert gyro left hand coords to unity right hand coords
@@ -40,10 +36,14 @@ public class GyroControl : MonoBehaviour {
     }
 	
 	void Update () {
-
+        
             if (gEnabled&&Time.timeScale!=0)
             {
-            //getAcceleration();
+
+                if (getAcceleration())
+                {
+                    //TODO change level, do whatever event when the phone is tilted
+                }
 
             //cameraContainer.transform.Rotate(0,-myGyro.rotationRateUnbiased.y*sens*Time.deltaTime,0); //use Rotate() with gyroRotation, smooting with sens and deltatime
             //transform.Rotate(-myGyro.rotationRateUnbiased.x*sens*Time.deltaTime, 0, 0);
@@ -51,8 +51,7 @@ public class GyroControl : MonoBehaviour {
              transform.rotation = Quaternion.Slerp(transform.rotation, GyroToUnity(myGyro.attitude), 60 * Time.deltaTime); //this is also a very good approach to gyro, 
                                                                                                                              //but setting the rotation directly results 
                                                                                                                              //in errors for specific values
-
-            transform.Rotate(90f,0,0);
+             transform.Rotate(90f,0,0);
 
             }
 
@@ -64,17 +63,13 @@ public class GyroControl : MonoBehaviour {
         transform.Rotate(90f, 0, 0);//solves issue that gyro's z axis is same as unity z axis
     }
 
-    /*
-     * 
-     * 
-     */
 
-    public bool getAcceleration()
+    public bool getAcceleration()//Function to sample the accelerometer input. returns true if the phone was tilted on the x axis
     {
-
+      
         float fPeriod = 0.0f;
         Vector3 AccVal = Vector3.zero;
-
+        
         foreach (AccelerationEvent ac in Input.accelerationEvents)//calculate accelerometer average for this frame
         {
             AccVal += ac.acceleration * Time.deltaTime;
@@ -86,11 +81,22 @@ public class GyroControl : MonoBehaviour {
         }
 
         AccVal = (AccVal.magnitude) > 1 ? AccVal.normalized : AccVal;//normalize
+                                                                 
+        //AccelerometerDebug.text = AccVal.x.ToString();//debugging
 
-        //lowPassValue = Vector3.Lerp(lowPassValue, AccVal, LowPassFilterFactor);
+        if( isTilted && Mathf.Abs(AccVal.x) <= 0.2)//bringing phone back in upright position
+        {
+            isTilted = false;
+        }
 
-        float mag = AccVal.magnitude;
-        AccelerometerDebug.text = mag.ToString();//debugging
+        if (Mathf.Abs(AccVal.x)>=0.75 && !isTilted)//tilt is detected
+        {
+            tiltcount++;
+            AccelerometerDebug.text = "Tilts: "+tiltcount.ToString();//debugging
+            isTilted = true;
+
+            return true;
+        }
 
         return false;
     }
