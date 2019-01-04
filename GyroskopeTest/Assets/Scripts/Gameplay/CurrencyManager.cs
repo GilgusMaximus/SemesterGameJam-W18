@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class CurrencyManager : MonoBehaviour {
 
-    private int stabilität=0;
+    public static int stabilität=0; //TODO we need a way to determine on which level we are working on right now
 
-    public int mindStabi = 0;
+    public int mindStabi = 0; //required stability for the level
 
-    private static int currentMoney = 0;
+    public static int currentMoney = 0;
 
     public Text moneyDisplay;
 
@@ -17,6 +17,14 @@ public class CurrencyManager : MonoBehaviour {
     {
         resetMoney();
         resetStabilität();
+
+        LevelData d = SaveSystem.LoadData();
+        Debug.Log("Previous: Money: "+d.money+" Stability: "+d.stability); //Here we can just set our current money and stability
+    }
+
+    private void OnDestroy()//save data when we end the scene for debugging TODO: save our progress AFTER the level-up screen
+    {
+        SaveSystem.SaveData(this);
     }
 
     // Update is called once per frame
@@ -40,22 +48,27 @@ public class CurrencyManager : MonoBehaviour {
             currentMoney -= 100;
             incrementStabilität(1);
         }
+    
     }
 
     public static void incrementMoney(int i)
     {
         currentMoney += i;
-        
     }
 
-    public static void resetMoney()
+    public void resetMoney()
     {
         currentMoney = 0;
     }
 
-    public static int getMoney()
+    public int getMoney()
     {
         return currentMoney;
+    }
+
+    public int getStability()
+    {
+        return stabilität;
     }
 
     public void incrementStabilität(int i)
@@ -67,11 +80,6 @@ public class CurrencyManager : MonoBehaviour {
     public void resetStabilität()
     {
         stabilität = 0;
-    }
-
-    public int getStabilität()
-    {
-        return stabilität;
     }
 
 }

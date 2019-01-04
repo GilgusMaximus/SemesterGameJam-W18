@@ -18,6 +18,8 @@ public class GameScoreManager : MonoBehaviour {
 
     public static bool l;
 
+    CurrencyManager cm;
+
     private void Start()//Aufpassen: wenn man in einem level mehrere scenen läd, darf man den score nicht resetten!
     {
         if (rtime <= 0)
@@ -25,6 +27,8 @@ public class GameScoreManager : MonoBehaviour {
             rtime = timer;
         }
         isCounting = true;
+
+        cm = gameObject.GetComponent<CurrencyManager>();
     }
 
     private void Update()
