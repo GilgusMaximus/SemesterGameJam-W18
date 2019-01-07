@@ -19,6 +19,7 @@ public class CurrencyManager : MonoBehaviour {
         resetStabilität();
 
         LevelData d = SaveSystem.LoadData();
+        //moneyDisplay.text = d.money + " " + d.stability;
         Debug.Log("Previous: Money: "+d.money+" Stability: "+d.stability); //Here we can just set our current money and stability
     }
 
