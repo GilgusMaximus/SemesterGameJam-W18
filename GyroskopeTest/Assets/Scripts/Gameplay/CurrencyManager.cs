@@ -30,7 +30,7 @@ public class CurrencyManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        moneyDisplay.text = "Money: " + currentMoney;
+        //moneyDisplay.text = "Money: " + currentMoney;
 	}
 
     public void checkStabilität()//check if we have enough stability

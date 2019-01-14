@@ -92,7 +92,7 @@ public class GyroControl : MonoBehaviour {
         if (Mathf.Abs(AccVal.x)>=0.75 && !isTilted)//tilt is detected
         {
             tiltcount++;
-            AccelerometerDebug.text = "Tilts: "+tiltcount.ToString();//debugging
+            //AccelerometerDebug.text = "Tilts: "+tiltcount.ToString();//debugging
             isTilted = true;
 
             return true;
