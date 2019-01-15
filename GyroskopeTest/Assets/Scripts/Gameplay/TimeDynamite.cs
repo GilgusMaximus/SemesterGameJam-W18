@@ -6,7 +6,7 @@ public class TimeDynamite : MonoBehaviour {
 
     public bool istime;
     public int time;//in seconds
-#if UNITY_ANDROID && !UNITY_EDITOR
+/*#if UNITY_ANDROID && !UNITY_EDITOR
 public static AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 public static AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
 public static AndroidJavaObject vibrator = currentActivity.Call<AndroidJavaObject>("getSystemService", "vibrator");
@@ -15,18 +15,20 @@ public static AndroidJavaObject vibrator = currentActivity.Call<AndroidJavaObjec
     public static AndroidJavaObject currentActivity;
     public static AndroidJavaObject vibrator;
 #endif
-
+*/
   
 
     public static void Vibrate(long milliseconds)
     {
         if (isAndroid())
         {
-            vibrator.Call("vibrate", milliseconds);
+            // vibrator.Call("vibrate", milliseconds);
+            Handheld.Vibrate();
         }
         else
         {
             Handheld.Vibrate();
+            Debug.Log("Vibrate");
         }
     }
 

@@ -16,8 +16,8 @@ public class ProgressMenu : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         stabilitätsText.text = "" + CurrencyManager.stabilität + "/" + GameObject.FindObjectOfType<CurrencyManager>().mindStabi;
-        RoundMoneytext.text = "You made " + CurrencyManager.RoundMoney + " this round";
-        MoneyTotalText.text = "and have " + CurrencyManager.currentMoney + " in total to spend";
+        RoundMoneytext.text = "You made " + CurrencyManager.RoundMoney + " this round!";
+        MoneyTotalText.text = "and have " + CurrencyManager.currentMoney + " in total to spend.";
         GameObject.FindObjectOfType<CurrencyManager>().resetRoundMoney();
 
 
