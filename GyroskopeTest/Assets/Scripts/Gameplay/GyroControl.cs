@@ -42,7 +42,10 @@ public class GyroControl : MonoBehaviour {
 
                 if (getAcceleration())
                 {
-                    //TODO change level, do whatever event when the phone is tilted
+                //change Waterlevel if we do this event
+                Water w = this.GetComponent<Water>();
+                w.waterLevel -= 1;//TODO balancing
+
                 }
 
             //cameraContainer.transform.Rotate(0,-myGyro.rotationRateUnbiased.y*sens*Time.deltaTime,0); //use Rotate() with gyroRotation, smooting with sens and deltatime
