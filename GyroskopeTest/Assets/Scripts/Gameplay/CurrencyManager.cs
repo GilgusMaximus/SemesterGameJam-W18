@@ -54,6 +54,7 @@ public class CurrencyManager : MonoBehaviour {
             Debug.Log("We got enough stability");
             CurrentLevelToUnlock++;
             resetStabilität();
+            SaveSystem.SaveData(this);
         }
     }
 
@@ -63,7 +64,9 @@ public class CurrencyManager : MonoBehaviour {
         {
             currentMoney -= 100;
             incrementStabilität(1);
+            SaveSystem.SaveData(this);
         }
+
     
     }
 
@@ -109,6 +112,12 @@ public class CurrencyManager : MonoBehaviour {
     public void resetStabilität()
     {
         stabilität = 0;
+    }
+
+    public int getLevelToUnlock()
+    {
+        return CurrentLevelToUnlock;
+
     }
 
 }

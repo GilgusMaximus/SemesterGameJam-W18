@@ -13,6 +13,7 @@ public class LevelData {
     {
         money = cm.getMoney();
         stability = cm.getStability();
+        level = cm.getLevelToUnlock();
     }
 
 }
