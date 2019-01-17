@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Rocks : MonoBehaviour {
@@ -26,7 +27,8 @@ public class Rocks : MonoBehaviour {
     //public int index;
     private GameObject tr;
     //private bool instantiated;
-
+    private Water WaterScript;
+    
     public AudioClip Explosion;
 
 
@@ -42,7 +44,7 @@ public class Rocks : MonoBehaviour {
         {
             tr = Instantiate(Treasure, TreasurePoint, Quaternion.identity); //spawne ihn
         }
-
+        WaterScript = Water.getWaterScript();
     }
 	
 	// Update is called once per frame
@@ -66,6 +68,8 @@ public class Rocks : MonoBehaviour {
 
     public void DestroySelf() // der stein wird zerstört
     {
+        if(WaterScript != null)
+            WaterScript.spawnWater(transform);
         if (hasTreasure) //wenn es einen treasure gibt
         {
             audioSource.clip = DestroySoundTreasure;

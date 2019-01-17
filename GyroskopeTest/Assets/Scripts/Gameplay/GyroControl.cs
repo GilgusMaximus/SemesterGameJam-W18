@@ -19,7 +19,7 @@ public class GyroControl : MonoBehaviour {
 
     private int tiltcount = 0;
     private bool isTilted=false;//flag to check if we tilt the phone back
-
+    private Water w;
     void Start () {
 
         cameraContainer = new GameObject("CameraContainer");
@@ -28,23 +28,24 @@ public class GyroControl : MonoBehaviour {
         transform.SetParent(cameraContainer.transform);
 
         gEnabled = enableGyro();
+        w = this.GetComponent<Water>();
     }
 
     Quaternion GyroToUnity(Quaternion q) //covert gyro left hand coords to unity right hand coords
     {
         return new Quaternion(q.x,q.z,q.y,-q.w);
     }
-	
-	void Update () {
-        
-            if (gEnabled&&Time.timeScale!=0)
-            {
 
+    private bool flowH = false;
+	void Update () {
+
+        if (gEnabled&&Time.timeScale!=0) {
+                
                 if (getAcceleration())
                 {
                 //change Waterlevel if we do this event
-                Water w = this.GetComponent<Water>();
-                w.waterLevel -= 1;//TODO balancing
+                
+                    w.decreaseWaterLevel();//TODO balancing
 
                 }
 
