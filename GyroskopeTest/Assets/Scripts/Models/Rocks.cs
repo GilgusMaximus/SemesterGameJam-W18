@@ -44,6 +44,7 @@ public class Rocks : MonoBehaviour {
         {
             tr = Instantiate(Treasure, TreasurePoint, Quaternion.identity); //spawne ihn
         }
+        
         WaterScript = Water.getWaterScript();
     }
 	
