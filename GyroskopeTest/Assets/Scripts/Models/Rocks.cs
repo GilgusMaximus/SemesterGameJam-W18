@@ -75,7 +75,9 @@ public class Rocks : MonoBehaviour {
         {
             audioSource.clip = DestroySoundTreasure;
             audioSource.Play();      //treasure sound abspielen
-
+             
+            
+            
             tr.GetComponent<Treasure>().discovered = true;   //den schatz auf discovered setzen(damit er anfängt zum spieler zu fliehen)
 
 
@@ -92,6 +94,7 @@ public class Rocks : MonoBehaviour {
                 {
                     audioSource.clip = Explosion;
                     audioSource.Play(); //explosionsaudio wird abgespielt 
+                    GameObject.FindGameObjectWithTag("Main Camera").GetComponentInChildren<ParticleSystem>().Play();
                     //vibration auslösen
                 }
                 t.apply(); //dynamite/clock behaviour auslösen
