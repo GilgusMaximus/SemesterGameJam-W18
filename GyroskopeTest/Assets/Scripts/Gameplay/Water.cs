@@ -20,21 +20,28 @@ public class Water : MonoBehaviour{
 	void Start() {
 		waterLevel = 0f;
 		isFLowing = false;
-		waited10S = true;
+		waited10S = false;
+        StartCoroutine(wait10Seconds());
 		main = particleSystem.main;
 		waterScript = this;
 	}
 
-	public void decreaseWaterLevel() {
+    IEnumerator wait10Seconds()
+    {
+        yield return new WaitForSeconds(10);
+        waited10S = true;
+    }
+
+    public void decreaseWaterLevel() {
 		
 		Vector3 waterPlanePosition = waterPlane.transform.position;
-		Debug.Log("WATERPLANE IN DURATION 1 : " + waterPlanePosition.y);
+		//Debug.Log("WATERPLANE IN DURATION 1 : " + waterPlanePosition.y);
 		if (waterPlanePosition.y > -1.5f) {
-			waterLevel -= 1;
+			waterLevel -= 0.5f;
 			waterPlane.transform.Translate(new Vector3(0, -.5f, 0));
 			decreaseWater = true;
 		}
-		Debug.Log("WaterLevel Decreases");
+		//Debug.Log("WaterLevel Decreases");
 	}
 
 	public ParticleSystem getps() {
@@ -42,8 +49,8 @@ public class Water : MonoBehaviour{
 	}
 	public void spawnWater(Transform position) {
 		if (!isFLowing) {
-			if (Random.Range(0, 100) <= 300) {
-				Debug.Log("Water Spawned");
+			if (Random.Range(0, 100) <= 30) {
+				//Debug.Log("Water Spawned");
 				isFLowing = true;
 				particleSystem.transform.position =
 					position.position + (position.position - transform.position).normalized * 2f; //reposition particleSystem
@@ -58,27 +65,34 @@ public class Water : MonoBehaviour{
 	}
 
 	private void Update() {
-		Debug.Log("Water Flowing: " + isFLowing);
+		//Debug.Log("Water Flowing: " + isFLowing);
 		Vector3 waterPlanePosition = waterPlane.transform.position;
 		if (particleSystem.isPlaying == false) {
 			isFLowing = false;
-			
+            //resetting
+            waterLevel = 0;
+            waterPlane.transform.position = new Vector3(-24f,-1.5f,3.5f);
 		}
 
 		if (isFLowing) {
 			waterLevel += waterFlowingSpeed * Time.deltaTime;
 			waterPlane.transform.Translate(new Vector3(0, waterFlowingSpeed * Time.deltaTime, 0));
+            //apply damage
+            if (waterLevel>0)
+            {
+                GameScoreManager.rtime -= waterLevel*Time.deltaTime;
+            }
 		}
 
 		if (waterPlanePosition.y > transform.position.y) {
 			//TODO Access stability and decrease it or set a flag, which is checked by stability
 		}
 
-		if (waited10S) {
-			Transform ts = transform;
-			ts.Translate(0, 0, 2);
+		if (waited10S&&!isFLowing) {
+            GameObject t = new GameObject();
+            Transform ts = t.transform;
+			ts.position= new Vector3(this.transform.position.x, this.transform.position.y, 2);
 			spawnWater(transform);
-			waited10S = false;
 		}
 	}
 

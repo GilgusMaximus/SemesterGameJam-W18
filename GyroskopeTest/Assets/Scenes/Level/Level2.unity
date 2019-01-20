@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6863,7 +6863,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1624007703}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.3, y: -1.5, z: 3.5}
+  m_LocalPosition: {x: -24, y: -1.5, z: 3.5}
   m_LocalScale: {x: 5.0556493, y: 4.7567, z: 4.156357}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7319,6 +7319,11 @@ Prefab:
         type: 2}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198672632324392402, guid: 9b2c566d5fb4e3b49bf5423c73d376da,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b2c566d5fb4e3b49bf5423c73d376da, type: 2}
@@ -8013,8 +8018,8 @@ MonoBehaviour:
   waterPlane: {fileID: 1624007703}
   particleSystem: {fileID: 1323564803}
   waterFlowingSpeed: 0.2
-  minLifeTimeWater: 3
-  maxLifeTimeWater: 5
+  minLifeTimeWater: 5
+  maxLifeTimeWater: 8
   damagePerSecond: 5
 --- !u!1001 &1727983224
 Prefab:
@@ -9767,7 +9772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1996600959
 RectTransform:
   m_ObjectHideFlags: 0
