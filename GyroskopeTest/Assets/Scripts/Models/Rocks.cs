@@ -94,7 +94,9 @@ public class Rocks : MonoBehaviour {
                 {
                     audioSource.clip = Explosion;
                     audioSource.Play(); //explosionsaudio wird abgespielt 
-                    GameObject.FindGameObjectWithTag("Main Camera").GetComponentInChildren<ParticleSystem>().Play();
+                    ParticleSystem ps = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<ParticleSystem>();
+                    ps.playbackSpeed = 1f;
+                    ps.Play();
                     //vibration auslösen
                 }
                 t.apply(); //dynamite/clock behaviour auslösen

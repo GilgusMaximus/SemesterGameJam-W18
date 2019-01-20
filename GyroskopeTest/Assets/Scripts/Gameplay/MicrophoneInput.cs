@@ -8,7 +8,7 @@ public class MicrophoneInput : MonoBehaviour {
     public static float MicLoudness;
     bool isInit;
     AudioSource myAudio;
-
+    [SerializeField] private ParticleSystem ps;
     bool isWhisteling;
 
     public Text debugText;
@@ -88,7 +88,8 @@ public class MicrophoneInput : MonoBehaviour {
             n++;
             debugText.text = n.ToString();
             isWhisteling = true;
-
+            if(ps.isPlaying)
+              ps.playbackSpeed *= 1.5f;
             //TODO event here
         }
         if (isWhisteling && MicLoudness<=0.25)
