@@ -16,7 +16,7 @@ public class Spawning : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-return;
+
          rocks =  GameObject.FindObjectsOfType<Rocks>();  // alle steine in der szene finden
 
 
