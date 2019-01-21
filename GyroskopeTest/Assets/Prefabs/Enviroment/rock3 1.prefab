@@ -52,8 +52,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1237054964124278}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.84737, y: 1.2090125, z: 1.5056133}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20.374844, y: 5.5372066, z: -10.264603}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4594191653566470}
@@ -152,7 +152,7 @@ MonoBehaviour:
     type: 2}
   DestroyParticle: {fileID: 198044704590796530, guid: 401f9d4e3149ded4e8c393ec5860d2a2,
     type: 2}
-  Explosion: {fileID: 0}
+  Explosion: {fileID: 8300000, guid: 847d9cc1e803c6e448c85fa34a18ca21, type: 3}
 --- !u!114 &114242732289429782
 MonoBehaviour:
   m_ObjectHideFlags: 1
