@@ -15,10 +15,10 @@ public class ProgressMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        stabilitätsText.text = "" + CurrencyManager.stabilität + "/" + GameObject.FindObjectOfType<CurrencyManager>().mindStabi;
+        stabilitätsText.text = "" + CurrencyManager.stabilität + "/" + CurrencyManager.getStabilitätsRequirement();
         RoundMoneytext.text = "You made " + CurrencyManager.RoundMoney + " this round!";
         MoneyTotalText.text = "and have " + CurrencyManager.currentMoney + " in total to spend.";
-        GameObject.FindObjectOfType<CurrencyManager>().resetRoundMoney();
+        CurrencyManager.resetRoundMoney();
 
 
 
@@ -27,6 +27,10 @@ public class ProgressMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         MoneyTotalText.text = "and have " + CurrencyManager.currentMoney + " in total to spend";
-        stabilitätsText.text = "" + CurrencyManager.stabilität + "/" + GameObject.FindObjectOfType<CurrencyManager>().mindStabi;
+        stabilitätsText.text = "" + CurrencyManager.stabilität + "/" + CurrencyManager.getStabilitätsRequirement();
+        if(CurrencyManager.CurrentLevelToUnlock == CurrencyManager.stabilitätsReq.Length - 1)
+        {
+            stabilitätsText.text = "None";
+        }
     }
 }

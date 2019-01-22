@@ -13,12 +13,32 @@ public class Menu : MonoBehaviour {
 
     public GameObject PauseMenu;
 
-    
+    public GameObject Button1;
+    public GameObject Button2;
+    public GameObject Button3;
+    public bool Playmenu;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+
+    // Use this for initialization
+    void Start () {
+        if (Playmenu)
+        {
+            Button1.GetComponent<Button>().enabled = true;
+            Button1.GetComponent<Image>().color = Color.white;
+            if (CurrencyManager.CurrentLevelToUnlock > 0)
+            {
+                Button2.GetComponent<Button>().enabled = true;
+                Button2.GetComponent<Image>().color = Color.white;
+            }
+            if (CurrencyManager.CurrentLevelToUnlock > 1)
+            {
+               // Button3.GetComponent<Button>().enabled = true;
+              //  Button3.GetComponent<Image>().color = Color.white;
+            }
+
+        }
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -27,6 +47,7 @@ public class Menu : MonoBehaviour {
 
     public void LoadScene(string sceneName)
     {
+        CurrencyManager.resetRoundMoney();
         if (sceneName.Equals("Menu"))//Maarten: reset some stats
         {
             GameScoreManager.resetScore();
