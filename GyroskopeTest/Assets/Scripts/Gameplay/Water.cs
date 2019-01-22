@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Water : MonoBehaviour{
 
@@ -17,6 +18,7 @@ public class Water : MonoBehaviour{
 	private float waterLevel;
 	private bool isFLowing, waited10S, decreaseWater;
 	private static Water waterScript;
+	private PostProcessLayer postLayer;
 	void Start() {
 		waterLevel = 0f;
 		isFLowing = false;
@@ -24,6 +26,8 @@ public class Water : MonoBehaviour{
         StartCoroutine(wait10Seconds());
 		main = particleSystem.main;
 		waterScript = this;
+		postLayer = GetComponent<PostProcessLayer>();
+		postLayer.enabled = false;
 	}
 
     IEnumerator wait10Seconds()
@@ -88,8 +92,10 @@ public class Water : MonoBehaviour{
 		if (particleSystem.isPlaying == false) {
 			isFLowing = false;
             //resetting
-            waterLevel = 0;
-            waterPlane.transform.position = new Vector3(-24f,-1.5f,3.5f);
+            if (waterLevel <= 0) {
+	            waterLevel = 0;
+	            waterPlane.transform.position = new Vector3(-24f, -1.5f, 3.5f);
+            }
 		}
 
 		if (isFLowing) {
@@ -98,15 +104,17 @@ public class Water : MonoBehaviour{
             //apply damage
             if (waterLevel>0)
             {
-                GameScoreManager.rtime -= waterLevel*Time.deltaTime;
+               // GameScoreManager.rtime -= waterLevel*Time.deltaTime;
             }
 		}
 
 		if (waterPlanePosition.y > transform.position.y) {
 			//TODO Access stability and decrease it or set a flag, which is checked by stability
-		}
+			postLayer.enabled = true;
+		} else
+			postLayer.enabled = false;
 
-		
+
 	}
 
 	/*
