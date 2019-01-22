@@ -37,7 +37,15 @@ public class Water : MonoBehaviour{
 		Vector3 waterPlanePosition = waterPlane.transform.position;
 		//Debug.Log("WATERPLANE IN DURATION 1 : " + waterPlanePosition.y);
 		if (waterPlanePosition.y > -1.5f) {
-			waterLevel -= 0.5f;
+            if (waterLevel <= 0.5)
+            {
+                waterLevel = 0;
+            }
+            else
+            {
+                waterLevel -= 0.5f;
+            }
+
 			waterPlane.transform.Translate(new Vector3(0, -.5f, 0));
 			decreaseWater = true;
 		}
@@ -48,7 +56,7 @@ public class Water : MonoBehaviour{
 		return particleSystem;
 	}
 	public void spawnWater(Transform position) {
-		if (!isFLowing) {
+		if (!isFLowing&&waited10S) {
 			if (Random.Range(0, 100) <= 30) {
 				//Debug.Log("Water Spawned");
 				isFLowing = true;
@@ -88,12 +96,7 @@ public class Water : MonoBehaviour{
 			//TODO Access stability and decrease it or set a flag, which is checked by stability
 		}
 
-		if (waited10S&&!isFLowing) {
-            GameObject t = new GameObject();
-            Transform ts = t.transform;
-			ts.position= new Vector3(this.transform.position.x, this.transform.position.y, 2);
-			spawnWater(transform);
-		}
+		
 	}
 
 	/*

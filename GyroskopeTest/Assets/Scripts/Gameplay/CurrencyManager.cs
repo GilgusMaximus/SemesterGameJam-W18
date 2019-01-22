@@ -9,9 +9,9 @@ public class CurrencyManager : MonoBehaviour {
 
     public int mindStabi = 0; //required stability for the level
 
-    public int[] stabilitätsReq; //die stabilitätsGrenzen
-    public int CurrentLevelToUnlock = 0; //der index für das nächste Level 0 = das 2. level
-    public bool[] isUnlocked; // ob das jeweilige level freigeschaltet wurde
+    public static int[] stabilitätsReq; //die stabilitätsGrenzen
+    public static int CurrentLevelToUnlock = 0; //der index für das nächste Level 0 = das 2. level
+    public static bool[] isUnlocked; // ob das jeweilige level freigeschaltet wurde
 
     public static int  RoundMoney=0;
 
@@ -27,6 +27,7 @@ public class CurrencyManager : MonoBehaviour {
         resetStabilität();
 
         LevelData d = SaveSystem.LoadData();
+        CurrentLevelToUnlock = d.level;
         //moneyDisplay.text = d.money + " " + d.stability;
         if (d != null)
         {

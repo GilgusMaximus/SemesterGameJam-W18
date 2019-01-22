@@ -8,6 +8,7 @@ public class GameScoreManager : MonoBehaviour {
 
     public static int currentScore=0;
     public float timer = 600;//time in seconds
+    
 
     public static float rtime;//remaining time
     public static bool isCounting;
@@ -50,17 +51,23 @@ public class GameScoreManager : MonoBehaviour {
                 if (SceneManager.GetActiveScene().name=="PlayScene")//only upload in highscore scene
                 {
                     Highscores.AddNewHighscore(Menu.playerName, currentScore);//hochladen des highscores TODO
+                    if (!scoredisplay.activeInHierarchy)
+                    {
+                        Text scored = scoredisplay.transform.GetChild(0).GetComponent<Text>();
+                        scored.text = "Your score is: " + GameScoreManager.currentScore.ToString();
+
+                        scoredisplay.SetActive(true);
+                    }
+                }
+                if (SceneManager.GetActiveScene().name != "PlayScene")//only upload in highscore scene
+                {
+                    SceneManager.LoadScene("ProgressScene");
+
                 }
 
 
                 //Anzeigen Highscore und enable laden naechster scene durch button
-                if (!scoredisplay.activeInHierarchy)
-                {
-                    Text scored = scoredisplay.transform.GetChild(0).GetComponent<Text>();
-                    scored.text = "Your score is: "+GameScoreManager.currentScore.ToString();
-
-                    scoredisplay.SetActive(true);
-                }
+               
 
                 Debug.Log("Times's up guys!");
             }
