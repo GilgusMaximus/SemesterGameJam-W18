@@ -30,6 +30,7 @@ public class Water : MonoBehaviour{
     {
         yield return new WaitForSeconds(10);
         waited10S = true;
+        Debug.Log("WASSSER MAAAAAAAAAAAAARRRRRSCH");
     }
 
     public void decreaseWaterLevel() {
@@ -57,12 +58,21 @@ public class Water : MonoBehaviour{
 	}
 	public void spawnWater(Transform position) {
 		if (!isFLowing&&waited10S) {
-			if (Random.Range(0, 100) <= 30) {
+			if (Random.Range(0, 100) <= 33) {
 				//Debug.Log("Water Spawned");
 				isFLowing = true;
+				Vector3 stoneForward = (position.position - transform.position).normalized;
 				particleSystem.transform.position =
-					position.position + (position.position - transform.position).normalized * 2f; //reposition particleSystem
+					position.position +  stoneForward * 2.5f; //reposition particleSystem
 				main.duration = Random.Range(minLifeTimeWater, maxLifeTimeWater);
+				Vector3 psForward = particleSystem.transform.forward.normalized;
+				//mithilfe des Skalarprodukts den zu drehenden Winkel rausfinden
+				float winkel = Mathf.Acos((psForward.x * stoneForward.x + psForward.z * stoneForward.z) /
+				                          (Mathf.Sqrt(psForward.x * psForward.x + psForward.z * psForward.z) *
+				                          Mathf.Sqrt(stoneForward.x * stoneForward.x + stoneForward.z +
+				                                     stoneForward.z)));
+				
+				particleSystem.transform.Rotate(new Vector3(0, 1, 0)*winkel * 90, Space.World);
 				particleSystem.Play();
 			}
 		}

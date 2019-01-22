@@ -1927,15 +1927,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4977742112564580, guid: 1b0031636724b1d449499bbe703d611d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.11
+      value: -5.33
       objectReference: {fileID: 0}
     - target: {fileID: 4977742112564580, guid: 1b0031636724b1d449499bbe703d611d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.35
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 4977742112564580, guid: 1b0031636724b1d449499bbe703d611d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -20.2
+      value: -22.91
       objectReference: {fileID: 0}
     - target: {fileID: 4977742112564580, guid: 1b0031636724b1d449499bbe703d611d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1965,6 +1965,16 @@ Prefab:
         type: 2}
       propertyPath: m_Lightmapping
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108152291331196490, guid: 1b0031636724b1d449499bbe703d611d,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 7.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 108152291331196490, guid: 1b0031636724b1d449499bbe703d611d,
+        type: 2}
+      propertyPath: m_Range
+      value: 16.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0031636724b1d449499bbe703d611d, type: 2}
