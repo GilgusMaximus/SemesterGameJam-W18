@@ -14,7 +14,10 @@ public class Rocks : MonoBehaviour {
     public bool hasTreasure;  
     [Tooltip("der schatz")]
     public GameObject Treasure;
-
+    
+    [SerializeField]
+    private ParticleSystem dustExplosion;
+    
     private AudioSource audioSource;
 
     public AudioClip miningSound;
@@ -94,9 +97,9 @@ public class Rocks : MonoBehaviour {
                 {
                     audioSource.clip = Explosion;
                     audioSource.Play(); //explosionsaudio wird abgespielt 
-                    ParticleSystem ps = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<ParticleSystem>();
-                    ps.playbackSpeed = 1f;
-                    ps.Play();
+                    
+                    dustExplosion.playbackSpeed = 1f;
+                    dustExplosion.Play();
                     //vibration auslösen
                 }
                 t.apply(); //dynamite/clock behaviour auslösen

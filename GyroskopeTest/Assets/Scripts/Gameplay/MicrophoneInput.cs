@@ -12,7 +12,6 @@ public class MicrophoneInput : MonoBehaviour {
     bool isWhisteling;
 
     public Text debugText;
-
     int n = 0;
 
 
@@ -86,7 +85,7 @@ public class MicrophoneInput : MonoBehaviour {
         if (!isWhisteling && MicLoudness>0.35)
         {
             n++;
-            debugText.text = n.ToString();
+           // debugText.text = n.ToString();
             isWhisteling = true;
             if(ps.isPlaying)
               ps.playbackSpeed *= 1.5f;
