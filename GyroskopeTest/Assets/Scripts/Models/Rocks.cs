@@ -44,8 +44,8 @@ public class Rocks : MonoBehaviour {
         {
             tr = Instantiate(Treasure, TreasurePoint, Quaternion.identity); //spawne ihn
         }
-        
-        WaterScript = Water.getWaterScript();
+
+        WaterScript = GameObject.FindWithTag("MainCamera").GetComponent<Water>();
     }
 	
 	// Update is called once per frame
