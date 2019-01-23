@@ -20,9 +20,11 @@ public class GameScoreManager : MonoBehaviour {
     public static bool l;
 
     CurrencyManager cm;
+    public static bool menuExit=false;
 
     private void Start()//Aufpassen: wenn man in einem level mehrere scenen läd, darf man den score nicht resetten!
     {
+        menuExit = false;
         if (rtime <= 0)
         {
             rtime = timer;
@@ -43,6 +45,7 @@ public class GameScoreManager : MonoBehaviour {
 
             TimeDisplay.text = minutes + ":" + seconds;
 
+           
             if (rtime<=0)//abbruch
             {
                 TimeDisplay.text = "0";
@@ -59,10 +62,10 @@ public class GameScoreManager : MonoBehaviour {
                         scoredisplay.SetActive(true);
                     }
                 }
-                if (SceneManager.GetActiveScene().name != "PlayScene")//only upload in highscore scene
+                if (SceneManager.GetActiveScene().name != "PlayScene"&&menuExit==false)//only upload in highscore scene
                 {
                     SceneManager.LoadScene("ProgressScene");
-
+                   
                 }
 
 

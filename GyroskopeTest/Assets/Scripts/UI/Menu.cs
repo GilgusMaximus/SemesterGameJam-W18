@@ -48,13 +48,15 @@ public class Menu : MonoBehaviour {
     public void LoadScene(string sceneName)
     {
         CurrencyManager.resetRoundMoney();
-        if (sceneName.Equals("Menu"))//Maarten: reset some stats
-        {
-            GameScoreManager.resetScore();
-        }
+       
 
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1;
+        if (sceneName.Equals("Menu"))//Maarten: reset some stats
+        {
+            GameScoreManager.menuExit = true;
+            GameScoreManager.resetScore();
+        }
 
     }
 
