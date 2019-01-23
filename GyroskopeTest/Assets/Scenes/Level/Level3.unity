@@ -2287,6 +2287,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61771e32b45f6294ca766c6dd20b8b68, type: 2}
   m_IsPrefabAsset: 0
+--- !u!198 &657838959 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198996256863666180, guid: 61771e32b45f6294ca766c6dd20b8b68,
+    type: 2}
+  m_PrefabInternal: {fileID: 657838958}
 --- !u!1001 &680196049
 Prefab:
   m_ObjectHideFlags: 0
@@ -2376,7 +2381,7 @@ Prefab:
         type: 2}
       propertyPath: ps
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 657838959}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3e3dc803bbf604fb4382ef2031267a, type: 2}
   m_IsPrefabAsset: 0
