@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1601,7 +1601,7 @@ Prefab:
     - target: {fileID: 114749935284714790, guid: 0b1e6fc0bb643404ebf0f7b6e8a36dfa,
         type: 2}
       propertyPath: timer
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1e6fc0bb643404ebf0f7b6e8a36dfa, type: 2}
