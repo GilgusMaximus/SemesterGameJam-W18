@@ -3026,7 +3026,7 @@ Prefab:
     - target: {fileID: 114797167371010230, guid: 134f392c9bea84246af89176513f3723,
         type: 2}
       propertyPath: timer
-      value: 60
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 134f392c9bea84246af89176513f3723, type: 2}
@@ -3608,7 +3608,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4896590568076054, guid: f0b141c5f0513f4489f029141b0dd040, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -80
+      value: -93.6
       objectReference: {fileID: 0}
     - target: {fileID: 114383069875934388, guid: f0b141c5f0513f4489f029141b0dd040,
         type: 2}
@@ -3654,6 +3654,21 @@ Prefab:
         type: 2}
       propertyPath: m_ClearFlags
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 65294689718219700, guid: f0b141c5f0513f4489f029141b0dd040,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 1.1162506
+      objectReference: {fileID: 0}
+    - target: {fileID: 65294689718219700, guid: f0b141c5f0513f4489f029141b0dd040,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.000000008904747
+      objectReference: {fileID: 0}
+    - target: {fileID: 65294689718219700, guid: f0b141c5f0513f4489f029141b0dd040,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0.058124848
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0b141c5f0513f4489f029141b0dd040, type: 2}
