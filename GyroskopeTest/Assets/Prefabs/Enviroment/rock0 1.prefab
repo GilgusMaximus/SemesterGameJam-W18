@@ -155,6 +155,8 @@ MonoBehaviour:
   TreasurePointDiffrence: 0
   hasTreasure: 0
   Treasure: {fileID: 0}
+  dustExplosion: {fileID: 198672632324392402, guid: 9b2c566d5fb4e3b49bf5423c73d376da,
+    type: 2}
   miningSound: {fileID: 8300000, guid: a5cdc5af0e663f345bbf307bb7529ecb, type: 3}
   DestroySoundNothing: {fileID: 8300000, guid: b86b60c28459bd046ad9d6cf675f569a, type: 3}
   DestroySoundTreasure: {fileID: 8300000, guid: 6a410ad4ba89b744cb3505315a5da33e,
