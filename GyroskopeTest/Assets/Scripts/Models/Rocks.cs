@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rocks : MonoBehaviour {
     [Tooltip("das leben")]
@@ -98,9 +99,13 @@ public class Rocks : MonoBehaviour {
                     audioSource.clip = Explosion;
                     audioSource.Play(); //explosionsaudio wird abgespielt 
 
-                    //dustExplosion.playbackSpeed = 1f; //TODO Maarten: set the particle effects for the rocks
-                    //dustExplosion.Play();
-                    //vibration auslösen
+                    if (SceneManager.GetActiveScene().name != "PlayScene")//Maarten: no dust in highscore scene
+                    {
+                        dustExplosion.playbackSpeed = 1f;
+                        dustExplosion.Play();
+                        //vibration auslösen
+                    }
+
                 }
                 t.apply(); //dynamite/clock behaviour auslösen
             }
