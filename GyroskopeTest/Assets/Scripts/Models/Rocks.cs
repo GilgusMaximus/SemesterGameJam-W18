@@ -99,7 +99,7 @@ public class Rocks : MonoBehaviour {
                     audioSource.clip = Explosion;
                     audioSource.Play(); //explosionsaudio wird abgespielt 
 
-                    if (SceneManager.GetActiveScene().name != "PlayScene")//Maarten: no dust in highscore scene
+                    if (GameScoreManager.currentDiff != GameScoreManager.difficulty.normal)//Maarten: no dust in highscore scene
                     {
                         dustExplosion.playbackSpeed = 1f;
                         dustExplosion.Play();

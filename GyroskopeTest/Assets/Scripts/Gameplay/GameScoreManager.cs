@@ -22,6 +22,13 @@ public class GameScoreManager : MonoBehaviour {
     CurrencyManager cm;
     public static bool menuExit=false;
 
+    public enum difficulty //we enable/disable stuff based on the set diffiulty
+    {
+        nothing,normal,hard
+    };
+
+    public static difficulty currentDiff;
+
     private void Start()//Aufpassen: wenn man in einem level mehrere scenen läd, darf man den score nicht resetten!
     {
         menuExit = false;
@@ -32,6 +39,25 @@ public class GameScoreManager : MonoBehaviour {
         isCounting = true;
 
         cm = gameObject.GetComponent<CurrencyManager>();
+
+
+        switch (currentDiff)
+        {
+            case difficulty.nothing:
+                break;
+
+            case difficulty.normal:
+                Camera.main.GetComponent<Water>().enabled = false;
+
+                break;
+
+            case difficulty.hard:
+                Camera.main.GetComponent<Water>().enabled = true;
+                break;
+
+        }
+
+
     }
 
     private void Update()
@@ -100,6 +126,11 @@ public class GameScoreManager : MonoBehaviour {
             //isCounting = true;
             SceneManager.LoadScene("Menu");
         }
+    }
+
+    public void OnDestroy()
+    {
+        currentDiff = difficulty.nothing;
     }
 
 }

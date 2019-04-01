@@ -13,15 +13,17 @@ public class Menu : MonoBehaviour {
 
     public GameObject PauseMenu;
 
-    public GameObject Button1;
+   /* public GameObject Button1;
     public GameObject Button2;
     public GameObject Button3;
+    */
     public bool Playmenu;
 
+    public List<string> levels;
 
     // Use this for initialization
     void Start () {
-        if (Playmenu)
+     /*   if (Playmenu)
         {
             Button1.GetComponent<Button>().enabled = true;
             Button1.GetComponent<Image>().color = Color.white;
@@ -37,7 +39,7 @@ public class Menu : MonoBehaviour {
             }
 
         }
-
+        */
     }
 	
 	// Update is called once per frame
@@ -109,5 +111,23 @@ public class Menu : MonoBehaviour {
         PauseMenu.SetActive(false);
     }
 
+
+    public void SetDiffNormal()
+    {
+        GameScoreManager.currentDiff = GameScoreManager.difficulty.normal;
+        LoadRandomLevel();
+    }
+    public void SetDiffHard()
+    {
+        GameScoreManager.currentDiff = GameScoreManager.difficulty.hard;
+        LoadRandomLevel();
+    }
+
+    private void LoadRandomLevel()
+    {
+        int r = Random.Range(0,levels.Count);
+        SceneManager.LoadScene(levels[r]);
+
+    }
 
 }
