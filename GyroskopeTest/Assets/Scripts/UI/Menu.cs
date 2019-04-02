@@ -31,24 +31,6 @@ public class Menu : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        /*   if (Playmenu)
-           {
-               Button1.GetComponent<Button>().enabled = true;
-               Button1.GetComponent<Image>().color = Color.white;
-               if (CurrencyManager.CurrentLevelToUnlock > 0)
-               {
-                   Button2.GetComponent<Button>().enabled = true;
-                   Button2.GetComponent<Image>().color = Color.white;
-               }
-               if (CurrencyManager.CurrentLevelToUnlock > 1)
-               {
-                  // Button3.GetComponent<Button>().enabled = true;
-                 //  Button3.GetComponent<Image>().color = Color.white;
-               }
-
-           }
-           */
-
         //Maarten: load all possible levels for highscore run
         LevelData d = SaveSystem.LoadData();
         if (d==null || d.levels==null)
@@ -58,6 +40,24 @@ public class Menu : MonoBehaviour {
         else
         {
             levels = d.levels;
+        }
+
+        if (SceneManager.GetActiveScene().name == "LevelSelection")
+        {
+            GameObject Button2 = transform.Find("Level2").gameObject;
+            GameObject Button3 = transform.Find("Level3").gameObject;
+
+            if (d!=null && d.level > 0)
+            {
+                Button2.GetComponent<Button>().enabled = true;
+                Button2.GetComponent<Image>().color = Color.white;
+            }
+            if (d != null && d.level > 1)
+            {
+                 Button3.GetComponent<Button>().enabled = true;
+                  Button3.GetComponent<Image>().color = Color.white;
+            }
+
         }
 
 
