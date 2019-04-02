@@ -64,6 +64,7 @@ public class CurrencyManager : MonoBehaviour {
             if (CurrentLevelToUnlock + 1 <= stabilitätsReq.Length - 1)
             {
                 CurrentLevelToUnlock++;
+
             }
             
             resetStabilität();

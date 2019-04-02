@@ -48,6 +48,19 @@ public class Menu : MonoBehaviour {
 
            }
            */
+
+        //Maarten: load all possible levels for highscore run
+        LevelData d = SaveSystem.LoadData();
+        if (d==null || d.levels==null)
+        {
+            levels = new List<string> { "Level1" };
+        }
+        else
+        {
+            levels = d.levels;
+        }
+
+
         if (slider != null)
         {
             slider.value = PlayerPrefs.GetFloat("MasterVolume", 1);

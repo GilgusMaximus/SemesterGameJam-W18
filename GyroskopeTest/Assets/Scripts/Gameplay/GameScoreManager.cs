@@ -76,10 +76,10 @@ public class GameScoreManager : MonoBehaviour {
             {
                 TimeDisplay.text = "0";
                 isCounting = false;
-                //TODO verloren, naechste scene?
-                if (SceneManager.GetActiveScene().name=="PlayScene")//only upload in highscore scene
+                //verloren, naechste scene?
+                if (currentDiff!=GameScoreManager.difficulty.nothing)//only upload in highscore scene Maarten: we are in highscore Modus if diff is not nothing
                 {
-                    Highscores.AddNewHighscore(Menu.playerName, currentScore);//hochladen des highscores TODO
+                    Highscores.AddNewHighscore(Menu.playerName, currentScore);//hochladen des highscores TODO how to get name
                     if (!scoredisplay.activeInHierarchy)
                     {
                         Text scored = scoredisplay.transform.GetChild(0).GetComponent<Text>();
@@ -88,10 +88,11 @@ public class GameScoreManager : MonoBehaviour {
                         scoredisplay.SetActive(true);
                     }
                 }
-                if (SceneManager.GetActiveScene().name != "PlayScene"&&menuExit==false)//only upload in highscore scene
+
+                
+                if (menuExit==false)//Maarten: Do we always enable the upgrade, even after highscorerun?
                 {
                     SceneManager.LoadScene("ProgressScene");
-                   
                 }
 
 
