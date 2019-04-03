@@ -28,10 +28,11 @@ public class CurrencyManager : MonoBehaviour {
 
         LevelData d = SaveSystem.LoadData();
         CurrentLevelToUnlock = d.level;
+        stabilität = d.stability;
         //moneyDisplay.text = d.money + " " + d.stability;
         if (d != null)
         {
-            Debug.Log("Previous: Money: " + d.money + " Stability: " + d.stability); //Here we can just set our current money and stability
+            Debug.Log("Previous: Money: " + d.money + " Stability: " + d.stability+" CurrentLevel: "+d.level); //Here we can just set our current money and stability
         }
 
         currentMoney = d.money;

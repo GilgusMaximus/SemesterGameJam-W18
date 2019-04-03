@@ -20,7 +20,7 @@ public class ProgressMenu : MonoBehaviour {
         MoneyTotalText.text = "and have " + CurrencyManager.currentMoney + " in total to spend.";
         CurrencyManager.resetRoundMoney();
 
-
+        Debug.Log("Hehe" + CurrencyManager.CurrentLevelToUnlock);
 
     }
 	
@@ -28,7 +28,7 @@ public class ProgressMenu : MonoBehaviour {
 	void Update () {
         MoneyTotalText.text = "and have " + CurrencyManager.currentMoney + " in total to spend";
         stabilitätsText.text = "" + CurrencyManager.stabilität + "/" + CurrencyManager.getStabilitätsRequirement();
-        if(CurrencyManager.CurrentLevelToUnlock == CurrencyManager.stabilitätsReq.Length - 1)
+        if(CurrencyManager.CurrentLevelToUnlock >= CurrencyManager.stabilitätsReq.Length)
         {
             stabilitätsText.text = "None";
         }
