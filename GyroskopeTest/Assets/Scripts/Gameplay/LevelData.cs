@@ -5,45 +5,48 @@ using UnityEngine;
 [System.Serializable]
 public class LevelData {
 
-    public int level; //TODO Method to determine which level we are working on right now with incrementing stability
+    //public int level; //TODO Method to determine which level we are working on right now with incrementing stability
     public List<string> levels;//all possible levels for highscore run
-    public List<LevelPositions> positions;//all possible spawnpositions for possible Levels Maarten TODO: Implement this later
+    public List<LevelPositions> lData;//all possible spawnpositions for possible Levels Maarten TODO: Implement this later
     public int money;
-    public int stability;
+    //public int stability;
 
     public LevelData(CurrencyManager cm)
     {
         money = cm.getMoney();
-        stability = cm.getStability();
-        level = cm.getLevelToUnlock();
+        //stability = cm.getStability();
+        //level = cm.getLevelToUnlock();
 
-        switch (level)//Maarten: determine all possible levels for highscore TODO find a better solution for this
+        lData = cm.getLData(); //get the relevant leveldata like stability from the currencymanager
+        Debug.Log(lData.Count);
+
+        levels = new List<string> { };//write all the unlocked levels in here
+
+        foreach (LevelPositions ld in lData)
         {
-            case 1:
-                levels = new List<string>{ "Level1","Level2" };
-                break;
-
-            case 2:
-                levels = new List<string> { "Level1", "Level2", "Level3" };
-                break;
-
-            default:
-                levels = new List<string> { "Level1"};
-                break;
+            if (ld.unlocked)
+            {
+                levels.Add(ld.levelName);
+            }
         }
 
     }
 
 }
 
+[System.Serializable]
 public class LevelPositions
 {
     public string levelName;
-    public List<Vector3> possiblePositions;//all possible spawnpositions for this specific level
+    public int curStab;
+    public int reqStab;
+    public bool unlocked;
 
-    public LevelPositions(string name, List<Vector3> positions)
+    public LevelPositions(string name, int cur, int req, bool unlocked)
     {
         levelName = name;
-        possiblePositions = positions;
+        curStab = cur;
+        reqStab = req;
+        this.unlocked = unlocked;
     }
 }

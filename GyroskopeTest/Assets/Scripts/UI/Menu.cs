@@ -47,12 +47,12 @@ public class Menu : MonoBehaviour {
             GameObject Button2 = transform.Find("Level2").gameObject;
             GameObject Button3 = transform.Find("Level3").gameObject;
 
-            if (d!=null && d.level > 0)
+            if (d!=null && d.lData[1].unlocked)
             {
                 Button2.GetComponent<Button>().enabled = true;
                 Button2.GetComponent<Image>().color = Color.white;
             }
-            if (d != null && d.level > 1)
+            if (d != null && d.lData[2].unlocked)
             {
                  Button3.GetComponent<Button>().enabled = true;
                   Button3.GetComponent<Image>().color = Color.white;
