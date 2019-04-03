@@ -33,6 +33,8 @@ public class CurrencyManager : MonoBehaviour {
         {
             Debug.Log("Previous: Money: " + d.money + " Stability: " + d.stability); //Here we can just set our current money and stability
         }
+
+        currentMoney = d.money;
     }
 
     public static int getStabilitätsRequirement()

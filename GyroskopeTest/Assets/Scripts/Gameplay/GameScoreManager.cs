@@ -90,7 +90,7 @@ public class GameScoreManager : MonoBehaviour {
                 }
 
                 
-                if (menuExit==false)//Maarten: Do we always enable the upgrade, even after highscorerun?
+                if (currentDiff==GameScoreManager.difficulty.nothing && menuExit==false)//Maarten: Do we always enable the upgrade, even after highscorerun?
                 {
                     SceneManager.LoadScene("ProgressScene");
                 }
@@ -116,7 +116,7 @@ public class GameScoreManager : MonoBehaviour {
     {
         currentScore += i;
 
-        CurrencyManager.incrementMoney(i / 2);//TODO MAARTEN einfach irgendeinen value addieren, können wir uns ja noch entscheiden
+        //CurrencyManager.incrementMoney(i / 2);//TODO MAARTEN einfach irgendeinen value addieren, können wir uns ja noch entscheiden
     }
 
     public void ButtonHandleLoad()//invoked by button at end of round to load back into menu
@@ -125,7 +125,7 @@ public class GameScoreManager : MonoBehaviour {
         {
             scoredisplay.SetActive(false);
             //isCounting = true;
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("ProgressScene");
         }
     }
 

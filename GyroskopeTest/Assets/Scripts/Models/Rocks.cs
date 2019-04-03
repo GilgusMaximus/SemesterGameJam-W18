@@ -87,8 +87,8 @@ public class Rocks : MonoBehaviour {
 
             //vllt noch unterscheiden ob man in highscorerun ist, oder nicht
             GameScoreManager.addScore(Treasure.GetComponent<Treasure>().Wert);//score added
-            CurrencyManager.incrementMoney(Treasure.GetComponent<Treasure>().Wert);  //money added
-            CurrencyManager.incrementRoundMoney(Treasure.GetComponent<Treasure>().Wert);  //money added
+            CurrencyManager.incrementMoney(Treasure.GetComponent<Treasure>().Wert/2);  //money added
+            CurrencyManager.incrementRoundMoney(Treasure.GetComponent<Treasure>().Wert/2);  //money added
 
             TimeDynamite t = Treasure.GetComponent<TimeDynamite>();//invoke special behaviour for time or dynamite
 

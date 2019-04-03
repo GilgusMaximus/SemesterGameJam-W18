@@ -311,10 +311,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -376,13 +376,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2385000573d4b0d48b1b5d05e6a64b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 0}
   text: {fileID: 0}
   PauseMenu: {fileID: 0}
-  Button1: {fileID: 0}
-  Button2: {fileID: 0}
-  Button3: {fileID: 0}
   Playmenu: 0
+  levels: []
+  Username: -435897gbfhjsdf28737
+  inputf: {fileID: 0}
+  slider: {fileID: 0}
+  VolumeText: {fileID: 0}
+  options: 0
 --- !u!1 &582103393
 GameObject:
   m_ObjectHideFlags: 0
