@@ -101,7 +101,6 @@ public class CurrencyManager : MonoBehaviour {
 
     public void buyLevelStability(int i)//increment the level stability
     {
-        Debug.Log(lData[i].unlocked);
         if (currentMoney >= 100 && !lData[i].unlocked)
         {
             currentMoney -= 100;

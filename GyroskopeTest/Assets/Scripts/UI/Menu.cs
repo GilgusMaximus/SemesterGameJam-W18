@@ -74,6 +74,7 @@ public class Menu : MonoBehaviour {
         {
            
             nameSet = true;
+            playerName = Username;
         }
 
     }
@@ -192,6 +193,7 @@ public class Menu : MonoBehaviour {
             inputf.SetActive(false);
         }
         nameSet = true;
+        playerName = Username;
     }
 
     public void SetVolume()

@@ -3100,6 +3100,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoneyTotalText: {fileID: 713985855}
+  level1:
+  - {fileID: 130770572}
+  - {fileID: 1091872799}
+  - {fileID: 279371724}
+  level2:
+  - {fileID: 1156824715}
+  - {fileID: 770113984}
+  - {fileID: 866989797}
+  level3:
+  - {fileID: 561495996}
+  - {fileID: 1035301039}
+  - {fileID: 207605023}
 --- !u!4 &1607455039
 Transform:
   m_ObjectHideFlags: 0

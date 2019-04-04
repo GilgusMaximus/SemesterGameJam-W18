@@ -18,7 +18,7 @@ public class LevelData {
         //level = cm.getLevelToUnlock();
 
         lData = cm.getLData(); //get the relevant leveldata like stability from the currencymanager
-        Debug.Log(lData.Count);
+        //Debug.Log(lData.Count);
 
         levels = new List<string> { };//write all the unlocked levels in here
 

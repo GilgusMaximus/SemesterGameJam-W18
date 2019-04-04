@@ -3103,7 +3103,7 @@ Prefab:
     - target: {fileID: 114797167371010230, guid: 134f392c9bea84246af89176513f3723,
         type: 2}
       propertyPath: timer
-      value: 80
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114797167371010230, guid: 134f392c9bea84246af89176513f3723,
         type: 2}
