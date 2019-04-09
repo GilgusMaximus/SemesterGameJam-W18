@@ -177,7 +177,7 @@ public class Menu : MonoBehaviour {
     {
         int r = Random.Range(0,levels.Count);
         SceneManager.LoadScene(levels[r]);
-
+        //Maarten: TODO load random position
     }
 
     public void setUsername()

@@ -24,17 +24,24 @@ public class CurrencyManager : MonoBehaviour {
 
     private void Awake()
     {
-       // resetMoney();
-       // resetStabilität();
 
         LevelData d = SaveSystem.LoadData();
-       // CurrentLevelToUnlock = d.level;
-       // stabilität = d.stability;
         currentMoney = d.money;
         
         if (d != null)
         {
             Debug.Log("Previous: Money: " + d.money); //Here we can just set our current money and stability
+
+            /*if (d.lData!=null)
+            {
+                foreach(LevelPositions lp in d.lData)
+                {
+                    if (lp.unlocked)
+                    {
+                        Debug.Log("Unlocked: " + lp.levelName);
+                    }
+                }
+            }*/
         }
 
         if (d == null || d.lData==null || d.lData.Count == 0)//initial buildup for the stability
@@ -51,11 +58,6 @@ public class CurrencyManager : MonoBehaviour {
 
     }
 
-    /*public static int getStabilitätsRequirement()
-    {
-        return stabilitätsReq[CurrentLevelToUnlock];
-    }*/
-
     private void OnDestroy()//save data when we end the scene for debugging TODO: save our progress AFTER the level-up screen
     {
         SaveSystem.SaveData(this);
@@ -68,36 +70,6 @@ public class CurrencyManager : MonoBehaviour {
             moneyDisplay.text = "Money: " + RoundMoney;
         }
 	}
-
-    /*public void checkStabilität()//check if we have enough stability
-    {
-        if (stabilität>=stabilitätsReq[CurrentLevelToUnlock])
-        {
-          //  isUnlocked[CurrentLevelToUnlock] = true;
-
-            //TODO load scene, whatever
-            Debug.Log("We got enough stability");
-            if (CurrentLevelToUnlock + 1 <= stabilitätsReq.Length - 1)
-            {
-                CurrentLevelToUnlock++;
-
-            }
-            
-            resetStabilität();
-            SaveSystem.SaveData(this);
-        }
-    }
-
-    public void buyStabilität()//erhöhen stabilität durch buttenaufruf
-    {
-        if (currentMoney>=100)
-        {
-            currentMoney -= 100;
-            incrementStabilität(1);
-            SaveSystem.SaveData(this);
-        }
-    
-    }*/
 
     public void buyLevelStability(int i)//increment the level stability
     {
@@ -146,31 +118,6 @@ public class CurrencyManager : MonoBehaviour {
     {
         return currentMoney;
     }
-
-    /*public int getStability()
-    {
-        return stabilität;
-    }*/
-
-    /*public void incrementStabilität(int i)
-    {
-        
-            
-            stabilität += i;
-            checkStabilität();
-        
-    }*/
-
-   /* public void resetStabilität()
-    {
-        stabilität = 0;
-    }*/
-
-    /*public int getLevelToUnlock()
-    {
-        return CurrentLevelToUnlock;
-
-    }*/
 
     public List<LevelPositions> getLData()
     {

@@ -5,7 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class LevelData {
 
-    //public int level; //TODO Method to determine which level we are working on right now with incrementing stability
     public List<string> levels;//all possible levels for highscore run
     public List<LevelPositions> lData;//all possible spawnpositions for possible Levels Maarten TODO: Implement this later
     public int money;
@@ -14,8 +13,6 @@ public class LevelData {
     public LevelData(CurrencyManager cm)
     {
         money = cm.getMoney();
-        //stability = cm.getStability();
-        //level = cm.getLevelToUnlock();
 
         lData = cm.getLData(); //get the relevant leveldata like stability from the currencymanager
         //Debug.Log(lData.Count);
