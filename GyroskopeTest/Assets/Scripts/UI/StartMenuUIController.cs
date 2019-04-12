@@ -12,7 +12,7 @@ public class StartMenuUIController : MonoBehaviour
 	private Animator playButtonAnimator;
 
 	[SerializeField]
-	private Animator[] startupMenu, optionsMenu;
+	private Animator[] startupMenu, optionsMenu, playMenu, highscoreDisplayMenu;
 	[SerializeField]
 	private GameObject startUpMenuParent;
 	
@@ -43,19 +43,40 @@ public class StartMenuUIController : MonoBehaviour
 	{
 		triggerFadeIn();
 	}
+		
+	
+	
+	public void backToStartupmenu(int menuID){
+		//menu 0 = play; 1 = options; 2 = credits
+		Animator[] animators = null;
+		switch (menuID){
+			case 0: animators = playMenu;
+				break;
+			case 1: animators = optionsMenu;
+				break;
+		}
 
+		for (int i = 0; i < animators.Length; i++){
+			animators[i].SetTrigger("PlayFadeOut");
+		}
+		for(int i = 0; i < startupMenu.Length; i++)
+			startupMenu[i].SetTrigger("PlayFadeIn");
+	}
+	
 	//------------------------------------------------------------------------
 	//                          StartupMenu
     //------------------------------------------------------------------------
     
-	public void triggerFadeOut(int menuID)
+    
+    //triggers fadeOut of the startup menu and the fadeIn of the menu corresponding to menuID
+	public void triggerFadeOut(int menuId)
 	{
-
 		Animator[] animators = null;
 
-		switch (menuID){
-			case 0: animators = optionsMenu;
-				
+		switch (menuId){
+			case 0: animators = playMenu;
+				break;
+			case 1: animators = optionsMenu;
 				break;
 		}
 		//trigger reset to false after being activated
@@ -77,7 +98,7 @@ public class StartMenuUIController : MonoBehaviour
 		
 	}
 
-	public void exitProsougram()
+	public void exitProgram()
 	{
 		Application.Quit();
 	}
@@ -99,18 +120,38 @@ public class StartMenuUIController : MonoBehaviour
 		backgroundMusic.volume = slider.value/100f;
 	}
 
-	public void backToStartupmenu(int menuID){
-		//menu 0 = options
-		Animator[] animators = null;
-		switch (menuID){
-			case 0: animators = optionsMenu;
+	
+	//------------------------------------------------------------------------
+	//                          Play Menu
+	//------------------------------------------------------------------------
+
+	public void backToPlayMenu(int menuId)
+	{
+		Animator[] animator = null;
+		switch (menuId){
+			case 0: animator = highscoreDisplayMenu;
 				break;
 		}
-
-		for (int i = 0; i < animators.Length; i++){
-			animators[i].SetTrigger("PlayFadeOut");
+		for (int i = 0; i < animator.Length; i++){
+			animator[i].SetTrigger("PlayFadeOut");
 		}
-		for(int i = 0; i < startupMenu.Length; i++)
-			startupMenu[i].SetTrigger("PlayFadeIn");
+		for(int i = 0; i < playMenu.Length; i++)
+			playMenu[i].SetTrigger("PlayFadeIn");
 	}
+
+	public void fadeInSubPlayMenu(int menuId)
+	{
+		Animator[] animator = null;
+		switch (menuId){
+			case 0: animator = highscoreDisplayMenu;
+				break;
+		}
+		for (int i = 0; i < playMenu.Length; i++){
+			playMenu[i].SetTrigger("PlayFadeOut");
+		}
+		for(int i = 0; i < animator.Length; i++)
+			animator[i].SetTrigger("PlayFadeIn");
+	}
+	
+	
 }
