@@ -13,7 +13,7 @@ public class StartMenuUIController : MonoBehaviour
 
 	//Every array holds all UI Items of the corresponding menu
 	[SerializeField]
-	private Animator[] startupMenu, optionsMenu, playMenu, highscoreDisplayMenu;
+	private Animator[] startupMenu, optionsMenu, playMenu, highscoreDisplayMenu, levelChooseMenu;
 	
 	
 	//the 2 sprite images, which represent the mute button in the options menu - image 0 is the not muted image
@@ -31,7 +31,7 @@ public class StartMenuUIController : MonoBehaviour
 	//is false at start
 	private bool isAudioMuted;	
 
-
+	//hash values for the animation triggers -> faster lookup of the trigger when setTrigger() is called
 	private int playFadeInId, playFadeOutId;
 	
 	//used for changing the mute buttons sprite (0 = muted; 1 = not muted) 
@@ -139,6 +139,8 @@ public class StartMenuUIController : MonoBehaviour
 		switch (menuId){
 			case 0: animators = highscoreDisplayMenu;
 				break;
+			case 1: animators = levelChooseMenu;
+				break;
 			default: Debug.LogError("StartMenuUIController.cs: backToPlayMenu: wrong menuID");
 				return;
 		}
@@ -155,6 +157,8 @@ public class StartMenuUIController : MonoBehaviour
 		Animator[] animators = null;
 		switch (menuId){
 			case 0: animators = highscoreDisplayMenu;
+				break;
+			case 1: animators = levelChooseMenu;
 				break;
 			default: Debug.LogError("StartMenuUIController.cs: fadeInSubPlayMenu: wrong menuID");
 				return;
