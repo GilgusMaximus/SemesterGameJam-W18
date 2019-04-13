@@ -43,9 +43,9 @@ public class StartMenuUIController : MonoBehaviour
 
 
 	private void Start(){
-		triggerFadeIn();
 		playFadeInId = Animator.StringToHash("PlayFadeIn");
 		playFadeOutId = Animator.StringToHash("PlayFadeOut");
+		triggerFadeIn();
 	}
 		
 	
