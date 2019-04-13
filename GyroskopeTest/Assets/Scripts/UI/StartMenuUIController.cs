@@ -11,62 +11,71 @@ public class StartMenuUIController : MonoBehaviour
 	[SerializeField]
 	private Animator playButtonAnimator;
 
+	//Every array holds all UI Items of the corresponding menu
 	[SerializeField]
 	private Animator[] startupMenu, optionsMenu, playMenu, highscoreDisplayMenu;
-	[SerializeField]
-	private GameObject startUpMenuParent;
 	
+	
+	//the 2 sprite images, which represent the mute button in the options menu - image 0 is the not muted image
 	[SerializeField]
 	private Sprite[] muteSprites = new Sprite[2];
 
-
+	//the reference to the image object in the scene
 	[SerializeField] 
 	private Image muteButtonImage;
 
-	[SerializeField] private AudioSource backgroundMusic;
+	//background music source
+	[SerializeField] 
+	private AudioSource backgroundMusic;
 
-	private bool isAudioMuted = false; 
+	//is false at start
+	private bool isAudioMuted;	
+
+
+	private int playFadeInId, playFadeOutId;
 	
+	//used for changing the mute buttons sprite (0 = muted; 1 = not muted) 
 	private int currentMuteInt = 1;
+	
 	//------------------------------------------------------------------------
 	//                          General
 	//------------------------------------------------------------------------	
-	
-	private void Update()
-	{
-		if(Input.GetKeyDown(KeyCode.A))
-			triggerFadeIn();
-	}
 
 
-	private void Start()
-	{
+	private void Start(){
 		triggerFadeIn();
+		playFadeInId = Animator.StringToHash("PlayFadeIn");
+		playFadeOutId = Animator.StringToHash("PlayFadeOut");
 	}
 		
-	
-	
-	public void backToStartupmenu(int menuID){
-		//menu 0 = play; 1 = options; 2 = credits
-		Animator[] animators = null;
-		switch (menuID){
-			case 0: animators = playMenu;
-				break;
-			case 1: animators = optionsMenu;
-				break;
-		}
-
-		for (int i = 0; i < animators.Length; i++){
-			animators[i].SetTrigger("PlayFadeOut");
-		}
-		for(int i = 0; i < startupMenu.Length; i++)
-			startupMenu[i].SetTrigger("PlayFadeIn");
-	}
 	
 	//------------------------------------------------------------------------
 	//                          StartupMenu
     //------------------------------------------------------------------------
     
+    //from the options, credit and play menu, this method is called, when the back button is pressed
+    public void backToStartupMenu(int menuId){
+	    //get the correct Animator array
+	    //menu 0 = play; 1 = options; 2 = credits
+	    Animator[] animators = null;
+	    switch (menuId){
+		    case 0: animators = playMenu;
+			    break;
+		    case 1: animators = optionsMenu;
+			    break;
+		    default: Debug.LogError("StartMenuUIController.cs: backToStartupMenu: wrong menuID");
+			    return;
+	    }
+	    
+		//play fadeout animation for all sub-startupMenu items
+		foreach (Animator animator in animators)
+			animator.SetTrigger(playFadeOutId);
+		
+	    //play fadein animation for all startupMenu items
+	    foreach (Animator animator in startupMenu)
+		    animator.SetTrigger(playFadeInId);
+
+    }
     
     //triggers fadeOut of the startup menu and the fadeIn of the menu corresponding to menuID
 	public void triggerFadeOut(int menuId)
@@ -78,24 +87,22 @@ public class StartMenuUIController : MonoBehaviour
 				break;
 			case 1: animators = optionsMenu;
 				break;
+			default: Debug.LogError("StartMenuUIController.cs: triggerFadeOut: wrong menuID"); 
+				return;
 		}
 		//trigger reset to false after being activated
-		for(int i = 0; i < startupMenu.Length; i++)
-			startupMenu[i].SetTrigger("PlayFadeOut");
+		foreach (Animator animator in startupMenu)
+			animator.SetTrigger(playFadeOutId);
 		
-		for(int i = 0; i < animators.Length; i++)
-			animators[i].SetTrigger("PlayFadeIn");
+		foreach (Animator animator in animators)
+			animator.SetTrigger(playFadeInId);
 		
 	}
 	
-	public void triggerFadeIn()
-	{
-
+	private void triggerFadeIn(){
 		//trigger reset to false after being activated
-		for(int i = 0; i < startupMenu.Length; i++)
-			startupMenu[i].SetTrigger("PlayFadeIn");
-		
-		
+		foreach (Animator animator in startupMenu)
+			animator.SetTrigger(playFadeInId);	
 	}
 
 	public void exitProgram()
@@ -115,8 +122,8 @@ public class StartMenuUIController : MonoBehaviour
 		backgroundMusic.mute = isAudioMuted;
 	}
 
-	public void sliderValueChanged(Slider slider)
-	{
+	//called when the sound volume slider value changes
+	public void sliderValueChanged(Slider slider){
 		backgroundMusic.volume = slider.value/100f;
 	}
 
@@ -125,32 +132,39 @@ public class StartMenuUIController : MonoBehaviour
 	//                          Play Menu
 	//------------------------------------------------------------------------
 
+	//called when one of the sub-playMenu's back button is clicked
 	public void backToPlayMenu(int menuId)
 	{
-		Animator[] animator = null;
+		Animator[] animators = null;
 		switch (menuId){
-			case 0: animator = highscoreDisplayMenu;
+			case 0: animators = highscoreDisplayMenu;
 				break;
+			default: Debug.LogError("StartMenuUIController.cs: backToPlayMenu: wrong menuID");
+				return;
 		}
-		for (int i = 0; i < animator.Length; i++){
-			animator[i].SetTrigger("PlayFadeOut");
-		}
-		for(int i = 0; i < playMenu.Length; i++)
-			playMenu[i].SetTrigger("PlayFadeIn");
+		foreach (Animator animator in animators)
+			animator.SetTrigger(playFadeOutId);
+		
+		foreach (Animator animator in playMenu)
+			animator.SetTrigger(playFadeInId);
 	}
 
+	//called when one of the sub-playMenu's is clicked
 	public void fadeInSubPlayMenu(int menuId)
 	{
-		Animator[] animator = null;
+		Animator[] animators = null;
 		switch (menuId){
-			case 0: animator = highscoreDisplayMenu;
+			case 0: animators = highscoreDisplayMenu;
 				break;
+			default: Debug.LogError("StartMenuUIController.cs: fadeInSubPlayMenu: wrong menuID");
+				return;
 		}
-		for (int i = 0; i < playMenu.Length; i++){
-			playMenu[i].SetTrigger("PlayFadeOut");
-		}
-		for(int i = 0; i < animator.Length; i++)
-			animator[i].SetTrigger("PlayFadeIn");
+		
+		foreach (Animator animator in playMenu)
+			animator.SetTrigger(playFadeOutId);
+		
+		foreach (Animator animator in animators)
+			animator.SetTrigger(playFadeInId);
 	}
 	
 	
