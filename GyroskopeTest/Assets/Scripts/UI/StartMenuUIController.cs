@@ -14,7 +14,10 @@ public class StartMenuUIController : MonoBehaviour
 	//Every array holds all UI Items of the corresponding menu
 	[SerializeField]
 	private Animator[] startupMenu, optionsMenu, playMenu, highscoreDisplayMenu, levelChooseMenu;
-	
+
+	//the 4 models displayed in the level choose menu
+	[SerializeField] 
+	private GameObject[] levelModels;
 	
 	//the 2 sprite images, which represent the mute button in the options menu - image 0 is the not muted image
 	[SerializeField]
@@ -32,10 +35,16 @@ public class StartMenuUIController : MonoBehaviour
 	private bool isAudioMuted;	
 
 	//hash values for the animation triggers -> faster lookup of the trigger when setTrigger() is called
-	private int playFadeInId, playFadeOutId;
+	private int playFadeInId, playFadeOutId, playNextLevelId;
 	
 	//used for changing the mute buttons sprite (0 = muted; 1 = not muted) 
 	private int currentMuteInt = 1;
+
+	//index which model is currently displayed in level choose menu 
+	private int currentModelIndex = 0;
+
+	//which arrow is presses in the level choose menu - left = false; right = true;
+	private Boolean levelChooseArrow = false;
 	
 	//------------------------------------------------------------------------
 	//                          General
@@ -45,6 +54,7 @@ public class StartMenuUIController : MonoBehaviour
 	private void Start(){
 		playFadeInId = Animator.StringToHash("PlayFadeIn");
 		playFadeOutId = Animator.StringToHash("PlayFadeOut");
+		playNextLevelId = Animator.StringToHash("PlayNextLevel");
 		triggerFadeIn();
 	}
 		
@@ -159,6 +169,7 @@ public class StartMenuUIController : MonoBehaviour
 			case 0: animators = highscoreDisplayMenu;
 				break;
 			case 1: animators = levelChooseMenu;
+				levelModels[0].SetActive(true);
 				break;
 			default: Debug.LogError("StartMenuUIController.cs: fadeInSubPlayMenu: wrong menuID");
 				return;
@@ -171,5 +182,27 @@ public class StartMenuUIController : MonoBehaviour
 			animator.SetTrigger(playFadeInId);
 	}
 	
+	//function called when one of the arrow buttons is pressed 
+	public void arrowPressed(Boolean arrow){
+		if ((!arrow && currentModelIndex == 0)||(arrow && currentModelIndex == 3))
+			return;
+		levelChooseArrow = arrow;
+		levelChooseMenu[6].SetTrigger(playNextLevelId);
+	}
 	
+	//called when the fade in state for the model fade in begins - switches the active model
+	public void modelFadeOutDone(){
+		//corner cases do nothing
+		if ((!levelChooseArrow && currentModelIndex == 0)||(levelChooseArrow && currentModelIndex == 3))
+			return;
+		//right arrow pressed
+		if (levelChooseArrow){
+			levelModels[currentModelIndex++].SetActive(false);
+			levelModels[currentModelIndex].SetActive(true);
+		}else{	//left arrow pressed
+			levelModels[currentModelIndex--].SetActive(false);
+			levelModels[currentModelIndex].SetActive(true);
+		}
+		
+	}
 }

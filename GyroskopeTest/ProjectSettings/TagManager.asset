@@ -13,6 +13,7 @@ TagManager:
   - Ruby
   - Dynamite
   - Clock
+  - menuController
   layers:
   - Default
   - TransparentFX
