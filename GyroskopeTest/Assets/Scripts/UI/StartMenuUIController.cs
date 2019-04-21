@@ -43,6 +43,9 @@ public class StartMenuUIController : MonoBehaviour
 	//index which model is currently displayed in level choose menu 
 	private int currentModelIndex = 0;
 
+	//the index of the location selected - 0 = location 1; 1 = location 2; -1 = no location
+	private int currentSelectedLocation = -1;
+	
 	//which arrow is presses in the level choose menu - left = false; right = true;
 	private Boolean levelChooseArrow = false;
 	
@@ -162,13 +165,17 @@ public class StartMenuUIController : MonoBehaviour
 	}
 
 	//called when one of the sub-playMenu's is clicked
-	public void fadeInSubPlayMenu(int menuId)
-	{
+	public void fadeInSubPlayMenu(int menuId){
 		Animator[] animators = null;
 		switch (menuId){
 			case 0: animators = highscoreDisplayMenu;
 				break;
 			case 1: animators = levelChooseMenu;
+				foreach (GameObject model in levelModels){
+					model.SetActive(false);
+				}
+
+				currentModelIndex = 0;
 				levelModels[0].SetActive(true);
 				break;
 			default: Debug.LogError("StartMenuUIController.cs: fadeInSubPlayMenu: wrong menuID");
@@ -203,6 +210,9 @@ public class StartMenuUIController : MonoBehaviour
 			levelModels[currentModelIndex--].SetActive(false);
 			levelModels[currentModelIndex].SetActive(true);
 		}
-		
+	}
+
+	public void locationButtonClicked(int id){
+		currentSelectedLocation = id;
 	}
 }
