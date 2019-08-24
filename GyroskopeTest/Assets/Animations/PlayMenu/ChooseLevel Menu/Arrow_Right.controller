@@ -13,13 +13,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: PlayFadeOut
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -174,7 +174,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Wait2 0 0 0
+  m_Name: Wait2
   m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
@@ -200,7 +200,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Wait2 0 0 2
+  m_Name: Wait3
   m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
@@ -226,7 +226,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: New State
+  m_Name: Entry Wait
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -252,7 +252,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: New State 0
+  m_Name: FadeOut
   m_Speed: -1
   m_CycleOffset: 0
   m_Transitions:
@@ -278,7 +278,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Wait2 0 0
+  m_Name: Wait1
   m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
@@ -304,7 +304,7 @@ AnimatorState:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: top10player_text
+  m_Name: FadeIn
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -334,22 +334,22 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102092580363066210}
-    m_Position: {x: 125.30487, y: 293.88217, z: 0}
+    m_Position: {x: 12, y: 384, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102074558260600716}
-    m_Position: {x: -318.69513, y: 581.8822, z: 0}
+    m_Position: {x: -252, y: 516, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102471099192733510}
-    m_Position: {x: -282.69513, y: 737.8822, z: 0}
+    m_Position: {x: 84, y: 516, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102793403777385646}
-    m_Position: {x: -294.69513, y: 269.88217, z: 0}
+    m_Position: {x: -252, y: 288, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102216282607927820}
     m_Position: {x: -246.69513, y: 185.88217, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102925767376864678}
-    m_Position: {x: -306.69513, y: 449.88217, z: 0}
+    m_Position: {x: -252, y: 384, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
