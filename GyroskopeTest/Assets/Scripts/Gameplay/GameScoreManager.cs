@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameScoreManager : MonoBehaviour {
 
@@ -13,7 +15,8 @@ public class GameScoreManager : MonoBehaviour {
     public static float rtime;//remaining time
     public static bool isCounting;
 
-    public Text TimeDisplay;
+    //public Text TimeDisplay;
+    public TMP_Text TimeDisplay;
 
     public GameObject scoredisplay;
 
@@ -82,7 +85,7 @@ public class GameScoreManager : MonoBehaviour {
                     Highscores.AddNewHighscore(Menu.playerName, currentScore);//hochladen des highscores TODO how to get name
                     if (!scoredisplay.activeInHierarchy)
                     {
-                        Text scored = scoredisplay.transform.GetChild(0).GetComponent<Text>();
+                        TMP_Text scored = scoredisplay.transform.GetChild(0).GetComponent<TMP_Text>();
                         scored.text = "Your score is: " + GameScoreManager.currentScore.ToString();
 
                         scoredisplay.SetActive(true);

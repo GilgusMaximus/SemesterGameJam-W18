@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -18,7 +19,7 @@ public class CurrencyManager : MonoBehaviour {
     public static int currentMoney = 0;
     
 
-    public Text moneyDisplay;
+    public TMP_Text moneyDisplay;
 
     public List<LevelPositions> lData;
 
