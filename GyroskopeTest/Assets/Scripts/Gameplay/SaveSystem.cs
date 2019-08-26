@@ -14,7 +14,7 @@ public static class SaveSystem {
 
         formatter.Serialize(stream, data);//format into binary
 
-        //Debug.Log("Saved at: " + path);
+        Debug.Log("Saved at: " + path);
         stream.Close();
     }
 
