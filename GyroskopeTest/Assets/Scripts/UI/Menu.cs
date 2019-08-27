@@ -28,11 +28,14 @@ public class Menu : MonoBehaviour {
     public Slider slider;
     public Text VolumeText;
     public bool options;
+
+    LevelData d;
+
     // Use this for initialization
     void Start () {
 
         //Maarten: load all possible levels for highscore run
-        LevelData d = SaveSystem.LoadData();
+        d = SaveSystem.LoadData();
         if (d==null || d.levels==null)
         {
             levels = new List<string> { "Level1" };
@@ -176,8 +179,32 @@ public class Menu : MonoBehaviour {
     private void LoadRandomLevel()
     {
         int r = Random.Range(0,levels.Count);
+
+        //Maarten: load random position, very hacky approach
+        LevelPositions curLevelData=null;
+        foreach(LevelPositions l in d.lData) //sadly we can't just save the LevelPos as Listdata, since problems with UI elemnts
+        {
+            if (l.levelName.Equals(levels[r]))
+            {
+                curLevelData = l;
+                break;
+            }
+        }
+
+        bool posFound = false;
+        while (!posFound)
+        {
+            int rPos = Random.Range(0, curLevelData.spawnPos.Count);
+            if (curLevelData.unlockedPos[rPos])
+            {
+                SpawnCameraOnRandPos.currentSpawnPos = curLevelData.spawnPos[rPos];
+                posFound = true;
+                break;
+            }
+        }
+
         SceneManager.LoadScene(levels[r]);
-        //Maarten: TODO load random position
+        
     }
 
     public void setUsername()

@@ -47,7 +47,7 @@ public class CurrencyManager : MonoBehaviour {
 
         if (d == null || d.lData==null || d.lData.Count == 0)//initial buildup for the stability
         {
-            List<bool> unlockedPos1 = new List<bool> { true};
+            List<bool> unlockedPos1 = new List<bool> { true };
             List<bool> unlockedPos23 = new List<bool> { true, false, false };
 
             List<sVector3> spawnPos1 = new List<sVector3> { new sVector3(0,2.61f,0) };
@@ -97,6 +97,22 @@ public class CurrencyManager : MonoBehaviour {
         {
             ld.unlocked = true;
             SaveSystem.SaveData(this);
+        }
+    }
+
+    public void buyPosition(string stats)//enable optional spawnpos. Specify which level to unlock in UI Element
+    {
+        //we want to parse our targeted level and pos from the input
+        int level= int.Parse(stats.Substring(0,2));
+        int pos = int.Parse(stats.Substring(2));
+
+        //Debug.Log(level + "/" + pos);
+        if (currentMoney>=500 && lData[level].unlocked && !lData[level].unlockedPos[pos])
+        {
+            currentMoney -= 500;
+            lData[level].unlockedPos[pos] = true;
+            SaveSystem.SaveData(this);
+            Debug.Log("Unlocked Position: "+lData[level].spawnPos[pos].x+"/"+lData[level].spawnPos[pos].y+"/"+ lData[level].spawnPos[pos].z);
         }
     }
 
