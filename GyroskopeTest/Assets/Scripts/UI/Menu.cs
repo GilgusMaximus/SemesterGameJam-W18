@@ -99,6 +99,7 @@ public class Menu : MonoBehaviour {
         {
             CurrencyManager.resetRoundMoney();
 
+            GameScoreManager.currentDiff = GameScoreManager.difficulty.nothing;//Maarten: When we load a level, we always play it without a difficulty
 
             SceneManager.LoadScene(sceneName);
             Time.timeScale = 1;

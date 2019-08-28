@@ -54,8 +54,27 @@ public class ProgressMenu : MonoBehaviour {
         {
             level[0].text = "Unlock: " + d.lData[i].curStab + "/" + d.lData[i].reqStab + "\n100 money to increment";
         }
-        level[1].text = "Pos 1: " + "not yet implemented";
-        level[2].text = "Pos 2: " + "not yet implemented";
+
+        if (d.lData[i].unlockedPos.Count > 1 && d.lData[i].unlockedPos[1])
+        {
+            level[1].text = "Pos 1 unlocked!";
+        }
+        else
+        {
+            level[1].text = "Pay 500 money to unlock optional Position 1";
+        }
+
+        if (d.lData[i].unlockedPos.Count > 2 && d.lData[i].unlockedPos[2])
+        {
+            level[2].text = "Pos 2 unlocked!";
+        }
+        else
+        {
+            level[2].text = "Pay 500 money to unlock optional Position 2";
+        }
+
+        //level[1].text = "Pos 1: " + "not yet implemented";
+        //level[2].text = "Pos 2: " + "not yet implemented";
     }
 
 
