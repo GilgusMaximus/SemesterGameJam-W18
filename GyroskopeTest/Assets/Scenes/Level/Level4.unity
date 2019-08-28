@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1220,6 +1220,11 @@ Prefab:
       propertyPath: scoredisplay
       value: 
       objectReference: {fileID: 861964189}
+    - target: {fileID: 114797167371010230, guid: 134f392c9bea84246af89176513f3723,
+        type: 2}
+      propertyPath: MoneyBalance
+      value: 
+      objectReference: {fileID: 2011606222}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 134f392c9bea84246af89176513f3723, type: 2}
   m_IsPrefabAsset: 0
@@ -1770,7 +1775,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4764524608766234, guid: f0b141c5f0513f4489f029141b0dd040, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -28.73
+      value: -29.168
       objectReference: {fileID: 0}
     - target: {fileID: 4764524608766234, guid: f0b141c5f0513f4489f029141b0dd040, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1778,7 +1783,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4764524608766234, guid: f0b141c5f0513f4489f029141b0dd040, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 10.818
+      value: 11.227
       objectReference: {fileID: 0}
     - target: {fileID: 4764524608766234, guid: f0b141c5f0513f4489f029141b0dd040, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2507,16 +2512,6 @@ Prefab:
       propertyPath: scanner
       value: 
       objectReference: {fileID: 771244313}
-    - target: {fileID: 114335206957541518, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114561907737049632, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114781749812651106, guid: 94064775b5657e347977f967339990ea,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -2526,31 +2521,6 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114918094682456876, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114918094682456876, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114034356460049584, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114034356460049584, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224082145629981604, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114199211553968140, guid: 94064775b5657e347977f967339990ea,
         type: 2}
@@ -2565,6 +2535,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94064775b5657e347977f967339990ea, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2011606222 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1851530156746306, guid: 94064775b5657e347977f967339990ea,
+    type: 2}
+  m_PrefabInternal: {fileID: 2011606221}
 --- !u!1001 &2141091215
 Prefab:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
@@ -19,7 +20,8 @@ public class GameScoreManager : MonoBehaviour {
     public TMP_Text TimeDisplay;
 
     public GameObject scoredisplay;
-
+    public GameObject MoneyBalance;
+    
     public static bool l;
 
     CurrencyManager cm;
@@ -66,8 +68,8 @@ public class GameScoreManager : MonoBehaviour {
     private void Update()
     {
 
-        if (isCounting)
-        {
+        if (isCounting){
+            Debug.Log("IsCOunting");
             rtime -= Time.deltaTime;
             string minutes = Mathf.Floor(rtime / 60).ToString("00");
             string seconds = Mathf.RoundToInt(rtime%60).ToString("00");
@@ -107,6 +109,12 @@ public class GameScoreManager : MonoBehaviour {
 
         }
 
+    }
+
+
+    private void deactivateUIItemsONLevelFinish(){
+        TimeDisplay.enabled = false;
+        MoneyBalance.SetActive(false);
     }
 
     public static void resetScore()//Caution: Always call this before embarking a new run!
