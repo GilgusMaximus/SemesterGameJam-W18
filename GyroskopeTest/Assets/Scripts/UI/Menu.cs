@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Menu : MonoBehaviour {
 
@@ -31,6 +33,12 @@ public class Menu : MonoBehaviour {
 
     LevelData d;
 
+
+
+    public void setName(bool a){
+        nameSet = a;
+    }
+    
     // Use this for initialization
     void Start () {
 
@@ -93,6 +101,18 @@ public class Menu : MonoBehaviour {
         }
     }
 
+    public void exitToMenu(String sceneName){
+        if (nameSet == false){
+            setName(true);
+            LoadScene(sceneName);
+            setName(false);
+        }
+        else{
+            setName(true);
+            LoadScene(sceneName);
+        }
+    }
+
     public void LoadScene(string sceneName)
     {
         if (nameSet)
@@ -100,8 +120,12 @@ public class Menu : MonoBehaviour {
             CurrencyManager.resetRoundMoney();
 
             GameScoreManager.currentDiff = GameScoreManager.difficulty.nothing;//Maarten: When we load a level, we always play it without a difficulty
-
-            SceneManager.LoadScene(sceneName);
+            if (sceneName.Equals("Menu")){
+                SceneManager.LoadScene(0);   
+                Debug.Log("Scene 0 Loaded");
+            }else{
+                SceneManager.LoadScene(sceneName);
+            }
             Time.timeScale = 1;
             if (sceneName.Equals("Menu"))//Maarten: reset some stats
             {

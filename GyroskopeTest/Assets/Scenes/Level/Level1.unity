@@ -677,7 +677,7 @@ Prefab:
         type: 2}
       propertyPath: TimeDisplay
       value: 
-      objectReference: {fileID: 1514884131}
+      objectReference: {fileID: 0}
     - target: {fileID: 114749935284714790, guid: 0b1e6fc0bb643404ebf0f7b6e8a36dfa,
         type: 2}
       propertyPath: scoredisplay
@@ -688,6 +688,11 @@ Prefab:
       propertyPath: timer
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 114749935284714790, guid: 0b1e6fc0bb643404ebf0f7b6e8a36dfa,
+        type: 2}
+      propertyPath: MoneyBalance
+      value: 
+      objectReference: {fileID: 737842413}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1e6fc0bb643404ebf0f7b6e8a36dfa, type: 2}
   m_IsPrefabAsset: 0

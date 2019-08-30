@@ -9,23 +9,18 @@ using TMPro;
 
 public class GameScoreManager : MonoBehaviour {
 
-    public static int currentScore=0;
+    public static int currentScore = 0;
     public float timer = 600;//time in seconds
     
 
-    public static float rtime;//remaining time
-    public static bool isCounting;
+    public static float remainingTime;//remaining time
+    public static bool timeIsCounting;
+    public static bool menuExit;
 
-    //public Text TimeDisplay;
-    public TMP_Text TimeDisplay;
 
-    public GameObject scoredisplay;
-    public GameObject MoneyBalance;
-    
-    public static bool l;
-
-    CurrencyManager cm;
-    public static bool menuExit=false;
+    //the display texts while playing
+    [SerializeField]
+    private TMP_Text timeDisplayText;
 
     public enum difficulty //we enable/disable stuff based on the set diffiulty
     {
@@ -34,64 +29,59 @@ public class GameScoreManager : MonoBehaviour {
 
     public static difficulty currentDiff;
 
+    
     private void Start()//Aufpassen: wenn man in einem level mehrere scenen läd, darf man den score nicht resetten!
     {
+        
         menuExit = false;
-        if (rtime <= 0)
-        {
-            rtime = timer;
+        //remainingTime auf Anfangswert setzten
+        if (remainingTime <= 0){
+            remainingTime = timer;
         }
-        isCounting = true;
+        //Ablaufen der Zeit starten
+        timeIsCounting = true;
+        
+        //Features je nach Schwierigkeit (de)aktivieren
+        if (Camera.main != null){
+            switch (currentDiff){
+                case difficulty.nothing:
+                    break;
 
-        cm = gameObject.GetComponent<CurrencyManager>();
+                case difficulty.normal:
+                    Camera.main.GetComponent<Water>().enabled = false;
 
+                    break;
 
-        switch (currentDiff)
-        {
-            case difficulty.nothing:
-                break;
+                case difficulty.hard:
+                    Camera.main.GetComponent<Water>().enabled = true;
+                    break;
 
-            case difficulty.normal:
-                Camera.main.GetComponent<Water>().enabled = false;
-
-                break;
-
-            case difficulty.hard:
-                Camera.main.GetComponent<Water>().enabled = true;
-                break;
-
+            }
         }
-
-
     }
 
     private void Update()
     {
+        //wenn die Zeit läuft
+        if (timeIsCounting){
+            //Zeit seit letztem Update abziehen und anzeigen 
+            remainingTime -= Time.deltaTime;
+            string minutes = Mathf.Floor(remainingTime / 60).ToString("00");
+            string seconds = (remainingTime % 60).ToString("00");
 
-        if (isCounting){
-            Debug.Log("IsCOunting");
-            rtime -= Time.deltaTime;
-            string minutes = Mathf.Floor(rtime / 60).ToString("00");
-            string seconds = Mathf.RoundToInt(rtime%60).ToString("00");
+            timeDisplayText.text = minutes + ":" + seconds;
 
-            TimeDisplay.text = minutes + ":" + seconds;
-
-           
-            if (rtime<=0)//abbruch
+           //wenn keine Zeit mehr übrig ist
+            if (remainingTime <= 0)//abbruch
             {
-                TimeDisplay.text = "0";
-                isCounting = false;
-                //verloren, naechste scene?
+                //Ablaufen der Zeit deaktivieren und verbleibende Zeit auf 0 setzen
+                timeDisplayText.text = "0";
+                timeIsCounting = false;
+                
+                //wenn die Schwierigkeit nicht 'nothing' ist
                 if (currentDiff!=GameScoreManager.difficulty.nothing)//only upload in highscore scene Maarten: we are in highscore Modus if diff is not nothing
                 {
                     Highscores.AddNewHighscore(Menu.playerName, currentScore);//hochladen des highscores TODO how to get name
-                    if (!scoredisplay.activeInHierarchy)
-                    {
-                        TMP_Text scored = scoredisplay.transform.GetChild(0).GetComponent<TMP_Text>();
-                        scored.text = "Your score is: " + GameScoreManager.currentScore.ToString();
-
-                        scoredisplay.SetActive(true);
-                    }
                 }
 
                 
@@ -102,25 +92,15 @@ public class GameScoreManager : MonoBehaviour {
 
 
                 //Anzeigen Highscore und enable laden naechster scene durch button
-               
-
-                Debug.Log("Times's up guys!");
             }
 
         }
 
     }
-
-
-    private void deactivateUIItemsONLevelFinish(){
-        TimeDisplay.enabled = false;
-        MoneyBalance.SetActive(false);
-    }
-
+    
     public static void resetScore()//Caution: Always call this before embarking a new run!
     {
-        currentScore = 0;
-        rtime = 0;
+        currentScore = 0;remainingTime = 0;
     }
 
     public static void addScore(int i)
@@ -128,16 +108,6 @@ public class GameScoreManager : MonoBehaviour {
         currentScore += i;
 
         //CurrencyManager.incrementMoney(i / 2);//TODO MAARTEN einfach irgendeinen value addieren, können wir uns ja noch entscheiden
-    }
-
-    public void ButtonHandleLoad()//invoked by button at end of round to load back into menu
-    {
-        if (scoredisplay.activeInHierarchy)
-        {
-            scoredisplay.SetActive(false);
-            //isCounting = true;
-            SceneManager.LoadScene("ProgressScene");
-        }
     }
 
     public void OnDestroy()

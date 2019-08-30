@@ -12,7 +12,7 @@ public class Touchable : MonoBehaviour, IPointerClickHandler {
         Rocks r = eventData.pointerPress.GetComponent<Rocks>();  //überprüfung ob das angeklickte element ein stein ist
         if (r != null)
         {
-            if (GameScoreManager.isCounting && !StartScan.scannerActive)    //wenn man abbauen darf
+            if (GameScoreManager.timeIsCounting && !StartScan.scannerActive)    //wenn man abbauen darf
             {   
 
                 GameObject.FindObjectOfType<Pickaxe>().SpawnPickaxe(eventData);   //das event wird an den Pickaxespawner weitergegeben

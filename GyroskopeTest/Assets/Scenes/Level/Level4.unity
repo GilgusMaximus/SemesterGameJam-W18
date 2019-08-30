@@ -1225,6 +1225,25 @@ Prefab:
       propertyPath: MoneyBalance
       value: 
       objectReference: {fileID: 2011606222}
+    - target: {fileID: 1418773485730564, guid: 134f392c9bea84246af89176513f3723, type: 2}
+      propertyPath: m_Name
+      value: Highscoremanager
+      objectReference: {fileID: 0}
+    - target: {fileID: 114797167371010230, guid: 134f392c9bea84246af89176513f3723,
+        type: 2}
+      propertyPath: moneyBalanceText
+      value: 
+      objectReference: {fileID: 1271984494}
+    - target: {fileID: 114797167371010230, guid: 134f392c9bea84246af89176513f3723,
+        type: 2}
+      propertyPath: timeDisplayText
+      value: 
+      objectReference: {fileID: 1377352125}
+    - target: {fileID: 114797167371010230, guid: 134f392c9bea84246af89176513f3723,
+        type: 2}
+      propertyPath: scoreDisplayText
+      value: 
+      objectReference: {fileID: 2011606223}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 134f392c9bea84246af89176513f3723, type: 2}
   m_IsPrefabAsset: 0
@@ -2502,32 +2521,32 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114165695336202914, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1018738208}
     - target: {fileID: 114986075297817580, guid: 94064775b5657e347977f967339990ea,
         type: 2}
       propertyPath: scanner
       value: 
       objectReference: {fileID: 771244313}
-    - target: {fileID: 114781749812651106, guid: 94064775b5657e347977f967339990ea,
+    - target: {fileID: 114165695336202914, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1018738208}
+    - target: {fileID: 114199211553968140, guid: 94064775b5657e347977f967339990ea,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114781749812651106, guid: 94064775b5657e347977f967339990ea,
+    - target: {fileID: 114199211553968140, guid: 94064775b5657e347977f967339990ea,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114199211553968140, guid: 94064775b5657e347977f967339990ea,
+    - target: {fileID: 114781749812651106, guid: 94064775b5657e347977f967339990ea,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114199211553968140, guid: 94064775b5657e347977f967339990ea,
+    - target: {fileID: 114781749812651106, guid: 94064775b5657e347977f967339990ea,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -2540,6 +2559,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1851530156746306, guid: 94064775b5657e347977f967339990ea,
     type: 2}
   m_PrefabInternal: {fileID: 2011606221}
+--- !u!114 &2011606223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114034356460049584, guid: 94064775b5657e347977f967339990ea,
+    type: 2}
+  m_PrefabInternal: {fileID: 2011606221}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 --- !u!1001 &2141091215
 Prefab:
   m_ObjectHideFlags: 0

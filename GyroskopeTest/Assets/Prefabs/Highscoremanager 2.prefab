@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1418773485730564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 363.65002, y: 825.65, z: 0}
+  m_LocalPosition: {x: 354.55002, y: 825.65, z: 22.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,11 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b52a8bb1a663b54990a78cf531f4681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mindStabi: 3
-  "stabilit\xE4tsReq": 
-  CurrentLevelToUnlock: 0
-  isUnlocked: 
   moneyDisplay: {fileID: 0}
+  lData: []
 --- !u!114 &114797167371010230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,5 +66,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 30
-  TimeDisplay: {fileID: 0}
-  scoredisplay: {fileID: 0}
+  timeDisplayText: {fileID: 0}
+  moneyBalanceText: {fileID: 0}

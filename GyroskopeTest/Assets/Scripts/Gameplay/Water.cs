@@ -106,13 +106,13 @@ public class Water : MonoBehaviour{
             //apply damage
             if (waterLevel>0)
             {
-               // GameScoreManager.rtime -= waterLevel*Time.deltaTime;
+               // GameScoreManager.remainingTime -= waterLevel*Time.deltaTime;
             }
 		}
 
 		if (waterPlanePosition.y > transform.position.y) {
 			//TODO Access stability and decrease it or set a flag, which is checked by stability
-			GameScoreManager.rtime -= waterLevel*Time.deltaTime;
+			GameScoreManager.remainingTime -= waterLevel*Time.deltaTime;
 			postLayer.enabled = true;
 		} else
 			postLayer.enabled = false;

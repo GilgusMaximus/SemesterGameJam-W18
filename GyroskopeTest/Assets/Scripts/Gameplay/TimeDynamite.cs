@@ -49,11 +49,11 @@ public static AndroidJavaObject vibrator = currentActivity.Call<AndroidJavaObjec
       
         if (istime)
         {
-            GameScoreManager.rtime += time;   
+            GameScoreManager.remainingTime += time;   
         }
         else
         {
-            GameScoreManager.rtime -= time;
+            GameScoreManager.remainingTime -= time;
             Vibrate(20);
         }
 
