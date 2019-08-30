@@ -8,7 +8,7 @@ public class SpawnCameraOnRandPos : MonoBehaviour {
 
     private void Awake()
     {
-        if (GameScoreManager.currentDiff != GameScoreManager.difficulty.nothing) //Maarten TODO: only load random pos in highscore modus? 
+        if (GameScoreManager.currentDiff != GameScoreManager.difficulty.nothing && currentSpawnPos!=null) //Maarten TODO: only load random pos in highscore modus? 
         {
             Vector3 spawnPos = new Vector3(currentSpawnPos.x, currentSpawnPos.y, currentSpawnPos.z);
             this.gameObject.transform.position = spawnPos;
