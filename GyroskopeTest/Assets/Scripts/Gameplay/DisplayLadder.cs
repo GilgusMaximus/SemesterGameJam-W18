@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class DisplayLadder : MonoBehaviour {
 
-    public Text[] highscoreText;
+    //public Text[] highscoreText;
+    public TMPro.TextMeshProUGUI[] highscoreText;
     Highscores highscoreManager;
 
 	// Use this for initialization
@@ -42,7 +43,7 @@ public class DisplayLadder : MonoBehaviour {
 
     IEnumerator RefreshHighscores()
     {
-        while (SceneManager.GetActiveScene().name=="HighscoreMenu")
+        while (SceneManager.GetActiveScene().name=="3DStartmenu")//"HighscoreMenu")
         {
             highscoreManager.Downloadighscores();
             yield return new WaitForSeconds(30);

@@ -35,9 +35,7 @@ public class GameScoreManager : MonoBehaviour {
         
         menuExit = false;
         //remainingTime auf Anfangswert setzten
-        if (remainingTime <= 0){
-            remainingTime = timer;
-        }
+        remainingTime = timer;
         //Ablaufen der Zeit starten
         timeIsCounting = true;
         
