@@ -31,7 +31,8 @@ public class Menu : MonoBehaviour {
 
     LevelData levelData;
 
-
+    [SerializeField]
+    private IngamePauseMenu ingamePauseMenu;
 
     public void setName(bool a){
         nameSet = a;
@@ -188,7 +189,7 @@ public class Menu : MonoBehaviour {
         
     }
 
-    
+    public static bool deactivate = false;
     
     //------------------------------------------------------------------------
     //                    used extern by buttons
@@ -197,14 +198,16 @@ public class Menu : MonoBehaviour {
     {
         Time.timeScale = 0;
         PauseMenu.SetActive( true);
-
+        ingamePauseMenu.playFadeIn();
     }
     
     public void Continue()
     {
+        ingamePauseMenu.playFadeOut();
 
-        Time.timeScale = 1;
+        deactivate = false;
         PauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
    
     public void setUsername()
