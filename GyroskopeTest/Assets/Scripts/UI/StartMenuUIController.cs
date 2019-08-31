@@ -41,7 +41,7 @@ public class StartMenuUIController : MonoBehaviour
 	private int currentMuteInt = 1;
 
 	//index which model is currently displayed in level choose menu 
-	private int currentModelIndex = 0;
+	public static int currentModelIndex = 0;
 
 	//the index of the location selected - 0 = location 1; 1 = location 2; -1 = no location
 	private int currentSelectedLocation = -1;

@@ -57,7 +57,7 @@ public class StartMenu3D : MonoBehaviour {
 		
 	}
 
-    public void LoadLevel(string args)
+    public void LoadLevel(int position)
     {
         if (nameSet)
         {
@@ -66,22 +66,13 @@ public class StartMenu3D : MonoBehaviour {
             Time.timeScale = 1;
 
             //parsing args
-            int pos = int.Parse(args.Substring(0,2));
-            string sceneName= args.Substring(2);
+            int pos = position;//int.Parse(args.Substring(1));
+            int level = StartMenuUIController.currentModelIndex;//Watch out for bugs here, selected in menu
+            string sceneName = levelData.lData[level].levelName;
 
-            LevelPositions curLevelData = null;
-            foreach (LevelPositions l in levelData.lData) //sadly we can't just save the LevelPos as Listdata, since problems with UI elemnts
+            if (levelData.lData[level].unlocked && pos < levelData.lData[level].unlockedPos.Count && levelData.lData[level].unlockedPos[pos])
             {
-                if (l.levelName.Equals(sceneName))
-                {
-                    curLevelData = l;
-                    break;
-                }
-            }
-
-            if (curLevelData.unlockedPos[pos])
-            {
-                SpawnCameraOnRandPos.currentSpawnPos = curLevelData.spawnPos[pos];
+                SpawnCameraOnRandPos.currentSpawnPos = levelData.lData[level].spawnPos[pos];
                 SceneManager.LoadScene(sceneName);
             }
 
