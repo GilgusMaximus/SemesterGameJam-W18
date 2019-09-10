@@ -57,8 +57,14 @@ public class StartMenu3D : MonoBehaviour {
 		
 	}
 
+    public void playPressed(){
+        Debug.Log(StartMenuUIController.currentSelectedLocation);
+        LoadLevel(StartMenuUIController.currentSelectedLocation);
+    }
+	
     public void LoadLevel(int position)
     {
+        Debug.Log("NameSet: " + nameSet);
         if (nameSet)
         {
             CurrencyManager.resetRoundMoney();

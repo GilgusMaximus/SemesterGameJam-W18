@@ -23,6 +23,10 @@ public class StartMenuUIController : MonoBehaviour
 	[SerializeField]
 	private Sprite[] muteSprites = new Sprite[2];
 
+	//Buttons for the location selection
+	[SerializeField] 
+	private Button[] locationButtons;
+	
 	//the reference to the image object in the scene
 	[SerializeField] 
 	private Image muteButtonImage;
@@ -31,6 +35,8 @@ public class StartMenuUIController : MonoBehaviour
 	[SerializeField] 
 	private AudioSource backgroundMusic;
 
+	private static Color32 unselectedLocationButtonColor = new Color32(245, 245, 245, 255), selectedLocationButtonColor = new Color32(231, 159, 23, 255);
+	
 	//is false at start
 	private bool isAudioMuted;	
 
@@ -44,11 +50,12 @@ public class StartMenuUIController : MonoBehaviour
 	public static int currentModelIndex = 0;
 
 	//the index of the location selected - 0 = location 1; 1 = location 2; -1 = no location
-	private int currentSelectedLocation = -1;
+	public static int currentSelectedLocation = -1;
 	
 	//which arrow is presses in the level choose menu - left = false; right = true;
 	private Boolean levelChooseArrow = false;
-	
+
+	private Button currentSelectedLocationButton = null; 
 	//------------------------------------------------------------------------
 	//                          General
 	//------------------------------------------------------------------------	
@@ -213,6 +220,18 @@ public class StartMenuUIController : MonoBehaviour
 	}
 
 	public void locationButtonClicked(int id){
+		ColorBlock buttonColors;
+		if (currentSelectedLocationButton != null){
+			buttonColors = currentSelectedLocationButton.colors;
+			buttonColors.highlightedColor = unselectedLocationButtonColor;
+			currentSelectedLocationButton.colors = buttonColors;
+		}
+
 		currentSelectedLocation = id;
+		currentSelectedLocationButton = locationButtons[id];
+		
+		buttonColors = currentSelectedLocationButton.colors;
+		buttonColors.highlightedColor = selectedLocationButtonColor;
+		currentSelectedLocationButton.colors = buttonColors;
 	}
 }
