@@ -13,7 +13,7 @@ public class StartMenuUIController : MonoBehaviour
 
 	//Every array holds all UI Items of the corresponding menu
 	[SerializeField]
-	private Animator[] startupMenu, optionsMenu, playMenu, highscoreDisplayMenu, levelChooseMenu;
+	private Animator[] startupMenu, optionsMenu, playMenu, highscoreDisplayMenu, levelChooseMenu, difficultyMenu;
 
 	//the 4 models displayed in the level choose menu
 	[SerializeField] 
@@ -25,7 +25,7 @@ public class StartMenuUIController : MonoBehaviour
 
 	//Buttons for the location selection
 	[SerializeField] 
-	private Button[] locationButtons;
+	private Button[] locationButtons, difficultyButtons;
 	
 	//the reference to the image object in the scene
 	[SerializeField] 
@@ -35,7 +35,7 @@ public class StartMenuUIController : MonoBehaviour
 	[SerializeField] 
 	private AudioSource backgroundMusic;
 
-	private static Color32 unselectedLocationButtonColor = new Color32(245, 245, 245, 255), selectedLocationButtonColor = new Color32(231, 159, 23, 255);
+	private static Color32 unselectedButtonColor = new Color32(245, 245, 245, 255), selectedButtonColor = new Color32(231, 159, 23, 255);
 	
 	//is false at start
 	private bool isAudioMuted;	
@@ -49,13 +49,14 @@ public class StartMenuUIController : MonoBehaviour
 	//index which model is currently displayed in level choose menu 
 	public static int currentModelIndex = 0;
 
-	//the index of the location selected - 0 = location 1; 1 = location 2; -1 = no location
-	public static int currentSelectedLocation = -1;
+	//the index of the location /difficulty selected - 0 = location 1 / easy; 1 = location 2 / normal; 2 = location 3/ hard-1 = no location
+	public static int currentSelectedLocation = 0, currentSelectedDifficulty = 0;
 	
 	//which arrow is presses in the level choose menu - left = false; right = true;
 	private Boolean levelChooseArrow = false;
 
-	private Button currentSelectedLocationButton = null; 
+	[SerializeField]
+	private Button currentSelectedLocationButton, currentSelectedDifficultyButton; 
 	//------------------------------------------------------------------------
 	//                          General
 	//------------------------------------------------------------------------	
@@ -161,6 +162,8 @@ public class StartMenuUIController : MonoBehaviour
 				break;
 			case 1: animators = levelChooseMenu;
 				break;
+			case 2: animators = difficultyMenu;
+				break;
 			default: Debug.LogError("StartMenuUIController.cs: backToPlayMenu: wrong menuID");
 				return;
 		}
@@ -181,9 +184,14 @@ public class StartMenuUIController : MonoBehaviour
 				foreach (GameObject model in levelModels){
 					model.SetActive(false);
 				}
-
 				currentModelIndex = 0;
+				currentSelectedLocation = 0;
+				locationButtonClicked(0);
 				levelModels[0].SetActive(true);
+				break;
+			case 2: difficultyButtonClicked(0);
+				currentSelectedDifficulty = 0;
+				animators = difficultyMenu;
 				break;
 			default: Debug.LogError("StartMenuUIController.cs: fadeInSubPlayMenu: wrong menuID");
 				return;
@@ -223,7 +231,8 @@ public class StartMenuUIController : MonoBehaviour
 		ColorBlock buttonColors;
 		if (currentSelectedLocationButton != null){
 			buttonColors = currentSelectedLocationButton.colors;
-			buttonColors.highlightedColor = unselectedLocationButtonColor;
+			buttonColors.highlightedColor = unselectedButtonColor;
+			buttonColors.normalColor = unselectedButtonColor;
 			currentSelectedLocationButton.colors = buttonColors;
 		}
 
@@ -231,7 +240,30 @@ public class StartMenuUIController : MonoBehaviour
 		currentSelectedLocationButton = locationButtons[id];
 		
 		buttonColors = currentSelectedLocationButton.colors;
-		buttonColors.highlightedColor = selectedLocationButtonColor;
+		buttonColors.highlightedColor = selectedButtonColor;
+		buttonColors.normalColor = selectedButtonColor;
 		currentSelectedLocationButton.colors = buttonColors;
+	}
+	
+	//------------------------------------------------------------------------
+	//                          Difficulty Menu
+	//------------------------------------------------------------------------
+	
+	public void difficultyButtonClicked(int id){
+		ColorBlock buttonColors;
+		if (currentSelectedDifficultyButton != null){
+			buttonColors = currentSelectedDifficultyButton.colors;
+			buttonColors.highlightedColor = unselectedButtonColor;
+			buttonColors.normalColor = unselectedButtonColor;
+			currentSelectedDifficultyButton.colors = buttonColors;
+		}
+
+		currentSelectedDifficulty = id;
+		currentSelectedDifficultyButton = difficultyButtons[id];
+		
+		buttonColors = currentSelectedDifficultyButton.colors;
+		buttonColors.highlightedColor = selectedButtonColor;
+		buttonColors.normalColor = selectedButtonColor;
+		currentSelectedDifficultyButton.colors = buttonColors;
 	}
 }
