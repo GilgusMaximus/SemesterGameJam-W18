@@ -9,7 +9,7 @@ public class StartMenuUIController : MonoBehaviour
 {
 	
 	[SerializeField]
-	private Animator playButtonAnimator;
+	private Animator playButtonAnimator, logoAnimator;
 
 	//Every array holds all UI Items of the corresponding menu
 	[SerializeField]
@@ -92,6 +92,7 @@ public class StartMenuUIController : MonoBehaviour
 		foreach (Animator animator in animators)
 			animator.SetTrigger(playFadeOutId);
 		
+		
 	    //play fadein animation for all startupMenu items
 	    foreach (Animator animator in startupMenu)
 		    animator.SetTrigger(playFadeInId);
@@ -126,6 +127,10 @@ public class StartMenuUIController : MonoBehaviour
 			animator.SetTrigger(playFadeInId);	
 	}
 
+	private void loadLogo(){
+		logoAnimator.SetTrigger(playFadeInId);
+	}
+	
 	public void exitProgram()
 	{
 		Application.Quit();
@@ -170,6 +175,8 @@ public class StartMenuUIController : MonoBehaviour
 		foreach (Animator animator in animators)
 			animator.SetTrigger(playFadeOutId);
 		
+		logoAnimator.SetTrigger(playFadeInId);
+		
 		foreach (Animator animator in playMenu)
 			animator.SetTrigger(playFadeInId);
 	}
@@ -179,6 +186,7 @@ public class StartMenuUIController : MonoBehaviour
 		Animator[] animators = null;
 		switch (menuId){
 			case 0: animators = highscoreDisplayMenu;
+				logoAnimator.SetTrigger(playFadeOutId);
 				break;
 			case 1: animators = levelChooseMenu;
 				foreach (GameObject model in levelModels){
@@ -188,6 +196,7 @@ public class StartMenuUIController : MonoBehaviour
 				currentSelectedLocation = 0;
 				locationButtonClicked(0);
 				levelModels[0].SetActive(true);
+				logoAnimator.SetTrigger(playFadeOutId);
 				break;
 			case 2: difficultyButtonClicked(0);
 				currentSelectedDifficulty = 0;

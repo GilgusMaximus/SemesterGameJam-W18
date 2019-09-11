@@ -3503,6 +3503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playButtonAnimator: {fileID: 2104244200}
+  logoAnimator: {fileID: 1499188926}
   startupMenu:
   - {fileID: 2104244200}
   - {fileID: 1126502916}
@@ -10756,8 +10757,9 @@ GameObject:
   - component: {fileID: 1499188924}
   - component: {fileID: 1499188923}
   - component: {fileID: 1499188925}
+  - component: {fileID: 1499188926}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10793,7 +10795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10827,6 +10829,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconTransform: {fileID: 1499188922}
+--- !u!95 &1499188926
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499188921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9f3a692493910b40b029f0ebfa6e1fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1503001147
 GameObject:
   m_ObjectHideFlags: 0
