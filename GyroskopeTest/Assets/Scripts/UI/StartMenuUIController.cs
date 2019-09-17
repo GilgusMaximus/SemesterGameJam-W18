@@ -34,8 +34,8 @@ public class StartMenuUIController : MonoBehaviour
 	//background music source
 	[SerializeField] 
 	private AudioSource backgroundMusic;
-
-	private static Color32 unselectedButtonColor = new Color32(245, 245, 245, 255), selectedButtonColor = new Color32(231, 159, 23, 255);
+	[SerializeField]
+	private static Color32 unselectedButtonColor = new Color32(245, 245, 245, 255), selectedButtonColor = new Color32(31, 159, 23, 255), selectedLockedButtonColor = new Color32(231, 19, 23, 255);
 	
 	//is false at start
 	private bool isAudioMuted;	
@@ -175,7 +175,8 @@ public class StartMenuUIController : MonoBehaviour
 		foreach (Animator animator in animators)
 			animator.SetTrigger(playFadeOutId);
 		
-		logoAnimator.SetTrigger(playFadeInId);
+		if(menuId == 1)
+			logoAnimator.SetTrigger(playFadeInId);
 		
 		foreach (Animator animator in playMenu)
 			animator.SetTrigger(playFadeInId);

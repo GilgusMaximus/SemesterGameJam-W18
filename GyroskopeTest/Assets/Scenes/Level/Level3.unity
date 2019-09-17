@@ -2096,6 +2096,23 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 134f392c9bea84246af89176513f3723, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1018738208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1418773485730564, guid: 134f392c9bea84246af89176513f3723,
+    type: 2}
+  m_PrefabInternal: {fileID: 1018738207}
+--- !u!114 &1018738209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1018738208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edac1ce3751c3924e8c669179b9d7acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuAnimator: {fileID: 1802134664}
 --- !u!1001 &1060681671
 Prefab:
   m_ObjectHideFlags: 0
@@ -3451,9 +3468,39 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224938730363210734, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224008414779081010, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224158590363717016, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224035727765075610, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114140092156172398, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: ingamePauseMenu
+      value: 
+      objectReference: {fileID: 1018738209}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94064775b5657e347977f967339990ea, type: 2}
   m_IsPrefabAsset: 0
+--- !u!95 &1802134664 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95117417654426048, guid: 94064775b5657e347977f967339990ea,
+    type: 2}
+  m_PrefabInternal: {fileID: 1802134663}
 --- !u!114 &1802134665 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114781749812651106, guid: 94064775b5657e347977f967339990ea,

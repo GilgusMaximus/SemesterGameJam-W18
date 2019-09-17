@@ -81,7 +81,7 @@ public class StartMenu3D : MonoBehaviour {
                 SpawnCameraOnRandPos.currentSpawnPos = levelData.lData[level].spawnPos[pos];
                 SceneManager.LoadScene(sceneName);
             }
-
+            
         }
 
     }

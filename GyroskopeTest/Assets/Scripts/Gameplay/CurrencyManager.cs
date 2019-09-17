@@ -75,7 +75,7 @@ public class CurrencyManager : MonoBehaviour {
     void Update () {
         if (moneyDisplay != null)
         {
-            moneyDisplay.text = "Money: " + RoundMoney;
+            moneyDisplay.text = "" + RoundMoney;
         }
 	}
 

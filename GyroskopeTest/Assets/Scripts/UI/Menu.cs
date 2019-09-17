@@ -204,7 +204,6 @@ public class Menu : MonoBehaviour {
     public void Continue()
     {
         ingamePauseMenu.playFadeOut();
-
         deactivate = false;
         PauseMenu.SetActive(false);
         Time.timeScale = 1;

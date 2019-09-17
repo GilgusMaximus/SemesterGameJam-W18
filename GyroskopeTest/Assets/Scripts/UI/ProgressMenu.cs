@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class ProgressMenu : MonoBehaviour {
 
-    public Text MoneyTotalText;
+    public TMP_Text MoneyTotalText;
 
     //TODO: install a subscriber that updates the current and requried stability values
     public List<Text> level1;

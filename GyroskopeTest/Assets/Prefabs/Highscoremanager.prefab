@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4326306938995466}
   - component: {fileID: 114749935284714790}
+  - component: {fileID: 114915129750236790}
+  - component: {fileID: 114132876972748930}
   m_Layer: 0
   m_Name: Highscoremanager
   m_TagString: Untagged
@@ -40,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114132876972748930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1086366606325564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edac1ce3751c3924e8c669179b9d7acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuAnimator: {fileID: 0}
 --- !u!114 &114749935284714790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +66,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 30
-  rtime: 0
-  isCounting: 0
-  TimeDisplay: {fileID: 0}
-  scoredisplay: {fileID: 0}
+  timeDisplayText: {fileID: 0}
+--- !u!114 &114915129750236790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1086366606325564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b52a8bb1a663b54990a78cf531f4681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyDisplay: {fileID: 0}
+  lData: []

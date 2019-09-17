@@ -1276,6 +1276,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1018738207}
   m_Script: {fileID: 11500000, guid: efc6755c85e80a344b5f1f4e896619fe, type: 3}
+--- !u!1 &1018738209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1418773485730564, guid: 134f392c9bea84246af89176513f3723,
+    type: 2}
+  m_PrefabInternal: {fileID: 1018738207}
+--- !u!114 &1018738210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1018738209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edac1ce3751c3924e8c669179b9d7acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuAnimator: {fileID: 283629817}
 --- !u!1001 &1029755387
 Prefab:
   m_ObjectHideFlags: 0
@@ -1812,47 +1829,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57625be32061fd7488df6e91bb0a0d70, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1285733261
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1285733262}
-  - component: {fileID: 1285733263}
-  m_Layer: 0
-  m_Name: PasuseMenuUIController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1285733262
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1285733261}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.605103, y: 433.16415, z: -29.165161}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1285733263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1285733261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edac1ce3751c3924e8c669179b9d7acd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuAnimator: {fileID: 283629817}
 --- !u!1001 &1287319353
 Prefab:
   m_ObjectHideFlags: 0
@@ -2697,7 +2673,7 @@ Prefab:
         type: 2}
       propertyPath: ingamePauseMenu
       value: 
-      objectReference: {fileID: 1285733263}
+      objectReference: {fileID: 1018738210}
     - target: {fileID: 114168520926414784, guid: 94064775b5657e347977f967339990ea,
         type: 2}
       propertyPath: m_Color.a
@@ -2752,6 +2728,16 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224938730363210734, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224008414779081010, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95822913395991364, guid: 94064775b5657e347977f967339990ea, type: 2}

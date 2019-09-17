@@ -1324,13 +1324,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   PauseMenu: {fileID: 1006240323}
-  Playmenu: 0
   levels: []
   Username: -435897gbfhjsdf28737
   inputf: {fileID: 0}
   slider: {fileID: 0}
   VolumeText: {fileID: 0}
   options: 0
+  ingamePauseMenu: {fileID: 0}
 --- !u!114 &303913541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1765,6 +1765,11 @@ Prefab:
       propertyPath: scoreDisplayText
       value: 
       objectReference: {fileID: 1253464520}
+    - target: {fileID: 114132876972748930, guid: 0b1e6fc0bb643404ebf0f7b6e8a36dfa,
+        type: 2}
+      propertyPath: pauseMenuAnimator
+      value: 
+      objectReference: {fileID: 1253464522}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b1e6fc0bb643404ebf0f7b6e8a36dfa, type: 2}
   m_IsPrefabAsset: 0
@@ -1792,6 +1797,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyDisplay: {fileID: 1253464520}
   lData: []
+--- !u!114 &374768946 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114132876972748930, guid: 0b1e6fc0bb643404ebf0f7b6e8a36dfa,
+    type: 2}
+  m_PrefabInternal: {fileID: 374768942}
+  m_Script: {fileID: 11500000, guid: edac1ce3751c3924e8c669179b9d7acd, type: 3}
 --- !u!1001 &380094056
 Prefab:
   m_ObjectHideFlags: 0
@@ -6102,11 +6113,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224704310614436288, guid: 94064775b5657e347977f967339990ea,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 224704310614436288, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -6195,31 +6201,56 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114199211553968140, guid: 94064775b5657e347977f967339990ea,
+    - target: {fileID: 114140092156172398, guid: 94064775b5657e347977f967339990ea,
         type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114199211553968140, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114781749812651106, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114781749812651106, guid: 94064775b5657e347977f967339990ea,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: ingamePauseMenu
+      value: 
+      objectReference: {fileID: 374768946}
     - target: {fileID: 114986075297817580, guid: 94064775b5657e347977f967339990ea,
         type: 2}
       propertyPath: scanner
       value: 
       objectReference: {fileID: 395445434}
+    - target: {fileID: 224938730363210734, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224008414779081010, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224158590363717016, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224035727765075610, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114781749812651106, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114781749812651106, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114199211553968140, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114199211553968140, guid: 94064775b5657e347977f967339990ea,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94064775b5657e347977f967339990ea, type: 2}
   m_IsPrefabAsset: 0
@@ -6235,6 +6266,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1253464519}
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+--- !u!95 &1253464522 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95117417654426048, guid: 94064775b5657e347977f967339990ea,
+    type: 2}
+  m_PrefabInternal: {fileID: 1253464519}
 --- !u!1001 &1265492582
 Prefab:
   m_ObjectHideFlags: 0
