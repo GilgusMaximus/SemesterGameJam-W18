@@ -18,14 +18,15 @@ public class CurrencyManager : MonoBehaviour {
 
     public static int currentMoney = 0;
     
-
+    public static int addedMoney = 0, beforePlay;
+    
     public TMP_Text moneyDisplay;
 
     public List<LevelPositions> lData;
 
     private void Awake()
     {
-
+            
         LevelData d = SaveSystem.LoadData();
         currentMoney = d.money;
         
@@ -118,6 +119,10 @@ public class CurrencyManager : MonoBehaviour {
 
     public static void incrementMoney(int i)
     {
+        if (addedMoney == 0){
+            beforePlay = currentMoney;
+        }
+        addedMoney += i;
         currentMoney += i;
     }
 
