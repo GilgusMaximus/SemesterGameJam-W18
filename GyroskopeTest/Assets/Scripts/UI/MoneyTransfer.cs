@@ -16,7 +16,7 @@ public class MoneyTransfer : MonoBehaviour
 	[SerializeField] 
 	private string earnedCashString;
 
-	private int a = 0;
+	private int a = -100;
 	
 	private void Start(){
 		earnedCashInt = CurrencyManager.addedMoney;
@@ -24,7 +24,7 @@ public class MoneyTransfer : MonoBehaviour
 		Debug.Log("ADDED MONEY " + earnedCashInt);
 		totalCashInt = CurrencyManager.currentMoney-earnedCashInt;
 		totalCash.color = new Color32(0, 0, 0, 0);
-		
+		earnedCash.text = earnedCashString + earnedCashInt;
 	}
 
 	// Update is called once per frame
