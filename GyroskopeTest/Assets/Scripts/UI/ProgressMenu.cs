@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,7 +15,13 @@ public class ProgressMenu : MonoBehaviour {
     public List<Text> level2;
     public List<Text> level3;
 
+
+    [SerializeField]
+    private Button[] mineButtons;
+
+    private Button currentlySelectedMine;
     
+    private static Color32 unselectedButtonColor = new Color32(245, 245, 245, 255), selectedButtonColor = new Color32(31, 159, 23, 255), selectedLockedButtonColor = new Color32(231, 19, 23, 255);
 
 	// Use this for initialization
 	void Start () {
@@ -89,4 +96,22 @@ public class ProgressMenu : MonoBehaviour {
         obj.SetActive(false);
     }
 
+
+    public void mineButtonClicked(int buttonId){
+        ColorBlock buttonColors;
+        if (currentlySelectedMine != null){
+            buttonColors = currentlySelectedMine.colors;
+            buttonColors.highlightedColor = unselectedButtonColor;
+            buttonColors.normalColor = unselectedButtonColor;
+            currentlySelectedMine.colors = buttonColors;
+        }
+        
+        currentlySelectedMine = mineButtons[buttonId];
+		
+        buttonColors = currentlySelectedMine.colors;
+        buttonColors.highlightedColor = selectedButtonColor;
+        buttonColors.normalColor = selectedButtonColor;
+        currentlySelectedMine.colors = buttonColors;
+    }
+    
 }

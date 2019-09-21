@@ -16,6 +16,9 @@ public class MoneyTransfer : MonoBehaviour
 	[SerializeField] 
 	private string earnedCashString;
 
+	[SerializeField]
+	private Animator earnedPointsAnimator;
+	
 	private int a = -100;
 	
 	private void Start(){
@@ -38,6 +41,9 @@ public class MoneyTransfer : MonoBehaviour
 		}
 		else if(earnedCashInt > 0){
 			a++;
+		}
+		else{
+			earnedPointsAnimator.SetTrigger("PlayFadeOut");
 		}
 	}
 }
