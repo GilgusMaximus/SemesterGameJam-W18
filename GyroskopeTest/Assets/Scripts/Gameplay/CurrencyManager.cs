@@ -103,6 +103,7 @@ public class CurrencyManager : MonoBehaviour {
 
     public void buyPosition(string stats)//enable optional spawnpos. Specify which level to unlock in UI Element
     {
+        //bsp: 0101
         //we want to parse our targeted level and pos from the input
         int level= int.Parse(stats.Substring(0,2));
         int pos = int.Parse(stats.Substring(2));

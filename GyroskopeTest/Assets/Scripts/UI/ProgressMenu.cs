@@ -21,6 +21,7 @@ public class ProgressMenu : MonoBehaviour {
     private Button[] mineButtons;
 
     private Button currentlySelectedMine;
+    private int currentMine = 0;
     
     
     [SerializeField]
@@ -29,7 +30,7 @@ public class ProgressMenu : MonoBehaviour {
     [SerializeField] 
     private GameObject[] locationButtons;
     
-    private static Color32 unselectedButtonColor = new Color32(245, 245, 245, 255), selectedButtonColor = new Color32(31, 159, 23, 255), selectedLockedButtonColor = new Color32(231, 19, 23, 255);
+    private static Color32 unselectedButtonColor = new Color32(245, 245, 245, 255), selectedButtonColor = new Color32(31, 159, 23, 255), selectedLockedButtonColor = new Color32(231, 19, 23, 255), unavailableButtonColor = new Color32(168,168,168,255);
 
 	// Use this for initialization
 	void Start () {
@@ -40,7 +41,7 @@ public class ProgressMenu : MonoBehaviour {
 
         foreach(Button button in FindObjectsOfTypeAll(typeof(Button)))//add a listener that updates the UiValues whenever we click a button
         {
-            button.onClick.AddListener(updateValuesOnScreen);
+           // button.onClick.AddListener(updateValuesOnScreen);
         }
         
     }
@@ -53,7 +54,7 @@ public class ProgressMenu : MonoBehaviour {
     public void updateValuesOnScreen()//gets desired information from savefile and updates the ui elements
     {
         LevelData d = SaveSystem.LoadData();
-
+        Debug.Log("PAAAAATH" + Application.persistentDataPath);
         printValue(level1, d, 0);
         printValue(level2, d, 1);
         printValue(level3, d, 2);
@@ -62,21 +63,74 @@ public class ProgressMenu : MonoBehaviour {
 
     public void printValue(List<Text> level, LevelData d, int i)
     {
+      
+        
         if (d.lData[i].unlocked)
         {
+            Debug.Log(i + "unlocked");
+            Button currentButton = mineButtons[i];
+            currentButton.interactable = true;
+            
+            ColorBlock buttonColors;
+		
+            buttonColors = currentButton.colors;
+            buttonColors.highlightedColor = unselectedButtonColor;
+            buttonColors.normalColor = unselectedButtonColor;
+            currentButton.colors = buttonColors;
+            
+            
             level[0].text = "Already unlocked";
         }
         else
         {
+            //Buttons dunkel grau machen und nicht klickbar
+            Button currentButton = mineButtons[i];
+            currentButton.interactable = false;
+            
+            ColorBlock buttonColors;
+		
+            buttonColors = currentButton.colors;
+            buttonColors.highlightedColor = selectedLockedButtonColor;
+            buttonColors.normalColor = selectedLockedButtonColor;
+            currentButton.colors = buttonColors;
+            
             level[0].text = "Unlock: " + d.lData[i].curStab + "/" + d.lData[i].reqStab + "\n100 money to increment";
         }
 
         if (d.lData[i].unlockedPos.Count > 1 && d.lData[i].unlockedPos[1])
         {
+                TMP_Text[] texts = locationButtons[0].GetComponentsInChildren<TMP_Text>();
+                texts[0].faceColor = unavailableButtonColor;
+                texts[1].enabled = true;
+         
+
             level[1].text = "Pos 1 unlocked!";
         }
         else
         {
+            if (currentMine > 0)
+            {
+                TMP_Text[] texts = locationButtons[0].GetComponentsInChildren<TMP_Text>();
+
+                texts[0].color = unselectedButtonColor;
+                texts[1].enabled = false;
+            }
+            else
+            {
+                TMP_Text[] texts = locationButtons[0].GetComponentsInChildren<TMP_Text>();
+                texts[0].color = unavailableButtonColor;
+                texts[1].enabled = true;
+                Button currentButton = locationButtons[0].GetComponent<Button>();
+                currentButton.interactable = false;
+            
+                ColorBlock buttonColors;
+		
+                buttonColors = currentButton.colors;
+                buttonColors.highlightedColor = selectedLockedButtonColor;
+                buttonColors.normalColor = selectedLockedButtonColor;
+                currentButton.colors = buttonColors;
+            }
+
             level[1].text = "Pay 500 money to unlock optional Position 1";
         }
 
@@ -86,6 +140,27 @@ public class ProgressMenu : MonoBehaviour {
         }
         else
         {
+            if (currentMine > 0)
+            {
+                TMP_Text[] texts = locationButtons[1].GetComponentsInChildren<TMP_Text>();
+                texts[0].color = unselectedButtonColor;
+                texts[1].enabled = false;
+            }
+            else
+            {
+                TMP_Text[] texts = locationButtons[1].GetComponentsInChildren<TMP_Text>();
+                texts[0].color = unavailableButtonColor;
+                texts[1].enabled = true;
+                Button currentButton = locationButtons[1].GetComponent<Button>();
+                currentButton.interactable = false;
+            
+                ColorBlock buttonColors;
+		
+                buttonColors = currentButton.colors;
+                buttonColors.highlightedColor = selectedLockedButtonColor;
+                buttonColors.normalColor = selectedLockedButtonColor;
+                currentButton.colors = buttonColors;
+            }
             level[2].text = "Pay 500 money to unlock optional Position 2";
         }
 
@@ -105,7 +180,10 @@ public class ProgressMenu : MonoBehaviour {
     }
 
 
-    public void mineButtonClicked(int buttonId){
+    public void mineButtonClicked(int buttonId)
+    {
+        currentMine = buttonId;
+        updateValuesOnScreen();
         ColorBlock buttonColors;
         if (currentlySelectedMine != null){
             buttonColors = currentlySelectedMine.colors;
@@ -123,7 +201,7 @@ public class ProgressMenu : MonoBehaviour {
 
         
         //deactivate lines
-        for (int i = 0; i < mineButtonsClikedUI.Length - 2; i++)
+        for (int i = 0; i < mineButtonsClikedUI.Length - 3; i++)
         {
             mineButtonsClikedUI[i].enabled = false;
         }
@@ -138,10 +216,12 @@ public class ProgressMenu : MonoBehaviour {
         {
             mineButtonsClikedUI[mineButtonsClikedUI.Length - 1].enabled = true;
             mineButtonsClikedUI[mineButtonsClikedUI.Length - 2].enabled = true;
+            mineButtonsClikedUI[mineButtonsClikedUI.Length - 3].enabled = true;
         }
 
         locationButtons[0].SetActive(true);
         locationButtons[1].SetActive(true);
+        locationButtons[2].SetActive(true);
     }
     
 }
