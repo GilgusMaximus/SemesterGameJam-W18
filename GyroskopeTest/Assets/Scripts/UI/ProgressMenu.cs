@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using TMPro;
@@ -20,6 +21,13 @@ public class ProgressMenu : MonoBehaviour {
     private Button[] mineButtons;
 
     private Button currentlySelectedMine;
+    
+    
+    [SerializeField]
+    private Image[] mineButtonsClikedUI;
+
+    [SerializeField] 
+    private GameObject[] locationButtons;
     
     private static Color32 unselectedButtonColor = new Color32(245, 245, 245, 255), selectedButtonColor = new Color32(31, 159, 23, 255), selectedLockedButtonColor = new Color32(231, 19, 23, 255);
 
@@ -112,6 +120,28 @@ public class ProgressMenu : MonoBehaviour {
         buttonColors.highlightedColor = selectedButtonColor;
         buttonColors.normalColor = selectedButtonColor;
         currentlySelectedMine.colors = buttonColors;
+
+        
+        //deactivate lines
+        for (int i = 0; i < mineButtonsClikedUI.Length - 2; i++)
+        {
+            mineButtonsClikedUI[i].enabled = false;
+        }
+        //reenable line which were deactivated
+        Debug.Log(mineButtonsClikedUI[buttonId*2].enabled + " " + buttonId*2);
+        mineButtonsClikedUI[buttonId * 2].enabled = true;
+        
+        Debug.Log(mineButtonsClikedUI[buttonId*2].enabled + " " + buttonId*2);
+        mineButtonsClikedUI[buttonId * 2 + 1].enabled = true;
+        //activate the lines to the location
+        if (!mineButtonsClikedUI[mineButtonsClikedUI.Length - 1].enabled)
+        {
+            mineButtonsClikedUI[mineButtonsClikedUI.Length - 1].enabled = true;
+            mineButtonsClikedUI[mineButtonsClikedUI.Length - 2].enabled = true;
+        }
+
+        locationButtons[0].SetActive(true);
+        locationButtons[1].SetActive(true);
     }
     
 }
