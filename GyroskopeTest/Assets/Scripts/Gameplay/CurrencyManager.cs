@@ -28,12 +28,12 @@ public class CurrencyManager : MonoBehaviour {
     {
             
         LevelData d = SaveSystem.LoadData();
-        currentMoney = d.money;
+        
         
         if (d != null)
         {
             Debug.Log("Previous: Money: " + d.money+"\n"); //Here we can just set our current money and stability
-
+            currentMoney = d.money;
             /*if (d.lData!=null)
             {
                 foreach(LevelPositions lp in d.lData)

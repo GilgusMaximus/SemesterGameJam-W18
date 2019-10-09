@@ -12,8 +12,11 @@ public class StartMenu3D : MonoBehaviour {
     public static string playerName;
     public string Username = "-435897gbfhjsdf28737";
     public GameObject UsernameInput;
-    private static bool nameSet = false;
+    public GameObject initialUserNameInput;
+    private static bool nameSet = true;
 
+    public GameObject initial;
+    
     public Slider VolumeSlider;
     public AudioSource menuMusic;
 
@@ -36,7 +39,7 @@ public class StartMenu3D : MonoBehaviour {
         Username = PlayerPrefs.GetString("Username", "-435897gbfhjsdf28737");
         if (Username.Equals("-435897gbfhjsdf28737") && !nameSet)
         {
-            UsernameInput.SetActive(true);
+            initial.SetActive(true);
         }
         else
         {
@@ -137,6 +140,7 @@ public class StartMenu3D : MonoBehaviour {
     public void setUsername()
     {
         Username = UsernameInput.GetComponent<TMPro.TMP_InputField>().text;
+        Debug.Log("Username: " + Username);
         if (Username.Equals(""))
         {
             Username = "Anomyous_Owl";

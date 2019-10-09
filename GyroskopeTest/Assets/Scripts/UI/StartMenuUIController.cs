@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
@@ -13,8 +14,8 @@ public class StartMenuUIController : MonoBehaviour
 
 	//Every array holds all UI Items of the corresponding menu
 	[SerializeField]
-	private Animator[] startupMenu, optionsMenu, playMenu, highscoreDisplayMenu, levelChooseMenu, difficultyMenu;
-
+	private Animator[] startupMenu, optionsMenu, playMenu, highscoreDisplayMenu, levelChooseMenu, difficultyMenu, initialNameMenu;
+	
 	//the 4 models displayed in the level choose menu
 	[SerializeField] 
 	private GameObject[] levelModels;
@@ -36,6 +37,13 @@ public class StartMenuUIController : MonoBehaviour
 	private AudioSource backgroundMusic;
 	[SerializeField]
 	private static Color32 unselectedButtonColor = new Color32(245, 245, 245, 255), selectedButtonColor = new Color32(31, 159, 23, 255), selectedLockedButtonColor = new Color32(231, 19, 23, 255);
+
+	[SerializeField]
+	private TMP_InputField initialNameInput;
+
+	[SerializeField] private Image logo;
+
+	[SerializeField] private GameObject initial;
 	
 	//is false at start
 	private bool isAudioMuted;	
@@ -56,7 +64,8 @@ public class StartMenuUIController : MonoBehaviour
 	private Boolean levelChooseArrow = false;
 
 	[SerializeField]
-	private Button currentSelectedLocationButton, currentSelectedDifficultyButton; 
+	private Button currentSelectedLocationButton, currentSelectedDifficultyButton;
+	
 	//------------------------------------------------------------------------
 	//                          General
 	//------------------------------------------------------------------------	
@@ -66,13 +75,30 @@ public class StartMenuUIController : MonoBehaviour
 		playFadeInId = Animator.StringToHash("PlayFadeIn");
 		playFadeOutId = Animator.StringToHash("PlayFadeOut");
 		playNextLevelId = Animator.StringToHash("PlayNextLevel");
-		triggerFadeIn();
+		if (!initial.activeInHierarchy)
+			triggerFadeIn();
 	}
 		
 	
 	//------------------------------------------------------------------------
 	//                          StartupMenu
     //------------------------------------------------------------------------
+
+    
+	//called when on first time startup the continue button to name is clicked
+    public void continueToGame()
+    {
+	    triggerNameFadeout();
+	    triggerFadeIn();
+    }
+
+
+    private void triggerNameFadeout()
+    {
+	    initialNameMenu[0].SetTrigger("Out");
+	    initialNameMenu[1].SetTrigger("Out");
+    }
+    
     
     //from the options, credit and play menu, this method is called, when the back button is pressed
     public void backToStartupMenu(int menuId){
@@ -121,7 +147,9 @@ public class StartMenuUIController : MonoBehaviour
 		
 	}
 	
-	private void triggerFadeIn(){
+	private void triggerFadeIn()
+	{
+		logo.enabled = true;
 		//trigger reset to false after being activated
 		foreach (Animator animator in startupMenu)
 			animator.SetTrigger(playFadeInId);	
