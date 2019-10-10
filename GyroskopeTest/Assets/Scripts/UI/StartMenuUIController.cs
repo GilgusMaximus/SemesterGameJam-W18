@@ -44,6 +44,8 @@ public class StartMenuUIController : MonoBehaviour
 	[SerializeField] private Image logo;
 
 	[SerializeField] private GameObject initial;
+
+	[SerializeField] private StartMenu3D startMenu3D;
 	
 	//is false at start
 	private bool isAudioMuted;	
@@ -75,7 +77,7 @@ public class StartMenuUIController : MonoBehaviour
 		playFadeInId = Animator.StringToHash("PlayFadeIn");
 		playFadeOutId = Animator.StringToHash("PlayFadeOut");
 		playNextLevelId = Animator.StringToHash("PlayNextLevel");
-		if (!initial.activeInHierarchy)
+		//if (!initial.activeInHierarchy)
 			triggerFadeIn();
 	}
 		
@@ -278,14 +280,39 @@ public class StartMenuUIController : MonoBehaviour
 		currentSelectedLocationButton = locationButtons[id];
 		
 		buttonColors = currentSelectedLocationButton.colors;
-		buttonColors.highlightedColor = selectedButtonColor;
-		buttonColors.normalColor = selectedButtonColor;
+		if (startMenu3D.isLocationUnlocked(currentModelIndex, currentSelectedLocation))
+		{
+			buttonColors.highlightedColor = selectedButtonColor;
+			buttonColors.normalColor = selectedButtonColor;
+		}
+		else
+		{
+			buttonColors.highlightedColor = selectedLockedButtonColor;
+			buttonColors.normalColor = selectedLockedButtonColor;
+		}
+
 		currentSelectedLocationButton.colors = buttonColors;
 	}
 	
 	//------------------------------------------------------------------------
 	//                          Difficulty Menu
 	//------------------------------------------------------------------------
+
+
+	public void highscorePlayButtonPressed()
+	{
+		switch (currentSelectedDifficulty)
+		{
+			case 0:
+				startMenu3D.SetDiffNormal();
+				break;
+			case 1:
+				startMenu3D.SetDiffNormal();
+				break;
+			case 2: startMenu3D.SetDiffHard();
+				break;
+		}
+	}
 	
 	public void difficultyButtonClicked(int id){
 		ColorBlock buttonColors;

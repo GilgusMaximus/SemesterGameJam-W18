@@ -3621,7 +3621,8 @@ MonoBehaviour:
   backgroundMusic: {fileID: 634441811}
   initialNameInput: {fileID: 1475702757}
   logo: {fileID: 1499188923}
-  initial: {fileID: 1615573669}
+  initial: {fileID: 133297529}
+  startMenu3D: {fileID: 133297530}
   currentSelectedLocationButton: {fileID: 1257352416}
   currentSelectedDifficultyButton: {fileID: 1213839645}
 --- !u!1 &550895032
@@ -15306,8 +15307,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 524300685}
-        m_MethodName: backToStartupMenu
-        m_Mode: 3
+        m_MethodName: highscorePlayButtonPressed
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

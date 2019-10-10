@@ -54,11 +54,8 @@ public class StartMenu3D : MonoBehaviour {
         }
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    
+    
 
     public void playPressed(){
         Debug.Log(StartMenuUIController.currentSelectedLocation);
@@ -89,6 +86,16 @@ public class StartMenu3D : MonoBehaviour {
 
     }
 
+    public bool isLevelUnlocked(int level)
+    {
+        return levelData.lData[level].unlocked;
+    }
+
+    public bool isLocationUnlocked(int level, int location)
+    {
+        return levelData.lData[level].unlockedPos[location];
+    }
+    
     public void SetDiffNormal()
     {
         if (nameSet)
