@@ -26,10 +26,16 @@ public class MoneyTransfer : MonoBehaviour
 		CurrencyManager.addedMoney = 0;
 		Debug.Log("ADDED MONEY " + earnedCashInt);
 		totalCashInt = CurrencyManager.currentMoney-earnedCashInt;
+		totalCashDummy.text = ""+CurrencyManager.beforePlay;
 		totalCash.color = new Color32(0, 0, 0, 0);
 		earnedCash.text = earnedCashString + earnedCashInt;
 	}
 
+	public void reduceMoney(int amount)
+	{
+		
+	}
+	
 	// Update is called once per frame
 	void Update () {
 		if (earnedCashInt > 0 && a == 2){

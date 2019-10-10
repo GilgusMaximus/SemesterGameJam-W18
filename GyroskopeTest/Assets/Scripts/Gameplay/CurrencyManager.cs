@@ -20,15 +20,15 @@ public class CurrencyManager : MonoBehaviour {
     
     public static int addedMoney = 0, beforePlay;
     
-    public TMP_Text moneyDisplay;
+    public TMP_Text moneyDisplay, moneyDisplay2;
 
     public List<LevelPositions> lData;
-
+    [SerializeField] private MoneyTransfer moneyTransfer;
+    
     private void Awake()
     {
             
         LevelData d = SaveSystem.LoadData();
-        
         
         if (d != null)
         {
@@ -64,7 +64,8 @@ public class CurrencyManager : MonoBehaviour {
         {
             lData = d.lData;// load the saved data
         }
-
+        //if(moneyDisplay2 != null)
+           // moneyDisplay2.text = "" + RoundMoney;
     }
 
     private void OnDestroy()//save data when we end the scene for debugging TODO: save our progress AFTER the level-up screen
@@ -77,6 +78,7 @@ public class CurrencyManager : MonoBehaviour {
         if (moneyDisplay != null)
         {
             moneyDisplay.text = "" + RoundMoney;
+           // moneyDisplay2.text = moneyDisplay.text;
         }
 	}
 
@@ -84,16 +86,18 @@ public class CurrencyManager : MonoBehaviour {
     {
         if (currentMoney >= 100 && !lData[i].unlocked)
         {
+            Debug.Log("BOUGHT STABILITY");
             currentMoney -= 100;
             lData[i].curStab += 1;
             checkLevelStabilität(lData[i]);
-
+            moneyTransfer.reduceMoney(100);
             SaveSystem.SaveData(this);
         }
     }
 
-    public void checkLevelStabilität(LevelPositions ld)//check if we have enough stability and set the unlocked flag
+    private void checkLevelStabilität(LevelPositions ld)//check if we have enough stability and set the unlocked flag
     {
+        Debug.Log("STABILITY: " + ld.curStab + ld.reqStab);
         if (ld.curStab>=ld.reqStab)
         {
             ld.unlocked = true;
@@ -114,6 +118,7 @@ public class CurrencyManager : MonoBehaviour {
             currentMoney -= 500;
             lData[level].unlockedPos[pos] = true;
             SaveSystem.SaveData(this);
+            moneyTransfer.reduceMoney(500);
             Debug.Log("Unlocked Position: "+lData[level].spawnPos[pos].x+"/"+lData[level].spawnPos[pos].y+"/"+ lData[level].spawnPos[pos].z);
         }
     }

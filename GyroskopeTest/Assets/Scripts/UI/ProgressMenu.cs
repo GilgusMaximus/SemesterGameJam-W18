@@ -29,6 +29,9 @@ public class ProgressMenu : MonoBehaviour {
 
     [SerializeField] 
     private GameObject[] locationButtons;
+
+    [SerializeField]
+    private CurrencyManager currencyManager;
     
     private static Color32 unselectedButtonColor = new Color32(245, 245, 245, 255), selectedButtonColor = new Color32(31, 159, 23, 255), selectedLockedButtonColor = new Color32(231, 19, 23, 255), unavailableButtonColor = new Color32(168,168,168,255);
 
@@ -45,6 +48,7 @@ public class ProgressMenu : MonoBehaviour {
         }
         
     }
+	
 	
 	// Update is called once per frame
 	void Update () {
@@ -180,6 +184,16 @@ public class ProgressMenu : MonoBehaviour {
     }
 
 
+    public void buyMineLocationClicked(int id)
+    {
+        currencyManager.buyPosition(""+currentMine+ "" + id);
+    }
+
+    public void upgradeMineClicked()
+    {
+        currencyManager.buyLevelStability(currentMine);
+    }
+    
     public void mineButtonClicked(int buttonId)
     {
         currentMine = buttonId;
