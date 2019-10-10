@@ -203,7 +203,7 @@ public class StartMenuUIController : MonoBehaviour
 		foreach (Animator animator in animators)
 			animator.SetTrigger(playFadeOutId);
 		
-		if(menuId == 1)
+		if(menuId <= 1)
 			logoAnimator.SetTrigger(playFadeInId);
 		
 		foreach (Animator animator in playMenu)
