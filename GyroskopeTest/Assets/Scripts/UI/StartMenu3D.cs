@@ -93,7 +93,14 @@ public class StartMenu3D : MonoBehaviour {
 
     public bool isLocationUnlocked(int level, int location)
     {
-        return levelData.lData[level].unlockedPos[location];
+        if (location < levelData.lData[level].unlockedPos.Count)
+        {
+            return levelData.lData[level].unlockedPos[location];
+        }
+        else
+        {
+            return false;
+        }
     }
     
     public void SetDiffNormal()

@@ -54,10 +54,12 @@ public class CurrencyManager : MonoBehaviour {
             List<sVector3> spawnPos1 = new List<sVector3> { new sVector3(0,2.61f,0) };
             List<sVector3> spawnPos2 = new List<sVector3> { new sVector3(-24.09f, 5.7509f, -21.1f), new sVector3(-59f, 2f, 20f), new sVector3(-18f, -1f, 26f) };
             List<sVector3> spawnPos3 = new List<sVector3> { new sVector3(-24.94f, 6.56f, 9.32f), new sVector3(-14, 2f, -3f), new sVector3(-17f, 2f, 14f) };
+            List<sVector3> spawnPos4 = new List<sVector3> { new sVector3(-29f, 6f, 10.5f), new sVector3(-35, 6f, 10.5f), new sVector3(-32f, 6f, 4.2f) };
 
             lData = new List<LevelPositions> { new LevelPositions("Level1",0,0,true, spawnPos1, unlockedPos1),
                                                new LevelPositions("Level2",0,10,false, spawnPos2, unlockedPos23),
-                                               new LevelPositions("Level3",0,20,false, spawnPos3, unlockedPos23)};
+                                               new LevelPositions("Level3",0,20,false, spawnPos3, unlockedPos23),
+                                               new LevelPositions("Level4", 0, 30, false, spawnPos4, unlockedPos23)};
             SaveSystem.SaveData(this);
         }
         else
